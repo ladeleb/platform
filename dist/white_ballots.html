@@ -14,9 +14,7 @@
         <!-- build:css(.tmp) styles/main.css -->
             <link href="//netdna.bootstrapcdn.com/font-awesome/4.0.0/css/font-awesome.css" rel="stylesheet">
             <link rel="stylesheet" href="styles/main.css">
-
-        <link rel="stylesheet" href="bower_components/Leaflet.markercluster/dist/MarkerCluster.css" />
-        <link rel="stylesheet" href="bower_components/Leaflet.markercluster/dist/MarkerCluster.Default.css" />
+            <link rel="stylesheet" href="styles/white_ballots.css">
         <!-- endbuild -->
 
         <script src='//api.tiles.mapbox.com/mapbox.js/v1.5.2/mapbox.js'></script>
@@ -26,10 +24,10 @@
     <body>
         
         <ul id='toolbar'>
-            <li class='langbtn'>DOWNLOAD DATA
+            <li class='langbtn' id='download-data'>DOWNLOAD DATA
                 <ul id='toolbar-download'>
-                    <a href="data/white_ballots/white_ballots_csv.zip" > <li>CSV</li> <a> 
-                    <a href="data/white_ballots/2005_white_ballots.geojson" > <li>GEOJSON</li> <a> 
+                    <a href="data/white_ballots/white_ballots_csv.zip" > <li class='download-li'>CSV</li> <a> 
+                    <a href="data/white_ballots/white_ballots_geojson.zip" > <li class='download-li'>GEOJSON</li> <a> 
                 </ul>
             </li>
             <li class='langbtn'>ABOUT THIS DATA</li>
@@ -44,20 +42,16 @@
             <div class='text_overlay en'></div>
 
             <div id='map'></div>
-            <div id='name'></div>
-
+            <div id='tooltip-overlay'></div>
 
         </div>
 
-  <!--      <div id='graph_container'>
-            <div id='arrow'></div>
-
-        </div> -->
         
         <!--[if lt IE 7]>
             <p class="browsehappy">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
         <![endif]-->
 
+        <!-- TEMPLATS -->
         <script type='text/template' id='legend_template'>
                 <div id='leg'>
                     <div id='legcol' style='background-color: <%= color %>'></div>
@@ -74,14 +68,14 @@
                     <div id='timepicker'></div>
                     <div id='time'> <%= content[0].ttime %> </div>
                     <div id='time_desc'> <%= content[0].time_desc %> </div> 
-                    <div class="control" id="2005"></div>
+                    <div class="control" id="invalid_2005">INVALID</div>
                 </div>
                  <div id='<%= content[1].id %>' class='time_section clearfix'>
                     <div id='timepicker'></div>
                     <div id='time'> <%= content[1].ttime %> </div>
                     <div id='time_desc'> <%= content[1].time_desc %> </div> 
-                    <div class="control" id="2009_invalid">INVALID</div>
-                    <div class="control" id="2009_white">WHITE</div>
+                    <div class="control" id="invalid_2009">INVALID</div>
+                    <div class="control" id="white_2009">WHITE</div>
                 </div>
         </script>
 
@@ -119,19 +113,27 @@
             </ul>
         </script>
 
-
+ 
+        <link rel="stylesheet" href="bower_components/Leaflet.markercluster/dist/MarkerCluster.css" />
+        <link rel="stylesheet" href="bower_components/Leaflet.markercluster/dist/MarkerCluster.Default.css" />
         <!--[if lte IE 8]>
         <![endif]-->
-       
+        <script src="bower_components/Leaflet.markercluster/dist/leaflet.markercluster.js"></script>
 
 
         <!-- build:js scripts/vendor.js -->
         <!-- bower:js -->
         <script src="bower_components/jquery/jquery.js"></script>
-        <script src="bower_components/Leaflet.markercluster/dist/leaflet.markercluster.js"></script>
-
         <!-- endbower -->
         <!-- endbuild -->
+        <!-- build:js scripts/main.js -->
+        <script src='bower_components/underscore/underscore-min.js'></script> 
+        <script src="scripts/text_content.js"></script>
+        <script src="scripts/map.js"></script>
+        <script src="scripts/whiteballots.js"></script>
+        <!-- endbuild -->
+
+
 
         <!-- build:js scripts/plugins.js -->
         <script src="bower_components/sass-bootstrap/js/bootstrap-affix.js"></script>
@@ -148,11 +150,5 @@
         <script src="bower_components/sass-bootstrap/js/bootstrap-collapse.js"></script>
         <script src="bower_components/sass-bootstrap/js/bootstrap-tab.js"></script>
         <!-- endbuild -->
-        <script src='bower_components/underscore/underscore-min.js'></script> 
-        <script src="scripts/text_content.js"></script>
-        <script src="scripts/map.js"></script>
-        <script src="scripts/main.js"></script>
-
-
 </body>
 </html>

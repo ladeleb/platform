@@ -27,14 +27,6 @@ module.exports = function (grunt) {
     grunt.initConfig({
         yeoman: yeomanConfig,
         watch: {
-            coffee: {
-                files: ['<%= yeoman.app %>/scripts/{,*/}*.coffee'],
-                tasks: ['coffee:dist']
-            },
-            coffeeTest: {
-                files: ['test/spec/{,*/}*.coffee'],
-                tasks: ['coffee:test']
-            },
             compass: {
                 files: ['<%= yeoman.app %>/styles/{,*/}*.{scss,sass}'],
                 tasks: ['compass:server', 'autoprefixer']
@@ -130,26 +122,6 @@ module.exports = function (grunt) {
                 }
             }
         },
-        coffee: {
-            dist: {
-                files: [{
-                    expand: true,
-                    cwd: '<%= yeoman.app %>/scripts',
-                    src: '{,*/}*.coffee',
-                    dest: '.tmp/scripts',
-                    ext: '.js'
-                }]
-            },
-            test: {
-                files: [{
-                    expand: true,
-                    cwd: 'test/spec',
-                    src: '{,*/}*.coffee',
-                    dest: '.tmp/spec',
-                    ext: '.js'
-                }]
-            }
-        },
         compass: {
             options: {
                 sassDir: '<%= yeoman.app %>/styles',
@@ -205,18 +177,6 @@ module.exports = function (grunt) {
         /*uglify: {
             dist: {}
         },*/
-        rev: {
-            dist: {
-                files: {
-                    src: [
-                        '<%= yeoman.dist %>/scripts/{,*/}*.js',
-                        '<%= yeoman.dist %>/styles/{,*/}*.css',
-                        '<%= yeoman.dist %>/images/{,*/}*.{png,jpg,jpeg,gif,webp}',
-                        '<%= yeoman.dist %>/styles/fonts/{,*/}*.*'
-                    ]
-                }
-            }
-        },
         useminPrepare: {
             options: {
                 dest: '<%= yeoman.dist %>'
@@ -296,8 +256,9 @@ module.exports = function (grunt) {
                     cwd: '<%= yeoman.app %>',
                     dest: '<%= yeoman.dist %>',
                     src: [
+                        'data/**',
+                        'bower_components/**',
                         '*.{ico,png,txt}',
-                        '.htaccess',
                         'images/{,*/}*.{webp,gif}',
                         'styles/fonts/{,*/}*.*'
                     ]
@@ -314,15 +275,12 @@ module.exports = function (grunt) {
         concurrent: {
             server: [
                 'compass',
-                'coffee:dist',
                 'copy:styles'
             ],
             test: [
-                'coffee',
                 'copy:styles'
             ],
             dist: [
-                'coffee',
                 'compass',
                 'copy:styles',
                 'imagemin',
@@ -361,10 +319,7 @@ module.exports = function (grunt) {
         'concurrent:dist',
         'autoprefixer',
         'concat',
-        'cssmin',
-        'uglify',
         'copy:dist',
-        'rev',
         'usemin'
     ]);
 

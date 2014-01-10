@@ -1,0 +1,150 @@
+@import 'base';
+@import 'map';
+
+$iconSpritePath: "../images/glyphicons-halflings.png";
+$iconWhiteSpritePath: "../images/glyphicons-halflings-white.png";
+@import url(http://fonts.googleapis.com/css?family=Abel:400,600,700);
+@import url(http://fonts.googleapis.com/css?family=Lora:400,600,700);
+
+
+@import 'sass-bootstrap/lib/bootstrap';
+@import url(http://fonts.googleapis.com/css?family=Lato);
+@import url(http://fonts.googleapis.com/css?family=Playfair+Display:400,600,700);
+@import url(http://fonts.googleapis.com/css?family=Merriweather:100,400,300);
+@import url(http://fonts.googleapis.com/css?family=Raleway:100,400,300);
+
+
+$red: rgb(200,100,100);
+//$red: #f1c40f;
+
+html, body{
+	width:100%;
+	height:100%;
+	position:relative;
+	font-family : Helvetica, sans-serif;
+	font-weight:700;
+-webkit-box-sizing: border-box; /* Safari/Chrome, other WebKit */
+-moz-box-sizing: border-box;    /* Firefox, other Gecko */
+box-sizing: border-box;         /* Opera/IE 8+ */
+
+
+}
+
+body{
+	border: 12px solid black;
+
+}
+::selection {
+	background: rgb(150,170,200); /* Safari */
+	color: black;
+	}
+::-moz-selection {
+	background: rgb(150,170,200); /* Safari */
+	color: black;
+}
+
+
+.hero-unit {
+    margin: 50px auto 0 auto;
+    width: 300px;
+}
+
+.browsehappy {
+    margin: 0.2em 0;
+    background: #ccc;
+    color: #000;
+    padding: 0.2em 0;
+}
+
+
+p{
+	display:block;
+}
+
+
+ul#social{
+	margin:40px 0 0 0;
+	padding:0px;
+
+	li{
+		margin: 0 2px 0 2px;
+
+	}
+}
+
+#toolbar{
+	z-index: 100;
+	position:absolute;
+	top:0px;
+	right: 0;
+	width:100%;
+	font-size:1em;
+	font-family: Helvetica Neue, Helvetica, sans-serif;
+	font-weight: 700;
+	background-color: rgb(35,35,35);
+	background-color: rgba(220,220,230,0.5);
+	color:black !important;
+	li{
+
+	}
+}
+
+#toolbar-download{
+	position: absolute;
+	display:none;
+	top:120%;
+	width:100px;
+	margin:0px;
+	padding:0px;
+	float:left;
+	background:white;
+	li{
+		color:black;
+		width:100%;
+		list-style-type: none;
+		padding : 10px 0 10px 0;
+
+	}
+}
+
+
+$col : rgb(40,40,60);
+.langbtn{
+	padding: 20px;
+
+	text-align: center;
+	display:inline-block;
+	min-width:30px;
+	margin-right:10px;
+	float:right;
+	font-size:0.87em;
+	font-weight: 600;
+
+	color: white;
+	color:black;
+	@include transition(background-color 200ms ease-in);
+	cursor: pointer;
+
+	&:hover{
+		@include transition(background-color 200ms ease-in);
+		background-color: rgb(90,90,90);
+		color:white;
+	}
+}
+.langbtn:last-child{
+	border:none;
+}
+
+
+#ar, #en{
+	//background-color: desaturate(lighten(rgb(40,40,60), 60%),20%);
+	color: rgb(40,40,60);
+	&:hover{
+		background-color: white;
+		color: rgb(40,40,60);
+	}
+}
+
+#ar{
+	font-size: 1.3em;
+}

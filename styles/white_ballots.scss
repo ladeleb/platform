@@ -1,0 +1,128 @@
+@import "compass/css3";
+@import "compass/css3/transform-legacy";
+
+$red: rgb(200,100,100);
+
+
+h1{
+	margin: 0 0 0px 0 ;
+	font-weight: 700;
+}
+#tloc{
+	font-family: Helvetica, sans-serif;
+	font-weight:400;
+	font-size: 1.3em;
+	color: rgb(100,100,100);
+	padding-bottom: 0.8em;
+}
+
+#tnum{
+	font-family: Helvetica, sans-serif;
+	font-color: rgb(40,40,60);
+	font-size:4em;
+	font-weight: 800;
+
+}
+
+
+.text_overlay{
+
+	margin:75px 0 50px 50px;
+	padding: 20px;
+	color : rgb(40,40,40);
+	background-color: rgba(255,255,255,0.7);
+
+	max-width: 750px;
+	position:absolute;
+	top:0px;
+	left:0px;
+	z-index: 4;
+	font-size: 1.3em;
+
+	p{
+		max-width:550px;
+		line-height: 1.4em;
+		margin: 10px 0 20px 0;
+	}
+
+	#desc{
+		font-weight: 300;
+		font-size:1em;
+		font-family: "Lato", Helvetica Neue, serif;
+		color: rgb(120,120,120);
+	}
+}
+
+.text_overlay.en{
+	text-align: left;
+	
+	.time_section{
+		#time, #time_desc{
+			float: left;
+		}
+	}
+}
+
+// TOOL TIP
+#tooltip-overlay {
+	// width:200px;
+	padding:10px;
+	z-index:9999;
+	position:absolute;
+	bottom:30px;
+	right:100px;
+	background: white;
+	color:black;
+	text-align:center;
+}
+
+.control{
+	width:100px;
+	padding: 10px 0 10px 0;
+	text-align:center;
+	font: 15px Helvetica Neue;
+	font-weight: 700 ;
+	background-color:white;
+	display:inline-block;
+	cursor: pointer;
+	&:hover{
+		color: $red;
+	}
+}
+#2009_invalid{
+	border-right: 1px solid rgb(100,100,100);
+}
+
+.time_section{
+	display:block;
+	position:relative;
+}
+#time, #time_desc{
+	display:inline-block;
+	padding: 10px 0 10px 0;
+	font-family: "Lato", serif;
+	font-weight: 800;
+}
+
+#invalid_2009{
+	border-right: 1px solid black;
+}
+
+#timepicker{
+	display:inline-block;
+	margin-top: 15px;
+	width:15px;
+	height:15px;
+	background-color:rgb(200,200,190);
+	background-color:$red;
+	background-color: black;
+	border-radius: 50%;
+	float:left;
+}
+#time{
+
+	font-size: 2em;
+	margin: 0 20px 0 35px;
+	font-weight: 700;
+//	color: saturate($red,20%);
+}

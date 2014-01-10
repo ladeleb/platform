@@ -1,0 +1,154 @@
+<!doctype html>
+<!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
+<!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8"> <![endif]-->
+<!--[if IE 8]>         <html class="no-js lt-ie9"> <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js"> <!--<![endif]-->
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <title></title>
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width">
+        <!-- Place favicon.ico and apple-touch-icon.png in the root directory -->
+       
+        <!-- build:css(.tmp) styles/main.css -->
+            <link href="//netdna.bootstrapcdn.com/font-awesome/4.0.0/css/font-awesome.css" rel="stylesheet">
+            <link rel="stylesheet" href="styles/main.css">
+            <link rel="stylesheet" href="styles/white_ballots.css">
+        <!-- endbuild -->
+
+        <script src='//api.tiles.mapbox.com/mapbox.js/v1.5.2/mapbox.js'></script>
+        <link href='//api.tiles.mapbox.com/mapbox.js/v1.5.2/mapbox.css' rel='stylesheet' />
+
+    </head>
+    <body>
+        
+        <ul id='toolbar'>
+            <li class='langbtn' id='download-data'>DOWNLOAD DATA
+                <ul id='toolbar-download'>
+                    <a href="data/white_ballots/white_ballots_csv.zip" > <li class='download-li'>CSV</li> <a> 
+                    <a href="data/white_ballots/white_ballots_geojson.zip" > <li class='download-li'>GEOJSON</li> <a> 
+                </ul>
+            </li>
+            <li class='langbtn'>ABOUT THIS DATA</li>
+            <li class='langbtn'><div class="fa fa-twitter fa-1x"></div></li>
+            <li class='langbtn'><div class="fa fa-facebook fa-1x"></div></li>
+            <li class='langbtn'><div class="fa fa-google-plus fa-1x"></div></li>
+            <li id='ar' class='langbtn'>ع</li>
+        </ul>
+
+        <div id='map_container'>
+            <div class='text_overlay ar'></div>
+            <div class='text_overlay en'></div>
+
+            <div id='map'></div>
+            <div id='tooltip-overlay'></div>
+
+        </div>
+
+        
+        <!--[if lt IE 7]>
+            <p class="browsehappy">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
+        <![endif]-->
+
+        <!-- TEMPLATS -->
+        <script type='text/template' id='legend_template'>
+                <div id='leg'>
+                    <div id='legcol' style='background-color: <%= color %>'></div>
+                   <!-- <div id='leglabel'> <%= label %> </div> -->
+                    </div>
+        </script>
+
+        <script type='text/template' id='wb_text_overlay_template'>
+                <h1> <%= title %> </h1>
+                <p id='desc'>
+                    <%= desc %>
+                </p>
+                <div id='<%= content[0].id %>' class='time_section clearfix'>
+                    <div id='timepicker'></div>
+                    <div id='time'> <%= content[0].ttime %> </div>
+                    <div id='time_desc'> <%= content[0].time_desc %> </div> 
+                    <div class="control" id="invalid_2005">INVALID</div>
+                </div>
+                 <div id='<%= content[1].id %>' class='time_section clearfix'>
+                    <div id='timepicker'></div>
+                    <div id='time'> <%= content[1].ttime %> </div>
+                    <div id='time_desc'> <%= content[1].time_desc %> </div> 
+                    <div class="control" id="invalid_2009">INVALID</div>
+                    <div class="control" id="white_2009">WHITE</div>
+                </div>
+        </script>
+
+
+        <script type='text/template' id='rv_text_overlay_template'>
+            <h1> <%= title %> </h1>
+            <p id='desc'>
+                <%= desc %>
+            </p>
+            <div class='legend clearfix'>
+                <div><b>Over</b> represented</div>
+                <div class='legend inner'></div>
+                <div><b>Under</b> represented</div>
+
+            </div>
+              
+        </script>
+
+        <script type='text/template' id='time_section_template'>
+            <div id='<%= id %>' class='time_section clearfix'>
+                <div id='timepicker'></div>
+                <div id='time'> <%= text.ttime %> </div>
+                <div id='time_desc'> <%= text.time_desc %> </div> 
+            </div>
+        </script>
+
+
+        <script type='text/template' id='base_text_template'>
+            <h1>Lebanon Electoral Open Data </h1>
+            <h2>Lade</h2>
+
+            <ul id = 'toc'>
+                <li id='rv'></li> <!-- registered voters -->
+                <li id='wb'></li> <!-- white ballots -->
+            </ul>
+        </script>
+
+ 
+        <link rel="stylesheet" href="bower_components/Leaflet.markercluster/dist/MarkerCluster.css" />
+        <link rel="stylesheet" href="bower_components/Leaflet.markercluster/dist/MarkerCluster.Default.css" />
+        <!--[if lte IE 8]>
+        <![endif]-->
+        <script src="bower_components/Leaflet.markercluster/dist/leaflet.markercluster.js"></script>
+
+
+        <!-- build:js scripts/vendor.js -->
+        <!-- bower:js -->
+        <script src="bower_components/jquery/jquery.js"></script>
+        <!-- endbower -->
+        <!-- endbuild -->
+        <!-- build:js scripts/main.js -->
+        <script src='bower_components/underscore/underscore-min.js'></script> 
+        <script src="scripts/text_content.js"></script>
+        <script src="scripts/map.js"></script>
+        <script src="scripts/whiteballots.js"></script>
+        <!-- endbuild -->
+
+
+
+        <!-- build:js scripts/plugins.js -->
+        <script src="bower_components/sass-bootstrap/js/bootstrap-affix.js"></script>
+        <script src="bower_components/sass-bootstrap/js/bootstrap-alert.js"></script>
+        <script src="bower_components/sass-bootstrap/js/bootstrap-dropdown.js"></script>
+        <script src="bower_components/sass-bootstrap/js/bootstrap-tooltip.js"></script>
+        <script src="bower_components/sass-bootstrap/js/bootstrap-modal.js"></script>
+        <script src="bower_components/sass-bootstrap/js/bootstrap-transition.js"></script>
+        <script src="bower_components/sass-bootstrap/js/bootstrap-button.js"></script>
+        <script src="bower_components/sass-bootstrap/js/bootstrap-popover.js"></script>
+        <script src="bower_components/sass-bootstrap/js/bootstrap-typeahead.js"></script>
+        <script src="bower_components/sass-bootstrap/js/bootstrap-carousel.js"></script>
+        <script src="bower_components/sass-bootstrap/js/bootstrap-scrollspy.js"></script>
+        <script src="bower_components/sass-bootstrap/js/bootstrap-collapse.js"></script>
+        <script src="bower_components/sass-bootstrap/js/bootstrap-tab.js"></script>
+        <!-- endbuild -->
+</body>
+</html>

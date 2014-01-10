@@ -1,0 +1,153 @@
+/* line 7, ../../app/styles/white_ballots.scss */
+
+h1 {
+  margin: 0 0 0px 0;
+  font-weight: 700;
+}
+
+/* line 11, ../../app/styles/white_ballots.scss */
+
+#tloc {
+  font-family: Helvetica, sans-serif;
+  font-weight: 400;
+  font-size: 1.3em;
+  color: #646464;
+  padding-bottom: 0.8em;
+}
+
+/* line 19, ../../app/styles/white_ballots.scss */
+
+#tnum {
+  font-family: Helvetica, sans-serif;
+  font-color: #28283c;
+  font-size: 4em;
+  font-weight: 800;
+}
+
+/* line 28, ../../app/styles/white_ballots.scss */
+
+.text_overlay {
+  margin: 75px 0 50px 50px;
+  padding: 20px;
+  color: #282828;
+  background-color: rgba(255, 255, 255, 0.7);
+  max-width: 750px;
+  position: absolute;
+  top: 0px;
+  left: 0px;
+  z-index: 4;
+  font-size: 1.3em;
+}
+
+/* line 42, ../../app/styles/white_ballots.scss */
+
+.text_overlay p {
+  max-width: 550px;
+  line-height: 1.4em;
+  margin: 10px 0 20px 0;
+}
+
+/* line 48, ../../app/styles/white_ballots.scss */
+
+.text_overlay #desc {
+  font-weight: 300;
+  font-size: 1em;
+  font-family: "Lato", Helvetica Neue, serif;
+  color: #787878;
+}
+
+/* line 56, ../../app/styles/white_ballots.scss */
+
+.text_overlay.en {
+  text-align: left;
+}
+
+/* line 60, ../../app/styles/white_ballots.scss */
+
+.text_overlay.en .time_section #time,
+.text_overlay.en .time_section #time_desc {
+  float: left;
+}
+
+/* line 67, ../../app/styles/white_ballots.scss */
+
+#tooltip-overlay {
+  padding: 10px;
+  z-index: 9999;
+  position: absolute;
+  bottom: 30px;
+  right: 100px;
+  background: white;
+  color: black;
+  text-align: center;
+}
+
+/* line 79, ../../app/styles/white_ballots.scss */
+
+.control {
+  width: 100px;
+  padding: 10px 0 10px 0;
+  text-align: center;
+  font: 15px Helvetica Neue;
+  font-weight: 700;
+  background-color: white;
+  display: inline-block;
+  cursor: pointer;
+}
+
+/* line 88, ../../app/styles/white_ballots.scss */
+
+.control:hover {
+  color: #c86464;
+}
+
+/* line 92, ../../app/styles/white_ballots.scss */
+
+#2009_invalid {
+  border-right: 1px solid #646464;
+}
+
+/* line 96, ../../app/styles/white_ballots.scss */
+
+.time_section {
+  display: block;
+  position: relative;
+}
+
+/* line 100, ../../app/styles/white_ballots.scss */
+
+#time,
+#time_desc {
+  display: inline-block;
+  padding: 10px 0 10px 0;
+  font-family: "Lato", serif;
+  font-weight: 800;
+}
+
+/* line 107, ../../app/styles/white_ballots.scss */
+
+#invalid_2009 {
+  border-right: 1px solid black;
+}
+
+/* line 111, ../../app/styles/white_ballots.scss */
+
+#timepicker {
+  display: inline-block;
+  margin-top: 15px;
+  width: 15px;
+  height: 15px;
+  background-color: #c8c8be;
+  background-color: #c86464;
+  background-color: black;
+  border-radius: 50%;
+  float: left;
+}
+
+/* line 122, ../../app/styles/white_ballots.scss */
+
+#time {
+  font-size: 2em;
+  margin: 0 20px 0 35px;
+  font-weight: 700;
+}

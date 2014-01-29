@@ -6,7 +6,8 @@
     "jquery": "~1.9.1",
     "Leaflet.markercluster": "git://github.com/Leaflet/Leaflet.markercluster.git",
     "leaflet": "~0.7.1",
-    "underscore": "~1.5.2"
+    "underscore": "~1.5.2",
+    "d3": "~3.4.1"
   },
   "devDependencies": {}
 }

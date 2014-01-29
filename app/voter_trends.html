@@ -14,12 +14,11 @@
         <!-- build:css(.tmp) styles/main.css -->
             <link href="//netdna.bootstrapcdn.com/font-awesome/4.0.0/css/font-awesome.css" rel="stylesheet">
             <link rel="stylesheet" href="styles/main.css">
-            <link rel="stylesheet" href="styles/registered_voters.css">
+            <link rel="stylesheet" href="styles/voter_trends.css">
         <!-- endbuild -->
-
+        <script src="scripts/dimple.min.js"></script>
         <script src='//api.tiles.mapbox.com/mapbox.js/v1.5.2/mapbox.js'></script>
         <link href='//api.tiles.mapbox.com/mapbox.js/v1.5.2/mapbox.css' rel='stylesheet' />
-
     </head>
     <body>
         
@@ -27,8 +26,8 @@
 
             <li class='langbtn' id='download-data'>DOWNLOAD DATA
                 <ul id='toolbar-download'>
-                    <a href="data/vote_power/vote_power.csv" > <li class='download-li'>CSV</li> <a> 
-                    <a href="data/vote_power/vote_power.geojson" >  <li class='download-li'>GEOJSON</li> <a> 
+                    <a href="data/vote_power/vote_power.csv" > <li class='download-li'>CSV</li> </a> 
+                    <a href="data/vote_power/vote_power.geojson" >  <li class='download-li'>GEOJSON</li> </a> 
                 </ul>
             </li>
             <li class='langbtn'>ABOUT THIS DATA</li>
@@ -37,17 +36,21 @@
             <li class='langbtn'><div class="fa fa-google-plus fa-1x"></div></li>
             <li id='ar' class='langbtn'>ع</li>
         </ul>
+ 
 
         <div id='map_container'>
             <div class='text_overlay ar'></div>
             <div class='text_overlay en'></div>
-
+            <div id="chart-container">
+            <div id="chart-current">Total</div>
+                <div id="chart2" class="chart"> </div>
+                <div id="chart" class="chart">
+                    <!-- <select name="confessions" id="confessions"></select> -->
+                </div>
+            </div>
             <div id='map'></div>
             <div id='tooltip-overlay'></div>
-
-
         </div>
-
         
         <!--[if lt IE 7]>
             <p class="browsehappy">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
@@ -84,17 +87,11 @@
 
         <script type='text/template' id='rv_text_overlay_template'>
             <h1> <%= title %> </h1>
-            <h2> Do all Lebanese citizens have <br> equal voting powers? </h2>
+            <h2 id="desc2"> How has the lebanese population changed over time?</h2>
             <p id='desc'>
                 <%= desc %>
             </p>
-            <div class='legend clearfix'>
-                <div><b>Over</b> represented</div>
-                <div class='legend inner'></div>
-                <div><b>Under</b> represented</div>
-
-            </div>
-              
+            
         </script>
 
         <script type='text/template' id='time_section_template'>
@@ -139,16 +136,18 @@
         <script src="bower_components/Leaflet.markercluster/dist/leaflet.markercluster.js"></script>
 
 
+
         <!-- build:js scripts/vendor.js -->
         <!-- bower:js -->
         <script src="bower_components/jquery/jquery.js"></script>
+        <script src="bower_components/d3/d3.min.js"></script>
         <!-- endbower -->
         <!-- endbuild -->
         <!-- build:js scripts/main.js -->
         <script src='bower_components/underscore/underscore-min.js'></script> 
         <script src="scripts/text_content.js"></script>
         <script src="scripts/map.js"></script>
-        <script src="scripts/registeredvoters.js"></script>
+        <script src="scripts/newmap.js"></script>
         <!-- endbuild -->
 
 

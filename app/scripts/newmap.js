@@ -115,7 +115,7 @@ function loader(name) {
 		myChart.addCategoryAxis("x", "Year").addOrderRule("Population")
 		myChart.addSeries("Year", dimple.plot.bar)
 		storyboard = myChart.setStoryboard("Confession")
-		storyboard.autoplay = true;
+		storyboard.autoplay = false;
 
 		myChart2.addMeasureAxis("y", "Population")
 		myChart2.addCategoryAxis("x", "Confession").addOrderRule("Population")
@@ -141,7 +141,7 @@ $('document').ready(function(){
 	$("select").change(function() {
 		curr_confession = $("select option:selected").attr('value');
 		console.log(curr_confession)
-		storyboard.goToFrame(curr_confession);
+		storyboard.goToFrame(confessions[curr_confession]);
 	})
 	// whiteBallots.init();
 });

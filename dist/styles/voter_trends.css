@@ -1,0 +1,169 @@
+/* line 2, ../../app/styles/voter_trends.scss */
+
+h1 {
+  margin: 0 0 0px 0;
+  font-weight: 700;
+  font-size: 50px;
+}
+
+/* line 7, ../../app/styles/voter_trends.scss */
+
+h2 {
+  font-size: 25px;
+  line-height: 30px;
+  font-weight: 100;
+  color: #64646e;
+}
+
+/* line 15, ../../app/styles/voter_trends.scss */
+
+#tooltip-content {
+  padding: 10px;
+  z-index: 9999;
+  position: absolute;
+  bottom: 30px;
+  right: 100px;
+  background: white;
+  color: black;
+  text-align: center;
+}
+
+/* line 27, ../../app/styles/voter_trends.scss */
+
+#voters,
+#seats {
+  display: inline-block;
+  margin: 20px 15px 10px 15px;
+  min-width: 100px;
+}
+
+/* line 33, ../../app/styles/voter_trends.scss */
+
+.perc {
+  font-size: 40px;
+  margin: 7px 0 10px 0;
+}
+
+/* line 37, ../../app/styles/voter_trends.scss */
+
+.total {
+  font-size: 18px;
+  font-weight: 100;
+}
+
+/* line 41, ../../app/styles/voter_trends.scss */
+
+.llabel {
+  font-weight: 100;
+  font-size: 16px;
+}
+
+/* line 48, ../../app/styles/voter_trends.scss */
+
+#tloc {
+  font-family: Helvetica, sans-serif;
+  font-weight: 400;
+  font-size: 1.3em;
+  color: #646464;
+  padding-bottom: 0.8em;
+}
+
+/* line 56, ../../app/styles/voter_trends.scss */
+
+#tnum {
+  font-family: Helvetica, sans-serif;
+  font-color: #28283c;
+  font-size: 4em;
+  font-weight: 800;
+}
+
+/* line 65, ../../app/styles/voter_trends.scss */
+
+.text_overlay {
+  margin: 75px 0 50px 50px;
+  padding: 20px;
+  color: #282828;
+  background-color: rgba(255, 255, 255, 0.7);
+  width: 50%;
+  max-width: 450px;
+  position: absolute;
+  top: 0px;
+  left: 0px;
+  z-index: 4;
+  font-size: 1.3em;
+}
+
+/* line 80, ../../app/styles/voter_trends.scss */
+
+.text_overlay p {
+  max-width: 550px;
+  text-align: justify;
+  line-height: 1.4em;
+  margin: 30px 0 20px 0;
+}
+
+/* line 87, ../../app/styles/voter_trends.scss */
+
+.text_overlay #desc {
+  font-weight: 300;
+  font-size: 1em;
+  font-family: "Lato", Helvetica Neue, serif;
+  color: #787878;
+}
+
+/* line 96, ../../app/styles/voter_trends.scss */
+
+.text_overlay.en {
+  text-align: left;
+}
+
+/* line 100, ../../app/styles/voter_trends.scss */
+
+.text_overlay.en .time_section #time,
+.text_overlay.en .time_section #time_desc {
+  float: left;
+}
+
+/* line 107, ../../app/styles/voter_trends.scss */
+
+#chart-container {
+  position: absolute;
+  top: 300px;
+  right: 45%;
+  width: 50%;
+  z-index: 10;
+}
+
+/* line 114, ../../app/styles/voter_trends.scss */
+
+.chart {
+  display: inline-block;
+  width: 45%;
+  max-width: 350px;
+  height: 60%;
+  margin: 5px;
+  max-height: 350px;
+}
+
+/* line 122, ../../app/styles/voter_trends.scss */
+
+#map_container {
+  height: 0px;
+}
+
+/* line 126, ../../app/styles/voter_trends.scss */
+
+#map,
+#map2 {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 40%;
+  width: 60%;
+}
+
+/* line 130, ../../app/styles/voter_trends.scss */
+
+.leaflet-control-container {
+  display: none;
+}

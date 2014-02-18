@@ -90,11 +90,13 @@ var featuresToMarkerLayer = function(features, category){
 };
 
 content.layers = [];
+content.layers[0] = 
 
 // Get 2005 invalid votes, set marker layer  0
 // And display marker layer
 $.getJSON('data/white_ballots/2005_white_ballots.geojson', function(response){
 	content.layers[0] = featuresToMarkerLayer(response.features, "invalid_votes");
+	whiteBallots.init();
 	// whiteBallots.map.addLayer(content.layers[0]);
 });
 
@@ -111,7 +113,7 @@ $.getJSON('data/white_ballots/2009_white_ballots.geojson', function(response){
 }
 
 
-$('document').ready(function(){
-	whiteBallots.init();
-});
+// $('document').ready(function(){
+// 	whiteBallots.init();
+// });
 

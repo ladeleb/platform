@@ -1,12 +1,10 @@
-/* line 7, ../../app/styles/white_ballots.scss */
-
+/* line 7, white_ballots.scss */
 h1 {
   margin: 0 0 0px 0;
   font-weight: 700;
 }
 
-/* line 11, ../../app/styles/white_ballots.scss */
-
+/* line 11, white_ballots.scss */
 #tloc {
   font-family: Helvetica, sans-serif;
   font-weight: 400;
@@ -15,8 +13,7 @@ h1 {
   padding-bottom: 0.8em;
 }
 
-/* line 19, ../../app/styles/white_ballots.scss */
-
+/* line 19, white_ballots.scss */
 #tnum {
   font-family: Helvetica, sans-serif;
   font-color: #28283c;
@@ -24,8 +21,7 @@ h1 {
   font-weight: 800;
 }
 
-/* line 28, ../../app/styles/white_ballots.scss */
-
+/* line 28, white_ballots.scss */
 .text_overlay {
   margin: 75px 0 50px 50px;
   padding: 20px;
@@ -38,17 +34,13 @@ h1 {
   z-index: 4;
   font-size: 1.3em;
 }
-
-/* line 42, ../../app/styles/white_ballots.scss */
-
+/* line 42, white_ballots.scss */
 .text_overlay p {
   max-width: 550px;
   line-height: 1.4em;
   margin: 10px 0 20px 0;
 }
-
-/* line 48, ../../app/styles/white_ballots.scss */
-
+/* line 48, white_ballots.scss */
 .text_overlay #desc {
   font-weight: 300;
   font-size: 1em;
@@ -56,21 +48,16 @@ h1 {
   color: #787878;
 }
 
-/* line 56, ../../app/styles/white_ballots.scss */
-
+/* line 56, white_ballots.scss */
 .text_overlay.en {
   text-align: left;
 }
-
-/* line 60, ../../app/styles/white_ballots.scss */
-
-.text_overlay.en .time_section #time,
-.text_overlay.en .time_section #time_desc {
+/* line 60, white_ballots.scss */
+.text_overlay.en .time_section #time, .text_overlay.en .time_section #time_desc {
   float: left;
 }
 
-/* line 67, ../../app/styles/white_ballots.scss */
-
+/* line 67, white_ballots.scss */
 #tooltip-overlay {
   padding: 10px;
   z-index: 9999;
@@ -82,8 +69,7 @@ h1 {
   text-align: center;
 }
 
-/* line 79, ../../app/styles/white_ballots.scss */
-
+/* line 79, white_ballots.scss */
 .control {
   width: 100px;
   padding: 10px 0 10px 0;
@@ -94,44 +80,36 @@ h1 {
   display: inline-block;
   cursor: pointer;
 }
-
-/* line 88, ../../app/styles/white_ballots.scss */
-
+/* line 88, white_ballots.scss */
 .control:hover {
   color: #c86464;
 }
 
-/* line 92, ../../app/styles/white_ballots.scss */
-
+/* line 92, white_ballots.scss */
 #2009_invalid {
   border-right: 1px solid #646464;
 }
 
-/* line 96, ../../app/styles/white_ballots.scss */
-
+/* line 96, white_ballots.scss */
 .time_section {
   display: block;
   position: relative;
 }
 
-/* line 100, ../../app/styles/white_ballots.scss */
-
-#time,
-#time_desc {
+/* line 100, white_ballots.scss */
+#time, #time_desc {
   display: inline-block;
   padding: 10px 0 10px 0;
   font-family: "Lato", serif;
   font-weight: 800;
 }
 
-/* line 107, ../../app/styles/white_ballots.scss */
-
+/* line 107, white_ballots.scss */
 #invalid_2009 {
   border-right: 1px solid black;
 }
 
-/* line 111, ../../app/styles/white_ballots.scss */
-
+/* line 111, white_ballots.scss */
 #timepicker {
   display: inline-block;
   margin-top: 15px;
@@ -144,8 +122,7 @@ h1 {
   float: left;
 }
 
-/* line 122, ../../app/styles/white_ballots.scss */
-
+/* line 122, white_ballots.scss */
 #time {
   font-size: 2em;
   margin: 0 20px 0 35px;

@@ -77,8 +77,8 @@ h1{
 }
 
 .control{
-	width:100px;
-	padding: 10px 0 10px 0;
+	width:150px;
+	padding: 5px;
 	text-align:center;
 	font: 15px Helvetica Neue;
 	font-weight: 700 ;
@@ -89,8 +89,9 @@ h1{
 		color: $red;
 	}
 }
-#2009_invalid{
-	border-right: 1px solid rgb(100,100,100);
+.selected {
+	color: white;
+	background-color: $red;
 }
 
 .time_section{
@@ -104,9 +105,9 @@ h1{
 	font-weight: 800;
 }
 
-#invalid_2009{
-	border-right: 1px solid black;
-}
+// #invalid_2009{
+// 	border-right: 1px solid black;
+// }
 
 #timepicker{
 	display:inline-block;

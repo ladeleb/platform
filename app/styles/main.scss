@@ -110,13 +110,13 @@ ul#social{
 
 $col : rgb(40,40,60);
 .langbtn{
-	padding: 20px;
+	padding: 16px;
 
 	text-align: center;
 	display:inline-block;
 	min-width:30px;
 	margin-right:10px;
-	float:right;
+	float:left;
 	font-size:0.87em;
 	font-weight: 600;
 
@@ -131,6 +131,11 @@ $col : rgb(40,40,60);
 		color:white;
 	}
 }
+
+#download-data {
+	margin-left: 60px;
+}
+
 .langbtn:last-child{
 	border:none;
 }

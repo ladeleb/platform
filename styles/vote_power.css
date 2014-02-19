@@ -1,11 +1,11 @@
-/* line 2, vote_power.scss */
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/marcfarra\/Code\/ladeleb\/platform\/app\/styles\/vote_power\.scss}line{font-family:\000032}}
 h1 {
   margin: 0 0 0px 0;
   font-weight: 700;
   font-size: 50px;
 }
 
-/* line 7, vote_power.scss */
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/marcfarra\/Code\/ladeleb\/platform\/app\/styles\/vote_power\.scss}line{font-family:\000037}}
 h2 {
   font-size: 25px;
   line-height: 30px;
@@ -13,44 +13,44 @@ h2 {
   color: #64646e;
 }
 
-/* line 15, vote_power.scss */
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/marcfarra\/Code\/ladeleb\/platform\/app\/styles\/vote_power\.scss}line{font-family:\0000315}}
 #tooltip-content {
   padding: 10px;
   z-index: 9999;
   position: absolute;
-  bottom: 30px;
-  right: 100px;
-  background: white;
+  bottom: 50px;
+  right: 130px;
+  background: rgba(255, 255, 255, 0.5);
   color: black;
   text-align: center;
 }
 
-/* line 27, vote_power.scss */
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/marcfarra\/Code\/ladeleb\/platform\/app\/styles\/vote_power\.scss}line{font-family:\0000327}}
 #voters, #seats {
   display: inline-block;
   margin: 20px 15px 10px 15px;
   min-width: 100px;
 }
 
-/* line 33, vote_power.scss */
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/marcfarra\/Code\/ladeleb\/platform\/app\/styles\/vote_power\.scss}line{font-family:\0000333}}
 .perc {
   font-size: 40px;
   margin: 7px 0 10px 0;
 }
 
-/* line 37, vote_power.scss */
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/marcfarra\/Code\/ladeleb\/platform\/app\/styles\/vote_power\.scss}line{font-family:\0000337}}
 .total {
   font-size: 18px;
   font-weight: 100;
 }
 
-/* line 41, vote_power.scss */
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/marcfarra\/Code\/ladeleb\/platform\/app\/styles\/vote_power\.scss}line{font-family:\0000341}}
 .llabel {
   font-weight: 100;
   font-size: 16px;
 }
 
-/* line 48, vote_power.scss */
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/marcfarra\/Code\/ladeleb\/platform\/app\/styles\/vote_power\.scss}line{font-family:\0000348}}
 #tloc {
   font-family: Helvetica, sans-serif;
   font-weight: 400;
@@ -59,7 +59,7 @@ h2 {
   padding-bottom: 0.8em;
 }
 
-/* line 56, vote_power.scss */
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/marcfarra\/Code\/ladeleb\/platform\/app\/styles\/vote_power\.scss}line{font-family:\0000356}}
 #tnum {
   font-family: Helvetica, sans-serif;
   font-color: #28283c;
@@ -67,7 +67,7 @@ h2 {
   font-weight: 800;
 }
 
-/* line 65, vote_power.scss */
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/marcfarra\/Code\/ladeleb\/platform\/app\/styles\/vote_power\.scss}line{font-family:\0000365}}
 .text_overlay {
   margin: 75px 0 50px 50px;
   padding: 20px;
@@ -81,14 +81,14 @@ h2 {
   z-index: 4;
   font-size: 1.3em;
 }
-/* line 80, vote_power.scss */
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/marcfarra\/Code\/ladeleb\/platform\/app\/styles\/vote_power\.scss}line{font-family:\0000380}}
 .text_overlay p {
   max-width: 550px;
   text-align: justify;
   line-height: 1.4em;
   margin: 30px 0 20px 0;
 }
-/* line 87, vote_power.scss */
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/marcfarra\/Code\/ladeleb\/platform\/app\/styles\/vote_power\.scss}line{font-family:\0000387}}
 .text_overlay #desc {
   font-weight: 300;
   font-size: 1em;
@@ -96,11 +96,11 @@ h2 {
   color: #787878;
 }
 
-/* line 96, vote_power.scss */
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/marcfarra\/Code\/ladeleb\/platform\/app\/styles\/vote_power\.scss}line{font-family:\0000396}}
 .text_overlay.en {
   text-align: left;
 }
-/* line 100, vote_power.scss */
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/marcfarra\/Code\/ladeleb\/platform\/app\/styles\/vote_power\.scss}line{font-family:\00003100}}
 .text_overlay.en .time_section #time, .text_overlay.en .time_section #time_desc {
   float: left;
 }

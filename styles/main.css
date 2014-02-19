@@ -7092,14 +7092,18 @@ ul#social li {
   padding: 10px 0 10px 0;
 }
 
+#download-data{
+  margin-left: 100px;
+}
+
 /* line 112, main.scss */
 .langbtn {
   padding: 20px;
   text-align: center;
   display: inline-block;
   min-width: 30px;
-  margin-right: 10px;
-  float: right;
+  margin-left: 10px;
+  float: left;
   font-size: 0.87em;
   font-weight: 600;
   color: white;

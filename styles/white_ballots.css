@@ -1,10 +1,10 @@
-/* line 7, white_ballots.scss */
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/marcfarra\/Code\/ladeleb\/platform\/app\/styles\/white_ballots\.scss}line{font-family:\000037}}
 h1 {
   margin: 0 0 0px 0;
   font-weight: 700;
 }
 
-/* line 11, white_ballots.scss */
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/marcfarra\/Code\/ladeleb\/platform\/app\/styles\/white_ballots\.scss}line{font-family:\0000311}}
 #tloc {
   font-family: Helvetica, sans-serif;
   font-weight: 400;
@@ -13,7 +13,7 @@ h1 {
   padding-bottom: 0.8em;
 }
 
-/* line 19, white_ballots.scss */
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/marcfarra\/Code\/ladeleb\/platform\/app\/styles\/white_ballots\.scss}line{font-family:\0000319}}
 #tnum {
   font-family: Helvetica, sans-serif;
   font-color: #28283c;
@@ -21,26 +21,27 @@ h1 {
   font-weight: 800;
 }
 
-/* line 28, white_ballots.scss */
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/marcfarra\/Code\/ladeleb\/platform\/app\/styles\/white_ballots\.scss}line{font-family:\0000328}}
 .text_overlay {
   margin: 75px 0 50px 50px;
   padding: 20px;
   color: #282828;
   background-color: rgba(255, 255, 255, 0.7);
   max-width: 750px;
+  width: 40%;
   position: absolute;
   top: 0px;
   left: 0px;
   z-index: 4;
   font-size: 1.3em;
 }
-/* line 42, white_ballots.scss */
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/marcfarra\/Code\/ladeleb\/platform\/app\/styles\/white_ballots\.scss}line{font-family:\0000343}}
 .text_overlay p {
   max-width: 550px;
   line-height: 1.4em;
   margin: 10px 0 20px 0;
 }
-/* line 48, white_ballots.scss */
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/marcfarra\/Code\/ladeleb\/platform\/app\/styles\/white_ballots\.scss}line{font-family:\0000349}}
 .text_overlay #desc {
   font-weight: 300;
   font-size: 1em;
@@ -48,16 +49,16 @@ h1 {
   color: #787878;
 }
 
-/* line 56, white_ballots.scss */
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/marcfarra\/Code\/ladeleb\/platform\/app\/styles\/white_ballots\.scss}line{font-family:\0000357}}
 .text_overlay.en {
   text-align: left;
 }
-/* line 60, white_ballots.scss */
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/marcfarra\/Code\/ladeleb\/platform\/app\/styles\/white_ballots\.scss}line{font-family:\0000361}}
 .text_overlay.en .time_section #time, .text_overlay.en .time_section #time_desc {
   float: left;
 }
 
-/* line 67, white_ballots.scss */
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/marcfarra\/Code\/ladeleb\/platform\/app\/styles\/white_ballots\.scss}line{font-family:\0000368}}
 #tooltip-overlay {
   padding: 10px;
   z-index: 9999;
@@ -69,10 +70,10 @@ h1 {
   text-align: center;
 }
 
-/* line 79, white_ballots.scss */
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/marcfarra\/Code\/ladeleb\/platform\/app\/styles\/white_ballots\.scss}line{font-family:\0000380}}
 .control {
-  width: 100px;
-  padding: 10px 0 10px 0;
+  width: 150px;
+  padding: 5px;
   text-align: center;
   font: 15px Helvetica Neue;
   font-weight: 700;
@@ -80,23 +81,24 @@ h1 {
   display: inline-block;
   cursor: pointer;
 }
-/* line 88, white_ballots.scss */
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/marcfarra\/Code\/ladeleb\/platform\/app\/styles\/white_ballots\.scss}line{font-family:\0000389}}
 .control:hover {
   color: #c86464;
 }
 
-/* line 92, white_ballots.scss */
-#2009_invalid {
-  border-right: 1px solid #646464;
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/marcfarra\/Code\/ladeleb\/platform\/app\/styles\/white_ballots\.scss}line{font-family:\0000393}}
+.selected {
+  color: white;
+  background-color: #c86464;
 }
 
-/* line 96, white_ballots.scss */
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/marcfarra\/Code\/ladeleb\/platform\/app\/styles\/white_ballots\.scss}line{font-family:\0000398}}
 .time_section {
   display: block;
   position: relative;
 }
 
-/* line 100, white_ballots.scss */
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/marcfarra\/Code\/ladeleb\/platform\/app\/styles\/white_ballots\.scss}line{font-family:\00003102}}
 #time, #time_desc {
   display: inline-block;
   padding: 10px 0 10px 0;
@@ -104,12 +106,7 @@ h1 {
   font-weight: 800;
 }
 
-/* line 107, white_ballots.scss */
-#invalid_2009 {
-  border-right: 1px solid black;
-}
-
-/* line 111, white_ballots.scss */
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/marcfarra\/Code\/ladeleb\/platform\/app\/styles\/white_ballots\.scss}line{font-family:\00003113}}
 #timepicker {
   display: inline-block;
   margin-top: 15px;
@@ -122,7 +119,7 @@ h1 {
   float: left;
 }
 
-/* line 122, white_ballots.scss */
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/marcfarra\/Code\/ladeleb\/platform\/app\/styles\/white_ballots\.scss}line{font-family:\00003124}}
 #time {
   font-size: 2em;
   margin: 0 20px 0 35px;

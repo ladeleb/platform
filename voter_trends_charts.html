@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Trying dimple</title>
+	<meta name="viewport" content="initial-scale=1.0, maximum-scale=1.0, width=device-width">
+	<script type="text/javascript" src="components/d3/d3.min.js"></script>
+	<script type="text/javascript" src="components/jquery/jquery.min.js"></script>
+	<script type="text/javascript" src="dimple.min.js"></script>
+	<style>	
+		text {
+			font-size: 0.8em !important;
+		}
+		.chart {
+			display: inline-block;
+			width: 80%; max-width: 500px;
+			max-height: 500px;
+			margin: 20px;
+			margin-bottom: 40px;
+		}
+
+		.button {
+			cursor: pointer;
+			font-size: 1em;
+			font-family: helvetica;
+			font-weight: 100;
+			margin: 2px;
+			padding: 2px;
+			text-align: center;
+			min-width: 50px;
+			height: 30px;
+			line-height: 30px;
+			display: inline-block;
+			border: 1px solid rgba(0,0,0,0.1);
+			color: black;
+		}
+		.highlight, .highlight2 {
+			background-color: #d26b5f;
+		}
+	</style>
+</head>
+<body>
+	<nav id="districts"></nav>
+
+	<div id="chart" class="chart">
+		<nav id="confessions"></nav>
+	</div>
+	<div id="chart2" class="chart"></div>
+
+	<script type="text/javascript">
+		var confessions = {
+			alawite: "Alawite", 
+			armcath: "Armenian Catholic", 
+			sunni: "Sunni", 
+			shia: "Shia", 
+			maronite: "Maronite", 
+			greekorth: "Greek Orthodox", 
+			druze: "Druze",
+			greekcath: "Greek Catholic", 
+			armorth: "Armenian Orthodox", 
+			minorities: "Minorities",
+			evangelical: "Evangelical"
+		}
+		var names = {
+			"total"		: "data/total.csv",
+			"akkar"		: "data/akkar.csv",
+			"saida"		: "data/saida.csv",
+			"aley" 		: "data/aley.csv",
+			"jbeil"		: "data/jbeil.csv",
+			"baabda"	: "data/baabda.csv",
+			"jezzine"	: "data/jezzine.csv",
+			"baalbek"	: "data/baalbek.csv",           
+			"kesrwan"	: "data/kesrwan.csv ",          
+			"tripoli"	: "data/tripoli.csv",
+			"batroun"	: "data/batroun.csv",           
+			"koura"		: "data/koura.csv",           
+			"tyr"		: "data/tyr.csv",
+			"bcharry"	: "data/bcharry.csv ",          
+			"beirut"	: "data/beirut.csv",           
+			"matn"		: "data/matn.csv",   
+			"westbekaa-rachaya": "data/westbekaa.rachaya.csv",
+			"bent-jbel"	: "data/bent.jbel.csv         ",
+			"minniye-danniyeh":	"data/minniye.danniyeh.csv",  
+			"zahle"		:"data/zahle.csv",
+			"chouf"		: "data/chouf.csv",             
+			"nabatiyeh"	: "data/nabatiyeh.csv",         
+			"zgharta"	: "data/zgharta.csv"
+		}
+
+		var curr_confession = "alawite"; 
+		for (obj in names) {
+			$("#districts").append('<div id='+ obj +' class="button">' + obj + '</div>');
+			$("#" + obj).click(function() { 
+				$(".highlight").removeClass('highlight')
+				$(this).addClass("highlight");
+				loader(names[$(this).attr('id')])
+				$("#" + curr_confession).click();
+			});
+		}
+
+		//Setup storyboard
+		var storyboard;
+		for (obj in confessions) {
+			$("#confessions").append('<div id='+ obj +' class="button">' + confessions[obj]+ '</div>') 
+			$("#" + obj).click(function() {
+				curr_confession = $(this).attr('id')
+				$(".highlight2").removeClass('highlight2')
+				$(this).addClass("highlight2")
+				storyboard.goToFrame(confessions[$(this).attr('id')])
+			})
+		}
+
+		$("#total").click();
+		$("#alawite").click();
+		function loader(name) {
+			d3.selectAll("svg").remove();
+			var svg = dimple.newSvg("#chart", "100%", "100%");
+			var svg2 = dimple.newSvg("#chart2", "100%", "100%");
+			d3.csv(name, function(data) {
+				var myChart = new dimple.chart(svg, data);
+				var myChart2 = new dimple.chart(svg2, data);
+				function bounds() {
+					$(".chart").css("max-height", "" + $(window).height/1.5 + "px")
+					myChart.setBounds("20%", "10%", "70%", "80%")
+					myChart2.setBounds("30%", "10%", "70%", "80%")
+				}
+				bounds();
+				$( window ).resize(bounds);
+				myChart.addMeasureAxis("y", "Population")
+				myChart.addCategoryAxis("x", "Year").addOrderRule("Population")
+				myChart.addSeries("Year", dimple.plot.bar)
+				storyboard = myChart.setStoryboard("Confession")
+				storyboard.autoplay = false;
+
+				myChart2.addMeasureAxis("x", "Population")
+				myChart2.addCategoryAxis("y", "Confession").addOrderRule("Population")
+				myChart2.addSeries(null, dimple.plot.bar)
+				myChart2.setStoryboard("Year")
+
+				myChart.draw();
+				myChart2.draw();
+				$("#" + curr_confession).click();
+			})	
+		}
+	</script>
+</body>
+</html>

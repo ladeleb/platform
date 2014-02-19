@@ -24,14 +24,14 @@
 
             <li class="langbtn" id="download-data">DOWNLOAD DATA
                 <ul id="toolbar-download">
-                    <a href="data/vote_power/vote_power.csv"> <li class="download-li">CSV</li> <a> 
-                    <a href="data/vote_power/vote_power.geojson">  <li class="download-li">GEOJSON</li> <a> 
-                </a></a></a></a></ul>
+                    <a href="data/vote_power/vote_power.csv"> <li class="download-li">CSV</li> </a> 
+                    <a href="data/vote_power/vote_power.geojson">  <li class="download-li">GEOJSON</li> </a> 
+                </ul>
             </li>
-            <li class="langbtn">ABOUT THIS DATA</li>
+            <!-- <li class='langbtn'>ABOUT THIS DATA</li> -->
             <li class="langbtn"><div class="fa fa-twitter fa-1x"></div></li>
             <li class="langbtn"><div class="fa fa-facebook fa-1x"></div></li>
-            <li class="langbtn"><div class="fa fa-google-plus fa-1x"></div></li>
+            <!-- <li class='langbtn'><div class="fa fa-google-plus fa-1x"></div></li> -->
             <li id="ar" class="langbtn">ع</li>
         </ul>
 
@@ -41,8 +41,6 @@
 
             <div id="map"></div>
             <div id="tooltip-overlay"></div>
-
-
         </div>
 
         
@@ -50,32 +48,12 @@
             <p class="browsehappy">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
         <![endif]-->
 
-        <!-- TEMPLATS -->
+        <!-- TEMPLATES -->
         <script type="text/template" id="legend_template">
-                <div id='leg'>
-                    <div id='legcol' style='background-color: <%= color %>'></div>
-                   <!-- <div id='leglabel'> <%= label %> </div> -->
-                    </div>
-        </script>
-
-        <script type="text/template" id="wb_text_overlay_template">
-                <h1> <%= title %> </h1>
-                <p id='desc'>
-                    <%= desc %>
-                </p>
-                <div id='<%= content[0].id %>' class='time_section clearfix'>
-                    <div id='timepicker'></div>
-                    <div id='time'> <%= content[0].ttime %> </div>
-                    <div id='time_desc'> <%= content[0].time_desc %> </div> 
-                    <div class="control" id="2005"></div>
-                </div>
-                 <div id='<%= content[1].id %>' class='time_section clearfix'>
-                    <div id='timepicker'></div>
-                    <div id='time'> <%= content[1].ttime %> </div>
-                    <div id='time_desc'> <%= content[1].time_desc %> </div> 
-                    <div class="control" id="2009_invalid">INVALID</div>
-                    <div class="control" id="2009_white">WHITE</div>
-                </div>
+            <div id='leg'>
+                <div id='legcol' style='background-color: <%= color %>'></div>
+               <!-- <div id='leglabel'> <%= label %> </div> -->
+            </div>
         </script>
 
 
@@ -118,12 +96,12 @@
                 <div id='seats'>
                     <div class='llabel'> SEATS  </div>
                     <div class='perc' style='color: <%=color%>'>  <%= (Number(seats_perc)*100).toFixed(2)%>%   </div>
-                    <div class='total'> <%=seats_total%> total </div>
+                    <div class='total'> <%=seats_total%>/128 </div>
                 </div>
                 <div id='voters'>  
                     <div class='llabel'> VOTERS  </div>
                     <div class='perc' style='color: <%=color%>'> <%= (Number(voters_perc)*100).toFixed(2)%>%   </div>
-                    <div class='total'> <%=voters_total%> total </div>
+                    <div class='total'> <%=voters_total%>/3.2M </div>
                 </div>
             </div>
         </script>
@@ -138,6 +116,6 @@
         <script src="bower_components/underscore/underscore-min.js"></script> 
         <script src="scripts/text_content.js"></script>
         <script src="scripts/map.js"></script>
-        <script src="scripts/registeredvoters.js"></script>
+        <script src="scripts/vote_power.js"></script>
 </body>
 </html>

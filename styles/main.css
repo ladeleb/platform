@@ -7094,12 +7094,12 @@ ul#social li {
 
 @media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/marcfarra\/Code\/ladeleb\/platform\/app\/styles\/main\.scss}line{font-family:\00003112}}
 .langbtn {
-  padding: 20px;
+  padding: 16px;
   text-align: center;
   display: inline-block;
   min-width: 30px;
   margin-right: 10px;
-  float: right;
+  float: left;
   font-size: 0.87em;
   font-weight: 600;
   color: white;
@@ -7120,22 +7120,27 @@ ul#social li {
   color: white;
 }
 
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/marcfarra\/Code\/ladeleb\/platform\/app\/styles\/main\.scss}line{font-family:\00003134}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/marcfarra\/Code\/ladeleb\/platform\/app\/styles\/main\.scss}line{font-family:\00003135}}
+#download-data {
+  margin-left: 60px;
+}
+
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/marcfarra\/Code\/ladeleb\/platform\/app\/styles\/main\.scss}line{font-family:\00003139}}
 .langbtn:last-child {
   border: none;
 }
 
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/marcfarra\/Code\/ladeleb\/platform\/app\/styles\/main\.scss}line{font-family:\00003139}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/marcfarra\/Code\/ladeleb\/platform\/app\/styles\/main\.scss}line{font-family:\00003144}}
 #ar, #en {
   color: #28283c;
 }
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/marcfarra\/Code\/ladeleb\/platform\/app\/styles\/main\.scss}line{font-family:\00003142}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/marcfarra\/Code\/ladeleb\/platform\/app\/styles\/main\.scss}line{font-family:\00003147}}
 #ar:hover, #en:hover {
   background-color: white;
   color: #28283c;
 }
 
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/marcfarra\/Code\/ladeleb\/platform\/app\/styles\/main\.scss}line{font-family:\00003148}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/marcfarra\/Code\/ladeleb\/platform\/app\/styles\/main\.scss}line{font-family:\00003153}}
 #ar {
   font-size: 1.3em;
 }

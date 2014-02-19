@@ -83,26 +83,37 @@ M.Map.prototype.renderContents = function( lang ){
  *					'ar' translates to arabic. Default is English
  */
 M.Map.prototype.transText = function(lang){
+	var that = this;
 	if (lang === 'ar'){
+		$("#ar").unbind("click");
 		$('#ar').html('EN');
 		$('#ar').attr('id', 'en');
 		$('.text_overlay.ar').fadeIn('10');
 		$('.text_overlay.en').fadeOut('10');
+		$('#en').on('click', function(e) {
+			that.transText('en');
+		});
 	} else {
+		$("#en").unbind("click");
 		$('#en').html('ع');
 		$('#en').attr('id', 'ar');
 		$('.text_overlay.ar').fadeOut('10');
 		$('.text_overlay.en').fadeIn('10');
+		$('#ar').on('click', function(e){
+			that.transText('ar');
+		});
 	}
 };
 
 M.Map.prototype.init = function(){
 	this.renderContents('en');
+	$('#ar').on('click', function(e){
+		that.transText('ar');
+	});
 	var that = this;
 
-	$('.lang').on('click', function(e){
-		that.transText($(e.toElement).attr('id'));
-	});
+	
+
 	$('#download-data').on('click', function(){
 		if ($('#toolbar-download').is(':visible'))
 			$('#toolbar-download').fadeOut(75);

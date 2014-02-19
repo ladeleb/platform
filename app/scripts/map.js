@@ -83,7 +83,7 @@ M.Map.prototype.renderContents = function( lang ){
  *					'ar' translates to arabic. Default is English
  */
 M.Map.prototype.transText = function(lang){
-	if (lang == 'ar'){
+	if (lang === 'ar'){
 		$('#ar').html('EN');
 		$('#ar').attr('id', 'en');
 		$('.text_overlay.ar').fadeIn('10');
@@ -100,7 +100,7 @@ M.Map.prototype.init = function(){
 	this.renderContents('en');
 	var that = this;
 
-	$('.langbtn').on('click', function(e){
+	$('.lang').on('click', function(e){
 		that.transText($(e.toElement).attr('id'));
 	});
 	$('#download-data').on('click', function(){

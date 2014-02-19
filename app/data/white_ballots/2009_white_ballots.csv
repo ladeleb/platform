@@ -1,27 +1,27 @@
-NAME_0	ID_1	ID_2	blank_vote	invalid_vote	GOVERNORATE	DISTRICT
-Lebanon	1	1	783	483	An Nabatiyah	Bent Jbayl
-Lebanon	1	4	92	67	An Nabatiyah	Nabatiyeh
-Lebanon	2	53	991	705	Beirut	Beirut 3
-Lebanon	3	10	157	393	Beqaa	Zahleh
-Lebanon	4	11	1013	577	Mount Lebanon	Aley
-Lebanon	4	12	414	526	Mount Lebanon	Baabda
-Lebanon	4	13	1502	1029	Mount Lebanon	Chouf
-Lebanon	4	14	180	128	Mount Lebanon	Jbayl
-Lebanon	4	15	215	266	Mount Lebanon	Kesrouan
-Lebanon	4	16	460	439	Mount Lebanon	Matn
-Lebanon	5	17	354	778	North Lebanon	Akkar
-Lebanon	5	18	117	129	North Lebanon	Batroun
-Lebanon	5	19	134	126	North Lebanon	Bcharreh
-Lebanon	5	20	161	178	North Lebanon	Koura
-Lebanon	5	21	436	495	North Lebanon	Minie-Danniyeh
-Lebanon	5	22	1027	1038	North Lebanon	Tripoli
-Lebanon	5	23	175	221	North Lebanon	Zgharta
-Lebanon	6	24	113	117	South Lebanon	Jezzine
-Lebanon	6	251	311	357	South Lebanon	Saida
-Lebanon	6	26	1073	640	South Lebanon	Sour
-Lebanon	6	252	677	333	South Lebanon	Zahrany
-Lebanon	2	52	315	450	Beirut	Beirut 2
-Lebanon	2	51	183	201	Beirut	Beirut 1
-Lebanon	3	6	869	776	Beqaa	Baalbek-Hermel
-Lebanon	3	7	264	402	Beqaa	WestBekaa-Rachaya
-Lebanon	1	2	506	536	An Nabatiyah	Marjayoun-Hasbaya
+NAME_0,ID_1,ID_2,blank_vote,invalid_vote,GOVERNORATE,DISTRICT
+Lebanon,1,1,783,483,An Nabatiyah,Bent Jbayl
+Lebanon,1,4,92,67,An Nabatiyah,Nabatiyeh
+Lebanon,2,53,991,705,Beirut,Beirut 3
+Lebanon,3,10,157,393,Beqaa,Zahleh
+Lebanon,4,11,1013,577,Mount Lebanon,Aley
+Lebanon,4,12,414,526,Mount Lebanon,Baabda
+Lebanon,4,13,1502,1029,Mount Lebanon,Chouf
+Lebanon,4,14,180,128,Mount Lebanon,Jbayl
+Lebanon,4,15,215,266,Mount Lebanon,Kesrouan
+Lebanon,4,16,460,439,Mount Lebanon,Matn
+Lebanon,5,17,354,778,North Lebanon,Akkar
+Lebanon,5,18,117,129,North Lebanon,Batroun
+Lebanon,5,19,134,126,North Lebanon,Bcharreh
+Lebanon,5,20,161,178,North Lebanon,Koura
+Lebanon,5,21,436,495,North Lebanon,Minie-Danniyeh
+Lebanon,5,22,1027,1038,North Lebanon,Tripoli
+Lebanon,5,23,175,221,North Lebanon,Zgharta
+Lebanon,6,24,113,117,South Lebanon,Jezzine
+Lebanon,6,251,311,357,South Lebanon,Saida
+Lebanon,6,26,1073,640,South Lebanon,Sour
+Lebanon,6,252,677,333,South Lebanon,Zahrany
+Lebanon,2,52,315,450,Beirut,Beirut 2
+Lebanon,2,51,183,201,Beirut,Beirut 1
+Lebanon,3,6,869,776,Beqaa,Baalbek-Hermel
+Lebanon,3,7,264,402,Beqaa,WestBekaa-Rachaya
+Lebanon,1,2,506,536,An Nabatiyah,Marjayoun-Hasbaya

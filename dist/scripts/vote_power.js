@@ -61,7 +61,7 @@ options.setTooltip = function( that ){
 					color = that.options.legend.colors[i].color;
 
 				//Updates for yellow
-				if (index < 1.1 && index > 0.95) {
+				if (index < 1.1 && index > 0.8) {
 					color = 'rgb(66,66,66)';
 				}
 			}

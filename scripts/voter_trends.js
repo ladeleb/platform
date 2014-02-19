@@ -1,4 +1,3 @@
-
 content = {};
 
 content.baseMap = 'mayakreidieh.map-dfh9esrb';
@@ -8,12 +7,13 @@ content.textTemplateId = '#rv_text_overlay_template';
 content.textEn =  {
 	title: 'Voter Trends',
 	desc : 'Click on a district to see the change in population.'
-}
+};
+
 /* AR */
 content.textAr = {
 	title : 'قوة <fh>الاقتراع بيضاء</fh>',
 	desc : 'الاقتراع الأبيض يرمز إلى رفض قوي من النظام السياسي ونظام الحكم والقانون الانتخابي. أنه ليس لديه اعتراف الدينية وصوت الثابت الوحيد في لبنان.'
-}
+};
 
 content.layers = [];
 content.layers[0] =  L.mapbox.tileLayer('kamicut.voter_trends');
@@ -24,30 +24,30 @@ content.templates = [
 " <div id='tloc'>fnasdklfja ksldfjaslkdfjalsd</div>",
 " <div id='tloc'>{{District}}</div> <div id='tnum'>{{blank_vote}}</div>",
 ""
-]
+];
 
 var options = {};
 
 options.setTooltip = function( that ){
 	foo = function( str ){
-		$("#chart-current").text("You are viewing: " + str)
-		console.log(str)
-		console.log(names[str])
-		loader(names[str])
-	}
+		$("#chart-current").text("You are viewing: " + str);
+		console.log(str);
+		console.log(names[str]);
+		loader(names[str]);
+	};
 	var gridLayer = L.mapbox.gridLayer('kamicut.voter_trends');
 	that.map.addLayer(gridLayer);
 
 	var template = $( '#tooltip-template' ).html();
 	gridLayer.on('click',function(o) {
-		if ( o.data != undefined && that.current_district !== o.data['district']){
-			that.current_district = o.data['district'];
+		if ( o.data !== undefined && that.current_district !== o.data.district){
+			that.current_district = o.data.district;
 			foo(that.current_district);
 		}
-	})
-}
+	});
+};
 
-newMap = new Map(content, options);
+newMap = new M.Map(content, options);
 
 var confessions = {
 	alawite: "Alawite", 
@@ -61,13 +61,14 @@ var confessions = {
 	armorth: "Armenian Orthodox", 
 	minorities: "Minorities",
 	evangelical: "Evangelical"
-}
+};
+
 var prefix = "data/voter_trends/";
 var names = {
 	"total"		: prefix + "total.csv",
 	"Akkar"		: prefix + "akkar.csv",
 	"Saida"		: prefix + "saida.csv",
-	"Aley" 		: prefix + "aley.csv",
+	"Aley"		: prefix + "aley.csv",
 	"Jbeil"		: prefix + "jbeil.csv",
 	"Baabda"	: prefix + "baabda.csv",
 	"Jezzine"	: prefix + "jezzine.csv",
@@ -88,7 +89,7 @@ var names = {
 	"Chouf"		: prefix + "chouf.csv",             
 	"Nabatiyeh"	: prefix + "nabatiyeh.csv",         
 	"Zgharta"	: prefix + "zgharta.csv"
-}
+};
 
 var curr_confession = "alawite"; 
 //Setup storyboard
@@ -104,61 +105,43 @@ function loader(name) {
 		console.log(data);
 		var myChart = new dimple.chart(svg, data);
 		var myChart2 = new dimple.chart(svg2, data);
-		console.log(myChart2)
+		console.log(myChart2);
 		function bounds() {
-			myChart.setBounds("20%", "10%", "60%", "70%")
-			myChart2.setBounds("20%", "10%", "80%", "50%")
+			myChart.setBounds("20%", "10%", "60%", "70%");
+			myChart2.setBounds("20%", "10%", "80%", "50%");
 		}
 		bounds();
 		$( window ).resize(bounds);
-		myChart.addMeasureAxis("y", "Population")
-		myChart.addCategoryAxis("x", "Year").addOrderRule("Population")
-		myChart.addSeries("Year", dimple.plot.bar)
-		storyboard = myChart.setStoryboard("Confession")
+		myChart.addMeasureAxis("y", "Population");
+		myChart.addCategoryAxis("x", "Year").addOrderRule("Population");
+		myChart.addSeries("Year", dimple.plot.bar);
+		storyboard = myChart.setStoryboard("Confession");
 		storyboard.autoplay = false;
 
-		myChart2.addMeasureAxis("y", "Population")
-		myChart2.addCategoryAxis("x", "Confession").addOrderRule("Population")
-		myChart2.addSeries(null, dimple.plot.bar)
-		myChart2.setStoryboard("Year")
+		myChart2.addMeasureAxis("y", "Population");
+		myChart2.addCategoryAxis("x", "Confession").addOrderRule("Population");
+		myChart2.addSeries(null, dimple.plot.bar);
+		myChart2.setStoryboard("Year");
 
 		myChart.draw();
 		myChart2.draw();
-		// $("#" + curr_confession).click();
-	})	
+	});
 }
 
 
 $('document').ready(function(){
 
-	loader("data/voter_trends/total.csv")
+	loader("data/voter_trends/total.csv");
 	newMap.init();
 	newMap.current_district='';
 
-	for (obj in confessions) {
-		$("#confessions").append('<option value='+ obj +'>' + confessions[obj]+ '</option>') 
+	for (var obj in confessions) {
+		$("#confessions").append('<option value='+ obj +'>' + confessions[obj]+ '</option>');
 	}
 	$("select").change(function() {
 		curr_confession = $("select option:selected").attr('value');
-		console.log(curr_confession)
+		console.log(curr_confession);
 		storyboard.goToFrame(confessions[curr_confession]);
-	})
-	// whiteBallots.init();
+	});
 });
 
-
-
-// 	layers : [
-// 		'mayakreidieh.r5',
-// 		'mayakreidieh.testt',
-// // 		'mayakreidieh.t2'
-// // 	], 
-// content.templates : [
-// 		" <div id='tloc'>{{blanc_2005}}</div> <div id='tnum'>{{blanc_20_1}}</div>",
-// 		" <div id='tloc'>{{District}}</div> <div id='tnum'>{{blank_vote}}</div>",
-// 		""
-// 	]
-// }
-
-// Content of text overlay
-/* EN */

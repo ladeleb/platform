@@ -14,22 +14,21 @@
         <link rel="stylesheet" href="styles/white_ballots.css">
         <script src="//api.tiles.mapbox.com/mapbox.js/v1.5.2/mapbox.js"></script>
         <link href="//api.tiles.mapbox.com/mapbox.js/v1.5.2/mapbox.css" rel="stylesheet">
-
     </head>
     <body>
         
         <ul id="toolbar">
             <li class="langbtn" id="download-data">DOWNLOAD DATA
                 <ul id="toolbar-download">
-                    <a href="data/white_ballots/white_ballots_csv.zip"> <li class="download-li">CSV</li> <a> 
-                    <a href="data/white_ballots/white_ballots_geojson.zip"> <li class="download-li">GEOJSON</li> <a> 
-                </a></a></a></a></ul>
+                    <a href="data/white_ballots/white_ballots_csv.zip"> <li class="download-li">CSV</li> </a> 
+                    <a href="data/white_ballots/white_ballots_geojson.zip"> <li class="download-li">GEOJSON</li> </a> 
+                </ul>
             </li>
             <li class="langbtn">ABOUT THIS DATA</li>
             <li class="langbtn"><div class="fa fa-twitter fa-1x"></div></li>
             <li class="langbtn"><div class="fa fa-facebook fa-1x"></div></li>
-            <li class="langbtn"><div class="fa fa-google-plus fa-1x"></div></li>
-            <li id="ar" class="langbtn">ع</li>
+<!--             <li class='langbtn'><div class="fa fa-google-plus fa-1x"></div></li>-->            
+            <li id="ar" class="langbtn lang">ع</li>
         </ul>
 
         <div id="map_container">
@@ -51,7 +50,7 @@
                 <div id='leg'>
                     <div id='legcol' style='background-color: <%= color %>'></div>
                    <!-- <div id='leglabel'> <%= label %> </div> -->
-                    </div>
+                </div>
         </script>
 
         <script type="text/template" id="wb_text_overlay_template">
@@ -59,21 +58,17 @@
                 <p id='desc'>
                     <%= desc %>
                 </p>
-                <div id='<%= content[0].id %>' class='time_section clearfix'>
-                    <div id='timepicker'></div>
-                    <div id='time'> <%= content[0].ttime %> </div>
-                    <div id='time_desc'> <%= content[0].time_desc %> </div> 
-                    <div class="control" id="invalid_2005">INVALID</div>
+                <p> <%= select %> </p>
+                <div class='time_section clearfix'>
+                    <div class="control" id="invalid_2005"><%= content[0].time_desc %></div>
                 </div>
-                 <div id='<%= content[1].id %>' class='time_section clearfix'>
-                    <div id='timepicker'></div>
-                    <div id='time'> <%= content[1].ttime %> </div>
-                    <div id='time_desc'> <%= content[1].time_desc %> </div> 
-                    <div class="control" id="invalid_2009">INVALID</div>
-                    <div class="control" id="white_2009">WHITE</div>
+                 <div class='time_section clearfix'>
+                    <div class="control" id="invalid_2009"><%= content[1].time_desc %></div>
+                </div>
+                <div class='time_section clearfix'>
+                    <div class="control" id="white_2009"><%= content[2].time_desc %></div>
                 </div>
         </script>
-
 
         <script type="text/template" id="rv_text_overlay_template">
             <h1> <%= title %> </h1>
@@ -116,6 +111,6 @@
         <script src="bower_components/underscore/underscore-min.js"></script> 
         <script src="scripts/text_content.js"></script>
         <script src="scripts/map.js"></script>
-        <script src="scripts/whiteballots.js"></script>
+        <script src="scripts/white_ballots.js"></script>
 </body>
 </html>

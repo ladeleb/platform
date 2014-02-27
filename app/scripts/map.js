@@ -14,11 +14,13 @@ M.Map = function( content, options ){
 M.Map.prototype._renderMap = function(  layerIndex  ){
 	// init Map object, bind it to #map div
 	if (this.content.mapCenter !== undefined ){
-		this.map = L.map(this.content.el).setView( this.content.mapCenter, 9);
+		this.map = L.map(this.content.el, { zoomControl:false })
+		.setView( this.content.mapCenter, 9);
 	} else {
-		this.map = L.map(this.content.el).setView([33.894286, 35.47371], 9);
+		this.map = L.map(this.content.el,{ zoomControl:false })
+		.setView([33.894286, 35.47371], 9);
 	}
-
+	new L.Control.Zoom({ position: 'topright' }).addTo(this.map);
 	// load each layer and add it to the map
 	// note that the layer order matters, they overlap each other
 	this.map.addLayer( L.mapbox.tileLayer(this.content.baseMap));	
@@ -27,6 +29,7 @@ M.Map.prototype._renderMap = function(  layerIndex  ){
 	if (this.options.setTooltip !== undefined) {
 		this.options.setTooltip(this);
 	}
+
 };
 
 /* @desc	Renders the text of the page using the templates and the corresponding text

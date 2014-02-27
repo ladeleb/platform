@@ -132,8 +132,3 @@ h2 {
 #map_container {
   height: 0px;
 }
-
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/marcfarra\/Code\/ladeleb\/platform\/app\/styles\/confessions\.scss}line{font-family:\00003148}}
-.leaflet-control-container {
-  display: none;
-}

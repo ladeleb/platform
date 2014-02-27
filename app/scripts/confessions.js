@@ -5,7 +5,7 @@ content.textTemplateId = '#rv_text_overlay_template';
 
 /* EN */
 content.textEn =  {
-	title: 'Voter Trends',
+	title: 'Voters by Confession',
 	desc : 'Hover over a district to see the change in population.'
 };
 

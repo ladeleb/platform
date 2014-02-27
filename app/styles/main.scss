@@ -120,10 +120,20 @@ $col : rgb(40,40,60);
 	font-size:0.87em;
 	font-weight: 600;
 
-	color: white;
+	color:white;
 	color:black;
 	@include transition(background-color 200ms ease-in);
 	cursor: pointer;
+
+	a {
+		width: 100%;
+		height: 100%;
+		color: black;
+	}
+	a:hover {
+		color:white;
+		text-decoration: none;
+	}
 
 	&:hover{
 		@include transition(background-color 200ms ease-in);

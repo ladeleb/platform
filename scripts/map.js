@@ -50,7 +50,6 @@ M.Map.prototype._renderText = function( lang ){
 	$(".text_overlay.ar").html(_.template( template,  this.content.textAr));
 
 	this.control();
-
 };
 
 M.Map.prototype._renderLegend = function(){
@@ -123,6 +122,9 @@ M.Map.prototype.init = function(){
 	});
 	$('.download-li').on('click', function(){
 		$('#toolbar-download').fadeOut(75);
+	});
+	$("#map-btn").on('click', function() {
+		window.location.href = '/';
 	});
 };
 

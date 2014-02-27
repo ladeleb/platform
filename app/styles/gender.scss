@@ -1,0 +1,149 @@
+
+h1{
+    margin: 0 0 0px 0 ;
+    font-weight: 700;
+    font-size: 50px;
+    line-height: 48px;
+}
+h2{
+    font-size: 25px;
+    line-height: 30px;
+    font-weight:100;
+    color: rgb(100,100,110);
+}
+
+// TOOL TIP
+#tooltip-content {
+    min-width:300px;
+    padding:10px;
+    z-index:9999;
+    position:absolute;
+    bottom:50px;
+    right:50px;
+    background: white;
+    color:black;
+    // h2 {
+    //     color: white;
+    // }
+    .perce {
+        padding: 2px;
+        display: inline-block;
+    }
+}
+
+#select-container {
+    position: relative;
+    font-weight: 300;
+    font-size:.9em;
+    font-family: "Lato", Helvetica Neue, serif;
+    color: rgb(120,120,120);
+    li {
+        cursor: pointer;
+    }
+}
+.selected {
+    color: #b2182b;
+}
+
+
+// #tooltip-overlay {
+//     width:200px;
+//     padding:10px;
+//     z-index:9999;
+//     position:absolute;
+//     bottom:30px;
+//     right:30px;
+//     background: white;
+//     color:black;
+// }
+
+
+#voters, #seats{
+    display:inline-block;
+    margin: 20px 15px 10px 15px;
+    min-width: 100px;
+}
+
+.perc{
+    font-size: 40px;
+    margin: 7px 0 10px 0;
+}
+.total{
+    font-size: 18px;
+    font-weight: 100;
+}
+.llabel{
+    font-weight:100;
+    font-size: 16px;
+}
+
+
+// TEXT OVERLAY
+#tloc{
+    font-family: Helvetica, sans-serif;
+    font-weight:400;
+    font-size: 1.3em;
+    color: rgb(100,100,100);
+    padding-bottom: 0.8em;
+}
+
+#tnum{
+    font-family: Helvetica, sans-serif;
+    font-color: rgb(40,40,60);
+    font-size:4em;
+    font-weight: 800;
+
+}
+
+
+.text_overlay{
+
+    margin:75px 0 50px 50px;
+    margin-bottom: 0px;
+    padding: 20px;
+    color : rgb(40,40,40);
+    background-color: rgba(255,255,255,0.7);
+
+    width:50%;
+    max-width: 450px;
+    position:absolute;
+    top:0px;
+    left:0px;
+    z-index: 4;
+    font-size: 1.3em;
+
+    p{
+    max-width:550px;
+    text-align: justify;
+    line-height: 1.4em;
+    margin: 30px 0 20px 0;
+    }
+
+    #desc{
+        font-weight: 300;
+        font-size:1em;
+        font-family: "Lato", Helvetica Neue, serif;
+        color: rgb(120,120,120);
+
+    }
+}
+
+.text_overlay.en{
+    text-align: left;
+    
+    .time_section{
+        #time, #time_desc{
+            float: left;
+        }
+    }
+}
+
+
+#map_container {
+    height: 0px;
+}
+
+// #map, #map2 {
+//     position:absolute; top:0; bottom:0; left:40%;width:60%;
+// }
+

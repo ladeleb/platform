@@ -124,7 +124,13 @@ M.Map.prototype.init = function(){
 		$('#toolbar-download').fadeOut(75);
 	});
 	$("#map-btn").on('click', function() {
-		window.location.href = '/';
+		var pathArray = window.location.pathname.split( '/' );
+		var newPathname = "";
+		for ( i = 0; i < pathArray.length - 1; i++ ) {
+  			newPathname += "/";
+  			newPathname += pathArray[i];
+		}
+		window.location.href = newPathname;
 	});
 };
 

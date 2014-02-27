@@ -3,6 +3,12 @@
 
 $red: rgb(200,100,100);
 
+path {
+  fill: #000;
+  fill-opacity: .3;
+  stroke: #000;
+  stroke-width: 3px;
+}
 
 h1{
 	margin: 0 0 0px 0 ;
@@ -87,7 +93,7 @@ h1{
 	display:inline-block;
 	cursor: pointer;
 	&:hover{
-		color: $red;
+		color: lighten($red, 20%);
 	}
 }
 .selected {

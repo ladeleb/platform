@@ -36,14 +36,12 @@
     <div id='map_container'>
         <div class='text_overlay ar'></div>
         <div class='text_overlay en'></div>
-        <div id="select-container">
-            <div id="message">You are viewing the total population.</div>
-            <p><label class="custom-select"><select name="confessions" id="confessions"></select></label></p>
-            <p><label class="custom-select"><select name="confessions" id="confessions"></select></label></p>
-            </div>
-        </div>
+
         <div id='map'></div>
+        
         <div id='tooltip-overlay'></div>
+    </div>
+
     </div>
 
         <!--[if lt IE 7]>
@@ -64,7 +62,31 @@
                 <p id='desc'>
                     <%= desc %>
                 </p>
-
+                <div id="select-container">
+                <!-- <div id="message">You are viewing the total population.</div> --!>
+                <div id="select1">
+                    <h4>Select a year</h4>
+                    <ul>
+                        <li class="select1" id="1">2005 to 2009</li>
+                        <li class="select1" id="2">2009 to 2013</li>
+                    </ul>
+                </div>
+                <div id="select2">
+                    <h4>Select a confession</h4>
+                    <ul>
+                        <li class="select2" id="alawite">Alawite</li>
+                        <li class="select2" id="sunni">Sunni</li>
+                        <li class="select2" id="shia">Shia</li>
+                        <li class="select2" id="maronite">Maronite</li>
+                        <li class="select2" id="druze">Druze</li>
+                        <li class="select2" id="grkorth">Greek Orthodox</li>
+                        <li class="select2" id="grkcth">Greek Catholic</li>
+                        <li class="select2" id="armorth">Armenian Orthodox</li>
+                        <li class="select2" id="armcth">Armenian Catholic</li>
+                        <li class="select2" id="evang">Evangelical Protestant</li>
+                        <li class="select2" id="minorities">Minorities</li>
+                    </ul>
+                </div>
             </script>
 
             <script type='text/template' id='time_section_template'>
@@ -87,30 +109,26 @@
 
             <script type='text/template' id='tooltip-template'>
                 <div id='tooltip-content'>
-                    <div id='district' > <%= district %> </div>
-                    <div id='seats'>
-                        <div class='llabel'> SEATS  </div>
-                        <div class='perc' style='color: <%=color%>'>  <%= (Number(seats_perc)*100).toFixed(2)%>%   </div>
-                        <div class='total'> <%=seats_total%> total </div>
-                    </div>
-                    <div id='voters'>  
-                        <div class='llabel'> VOTERS  </div>
-                        <div class='perc' style='color: <%=color%>'> <%= (Number(voters_perc)*100).toFixed(2)%>%   </div>
-                        <div class='total'> <%=voters_total%> total </div>
-                    </div>
+                    <h2><div id='district' > <%= district %> </div></h2>
+                    <em><%= year_1 %></em>
+                    <div class="llabel">Total voters of <%= district %>: <%= total_1 %></div>
+                    <div class='llabel'><%= denom %> voters: <%= perc_1 %>% (<%= voters_1 %>) </div>
+                    <br>
+                    <em><%= year_2 %></em>
+                    <div class="llabel">Total voters of <%= district %>: <%= total_2 %></div>
+                    <div class='llabel'><%= denom %> voters: <%= perc_2 %>% (<%= voters_2 %>) </div>
+                    <br>
+                    <span>Percent change: <div class='perce' style='color: <%=color%>'><%= voters_diff %>% </div></span>
                 </div>
             </script>
 
-
-        <link rel="stylesheet" href="bower_components/Leaflet.markercluster/dist/MarkerCluster.css" />
-        <link rel="stylesheet" href="bower_components/Leaflet.markercluster/dist/MarkerCluster.Default.css" />
-        <script type="text/javascript" src="data/confessions/confessionsData.js"></script>
-        <script src="bower_components/Leaflet.markercluster/dist/leaflet.markercluster.js"></script>
-        <script src="bower_components/jquery/jquery.js"></script>
-        <script src="bower_components/d3/d3.min.js"></script>
-        <script src='bower_components/underscore/underscore-min.js'></script> 
-        <script src="scripts/text_content.js"></script>
-        <script src="scripts/map.js"></script>
-        <script src="scripts/confessions.js"></script>
-    </body>
-    </html>
+            <script type="text/javascript" src="data/confessions/confessionData.js"></script>
+            <script src="bower_components/Leaflet.markercluster/dist/leaflet.markercluster.js"></script>
+            <script src="bower_components/jquery/jquery.js"></script>
+            <script src="bower_components/d3/d3.min.js"></script>
+            <script src='bower_components/underscore/underscore-min.js'></script> 
+            <script src="scripts/text_content.js"></script>
+            <script src="scripts/map.js"></script>
+            <script src="scripts/confessions.js"></script>
+        </body>
+        </html>

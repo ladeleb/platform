@@ -13,16 +13,49 @@ h2{
 
 // TOOL TIP
 #tooltip-content {
-    // width:200px;
+    min-width:300px;
     padding:10px;
     z-index:9999;
     position:absolute;
-    bottom:30px;
-    right:100px;
+    bottom:50px;
+    right:50px;
     background: white;
     color:black;
-    text-align:center;
+    // h2 {
+    //     color: white;
+    // }
+    .perce {
+        padding: 2px;
+        display: inline-block;
+    }
 }
+
+#select-container {
+    position: relative;
+    font-weight: 300;
+    font-size:.9em;
+    font-family: "Lato", Helvetica Neue, serif;
+    color: rgb(120,120,120);
+    li {
+        cursor: pointer;
+    }
+}
+.selected {
+    color: #b2182b;
+}
+
+
+// #tooltip-overlay {
+//     width:200px;
+//     padding:10px;
+//     z-index:9999;
+//     position:absolute;
+//     bottom:30px;
+//     right:30px;
+//     background: white;
+//     color:black;
+// }
+
 
 #voters, #seats{
     display:inline-block;
@@ -101,30 +134,15 @@ h2{
             float: left;
         }
     }
+}
 
-
-}
-#chart-container {
-    position: absolute; top: 300px;right:45%;width:50%;
-    z-index: 10;
-}
-#chart-current {
-    // margin-top: 100px;
-}
-.chart {
-    display: inline-block;
-    width: 45%; max-width: 350px;
-    height: 60%;
-    margin: 5px;
-    max-height: 350px;
-}
 
 #map_container {
     height: 0px;
 }
 
-#map, #map2 {
-    position:absolute; top:0; bottom:0; left:40%;width:60%;
-}
+// #map, #map2 {
+//     position:absolute; top:0; bottom:0; left:40%;width:60%;
+// }
 
 .leaflet-control-container { display: none; }

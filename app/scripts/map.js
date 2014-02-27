@@ -16,7 +16,7 @@ M.Map.prototype._renderMap = function(  layerIndex  ){
 	if (this.content.mapCenter !== undefined ){
 		this.map = L.map(this.content.el).setView( this.content.mapCenter, 9);
 	} else {
-		this.map = L.map(this.content.el).setView([33.894286, 35.59071], 9);
+		this.map = L.map(this.content.el).setView([33.894286, 35.47371], 9);
 	}
 
 	// load each layer and add it to the map
@@ -111,8 +111,6 @@ M.Map.prototype.init = function(){
 		that.transText('ar');
 	});
 	var that = this;
-
-	
 
 	$('#download-data').on('click', function(){
 		if ($('#toolbar-download').is(':visible'))

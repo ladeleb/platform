@@ -113,7 +113,7 @@ function getLayers() {
 }
 
 $('document').ready(function(){
-	getLayers();	
+	getLayers();
 
 });
 

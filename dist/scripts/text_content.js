@@ -2,6 +2,9 @@ var registeredVoters = registeredVoters || {};
 var whiteBallotText = {};
 var confession_trends = {};
 
+// *************** MAIN INDEX
+
+
 // *************** REGISTERED VOTERS 
 
 /* EN */

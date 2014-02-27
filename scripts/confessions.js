@@ -59,7 +59,6 @@ options.control = function() {
 			$(this).addClass('selected');
 		});
 	})
-	
 };
 
 options.setTooltip = function( that ){

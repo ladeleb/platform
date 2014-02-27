@@ -6,7 +6,8 @@ content.textTemplateId = '#rv_text_overlay_template';
 /* EN */
 content.textEn =  {
 	title: 'Voter Power',
-	desc : ''
+	desc : 'This map shows the representation of voters in parliament. By calculating the ratio between the percentage of voters in a ' +
+	'district and the percentage of seats that represent them, we show inequality. Ideally, 1 seat should represent 25,000 voters.'
 };
 /* AR */
 content.textAr = {

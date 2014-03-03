@@ -100,15 +100,10 @@
             <script type="text/template" id="tooltip-template">
                 <div id='tooltip-content'>
                     <h2><div id='district' > <%= district %> </div></h2>
-                    <em>Registered</em>
-                    <div class="llabel">Total registered: <%= total_registered %></div>
-                    <div class="llabel">Female registered: <%= reg_female %> (<%= reg_female_pct %>%)</div>
-                    <div class='llabel'>Male registered: <%= reg_male %> (<%= reg_male_pct %>%) </div>
-                    <br>
-                    <em>Turnout</em>
-                    <div class="llabel">Total turnout: <%= total_turnout %></div>
-                    <div class="llabel">Female turnout: <%= turnout_female %> (<%= turnout_female_pct %>%)</div>
-                    <div class='llabel'>Male turnout: <%= turnout_male %> (<%= turnout_male_pct %>%) </div>
+                    <em><%= diff_label %></em>
+                    <div class="llabel">Total <%= diff_name %>: <%= total %></div>
+                    <div class="llabel">Female <%= diff_name %>: <%= num_female %> (<%= perc_female %>%)</div>
+                    <div class='llabel'>Male <%= diff_name %>: <%= num_male %> (<%= perc_male %>%) </div>
                     <br>
                     <span>Difference between male and female: <div class='perce' style='color: <%=color%>'><%= diff %>% </div></span>
                 </div>

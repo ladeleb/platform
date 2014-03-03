@@ -39,19 +39,16 @@ options.setTooltip = function( that ){
 	var template = $( '#tooltip-template' ).html();
 	info.update = function (props) {
 		document.getElementById('tooltip-overlay').innerHTML = (props && _.template( template,  {
-				'district':props.district,
-				'diff': Math.abs(props.diff),
-				'total_registered': props.total_registered,
-				'reg_female': props.registered_female,
-				'reg_male': props.registered_male,
-				'turnout_male': props.voter_turnout_male,
-				'turnout_female': props.voter_turnout_female,
-				'reg_male_pct': props.registered_male_pct,
-				'reg_female_pct': props.registered_female_pct,
-				'turnout_male_pct': props.voter_turnout_male_pct,
-				'turnout_female_pct': props.voter_turnout_female_pct,
-				'total_turnout':props.voter_turnout,
-				'color': getColor(props.diff)
+			'district':props.district,
+			'diff': Math.abs(props.diff),
+			'diff_name': props.diff_name,
+			'diff_label': props.diff_name.charAt(0).toUpperCase() + props.diff_name.slice(1),
+			'num_male': props.num_male,
+			'num_female':props.num_female,
+			'total': props.total,
+			'perc_male': props.perc_male,
+			'perc_female': props.perc_female,
+			'color': getColor(props.diff)
 		}) || '');
 	};
 };
@@ -106,7 +103,23 @@ function highlightFeature(e) {
 
 function onEachFeature(datalayer) {
 	diff = 'diff_'+datalayer;
+
 	return function(feature,layer) {
+		if (datalayer == 'voter_turnout') {
+			feature.properties.diff_name = 'turnout';
+			feature.properties.total = feature.properties.voter_turnout;
+			feature.properties.num_male = feature.properties.voter_turnout_male;
+			feature.properties.num_female = feature.properties.voter_turnout_female;
+			feature.properties.perc_male = feature.properties.voter_turnout_male_pct;
+			feature.properties.perc_female = feature.properties.voter_turnout_female_pct;
+		} else {
+			feature.properties.diff_name = 'registered';
+			feature.properties.total = feature.properties.total_registered;
+			feature.properties.num_male = feature.properties.registered_male;
+			feature.properties.num_female = feature.properties.registered_female;
+			feature.properties.perc_male = feature.properties.registered_male_pct;
+			feature.properties.perc_female = feature.properties.registered_female_pct;
+		}
 		feature.properties.diff = feature.properties[diff];
 		feature.properties.datalayer = datalayer;
 		layer.on({

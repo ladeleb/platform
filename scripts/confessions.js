@@ -82,22 +82,34 @@ options.setTooltip = function( that ){
 		}) || '');
 	};
 };
+//Blue is decrease, red increase
+// function getColor(d) {
+// 	return d > 1.5 ? '#b2182b' :
+// 	d > 1  ? '#ef8a62' :
+// 	d > 0.3  ? '#fddbc7' :
+// 	d >= -0.05   ? '#f7f7f7' :
+// 	d > -0.3   ? '#d1e5f0' :
+// 	d > -1   ? '#67a9cf' :
+// 	'#2166ac';
+// }
 
+//Red increase, blue decrease
 function getColor(d) {
-	return d > 1.5 ? '#b2182b' :
-	d > 1  ? '#ef8a62' :
-	d > 0.3  ? '#fddbc7' :
-	d >= -0.05   ? '#f7f7f7' :
-	d > -0.3   ? '#d1e5f0' :
-	d > -1   ? '#67a9cf' :
-	'#2166ac';
+	return d > 1.5 ? '#2166ac' :
+	d > 1  ? '#67a9cf' :
+	d > 0.3  ? '#d1e5f0' :
+	d >= -0.05   ? '#ffffbf' :
+	d > -0.3   ? '#fddbc7' :
+	d > -1   ? '#ef8a62' :
+	'#b2182b';
 }
+
 function getTooltipColor(d) {
-	return d > 1.5 ? '#b2182b' :
-	d > 0.3  ? '#ef8a62' :
+	return d > 1.5 ? '#2166ac' :
+	d > 0.3  ?  '#67a9cf':
 	d > -0.05   ? '#0000' :
-	d > -1   ? '#67a9cf' :
-	'#2166ac';
+	d > -1   ? '#ef8a62' :
+	'#b2182b';
 }
 
 function style(denom) {

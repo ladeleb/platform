@@ -125,7 +125,7 @@ M.Map.prototype.init = function(){
 	});
 	$("#map-btn").on('click', function() {
 		var s = window.location.href;
-		a = s.split('/');
+		var a = s.split('/');
 		a.pop();
 		window.location.href = a.join('/');
 	});

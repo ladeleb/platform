@@ -25,7 +25,7 @@
         <li class="langbtn"><div class="fa fa-twitter fa-1x"></div></li>
         <li class="langbtn"><div class="fa fa-facebook fa-1x"></div></li>
         <li id="ar" class="langbtn">ع</li>
-    </ul>
+    </ul> 
 
     <div id="map_container">
         <div class="text_overlay ar"></div>
@@ -50,6 +50,12 @@
                     <li><a href="vote_power.html"><%= voter_power %></a></li>
                 </ul>
                 <div class="llabel" style="margin-top: 100px"><p><%= footer %></p></div>
+                <div class="partners">Partners: 
+                        <a href="http://developmentseed.org"><img src="/images/devseed.jpg"></img></a>
+                        <a href="http://democracyinternational.com/"><img src="/images/DI.jpg"></img></a>
+                        <a href="http://lambalabs.org/"><img src="/images/lamba.png"></img></a>
+                         <a href="http://www.lade.org.lb"><img src="/images/lade.png"></img></a>
+                </div>
             </script>
 
 
@@ -65,16 +71,16 @@
             content.baseMap = 'kamicut.hd1mnn1i';
             content.textTemplateId = '#wb_text_overlay_template';
             content.textEn = {
-                title: "Lebanese Electoral Maps",
+                title: "Lebanese Electoral Data",
                 desc: "These maps show trends in voter registration by confession, gender, white ballots and representation.",
                 confessions: "Voter trends by confessions",
                 gender: "Voter trends by gender",
-                white_ballots: "White ballots of 2005, 2009",
+                white_ballots: "White and invalid ballots",
                 voter_power: "Voter representation in the parliament",
-                footer: "The data is licensed under CC By S.A 3.0 and can be downloaded <a href='https://www.github.com/ladeleb/platform'>here.</a>"
+                footer: "A project exploring open data. The data is licensed under CC By S.A 3.0 and can be downloaded <a href='https://www.github.com/ladeleb/platform'>here.</a>"
             };
             content.textAr = {
-                title: "Lebanese Electoral Maps",
+                title: "Lebanese Electoral Data",
                 desc: "These maps show trends in voter registration by confession, gender, white ballots and representation.",
                 confessions: "Voter trends by confessions",
                 gender: "Voter trends by gender",

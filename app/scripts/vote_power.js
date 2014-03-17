@@ -6,7 +6,7 @@ content.textTemplateId = '#rv_text_overlay_template';
 /* EN */
 content.textEn =  powerText.textEn;
 /* AR */
-content.textAr = powerText.textEn;
+content.textAr = powerText.textAr;
 
 content.layers = [];
 content.layers[0] =  L.mapbox.tileLayer('mayakreidieh.voter_power');

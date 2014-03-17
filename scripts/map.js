@@ -97,7 +97,7 @@ M.Map.prototype.transText = function(lang){
 		});
 	} else {
 		$("#en").unbind("click");
-		$('#en').html('ع');
+		$('#en').html('عربي');
 		$('#en').attr('id', 'ar');
 		$('.text_overlay.ar').fadeOut('10');
 		$('.text_overlay.en').fadeIn('10');

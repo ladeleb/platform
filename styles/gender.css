@@ -117,21 +117,21 @@ h2 {
 @media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/marcfarra\/Code\/ladeleb\/platform\/app\/styles\/gender\.scss}line{font-family:\00003123}}
 .text_overlay #desc {
   font-weight: 300;
-  font-size: 1em;
+  font-size: 0.9em;
   font-family: "Lato", Helvetica Neue, serif;
   color: #787878;
 }
 
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/marcfarra\/Code\/ladeleb\/platform\/app\/styles\/gender\.scss}line{font-family:\00003132}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/marcfarra\/Code\/ladeleb\/platform\/app\/styles\/gender\.scss}line{font-family:\00003131}}
 .text_overlay.en {
   text-align: left;
 }
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/marcfarra\/Code\/ladeleb\/platform\/app\/styles\/gender\.scss}line{font-family:\00003136}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/marcfarra\/Code\/ladeleb\/platform\/app\/styles\/gender\.scss}line{font-family:\00003135}}
 .text_overlay.en .time_section #time, .text_overlay.en .time_section #time_desc {
   float: left;
 }
 
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/marcfarra\/Code\/ladeleb\/platform\/app\/styles\/gender\.scss}line{font-family:\00003143}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/marcfarra\/Code\/ladeleb\/platform\/app\/styles\/gender\.scss}line{font-family:\00003142}}
 #map_container {
   height: 0px;
 }

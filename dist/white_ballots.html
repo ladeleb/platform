@@ -16,8 +16,9 @@
         <link href="//api.tiles.mapbox.com/mapbox.js/v1.5.2/mapbox.css" rel="stylesheet">
     </head>
     <body>
-        
         <ul id="toolbar">
+
+            <li class="langbtn" id="home-btn">HOME</li>
             <li class="langbtn" id="download-data">DOWNLOAD DATA
                 <ul id="toolbar-download">
                     <a href="data/white_ballots/white_ballots_csv.zip"> <li class="download-li">CSV</li> </a> 
@@ -25,7 +26,7 @@
                 </ul>
             </li>
             <!-- <li class='langbtn'>ABOUT THIS DATA</li> -->
-            <li class="langbtn" id="map-btn">MAPS</li>
+          
             <li class="langbtn"><div class="fa fa-twitter fa-1x"></div></li>
             <li class="langbtn"><div class="fa fa-facebook fa-1x"></div></li>
 <!--             <li class='langbtn'><div class="fa fa-google-plus fa-1x"></div></li>-->            
@@ -56,6 +57,8 @@
 
         <script type="text/template" id="wb_text_overlay_template">
                 <h1> <%= title %> </h1>
+                                <p class='attribution'> <%= attribution %> </p>
+
                 <p id='desc'>
                     <%= desc %>
                 </p>
@@ -69,20 +72,6 @@
                 <div class='time_section clearfix'>
                     <div class="control" id="white_2009"><%= content[2].time_desc %></div>
                 </div>
-        </script>
-
-        <script type="text/template" id="rv_text_overlay_template">
-            <h1> <%= title %> </h1>
-            <p id='desc'>
-                <%= desc %>
-            </p>
-            <div class='legend clearfix'>
-                <div><b>Over</b> represented</div>
-                <div class='legend inner'></div>
-                <div><b>Under</b> represented</div>
-
-            </div>
-              
         </script>
 
         <script type="text/template" id="time_section_template">

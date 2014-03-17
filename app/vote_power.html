@@ -21,7 +21,7 @@
     <body>
         
         <ul id='toolbar'>
-
+        <li class='langbtn' id="home-btn">HOME</li>
             <li class='langbtn' id='download-data'>DOWNLOAD DATA
                 <ul id='toolbar-download'>
                     <a href="data/vote_power/vote_power.csv" > <li class='download-li'>CSV</li> </a> 
@@ -29,7 +29,7 @@
                 </ul>
             </li>
             <!-- <li class='langbtn'>ABOUT THIS DATA</li> -->
-            <li class='langbtn' id="map-btn">MAPS</li>
+            
             <li class='langbtn'><div class="fa fa-twitter fa-1x"></div></li>
             <li class='langbtn'><div class="fa fa-facebook fa-1x"></div></li>
             <!-- <li class='langbtn'><div class="fa fa-google-plus fa-1x"></div></li> -->
@@ -61,6 +61,7 @@
         <script type='text/template' id='rv_text_overlay_template'>
             <h1> <%= title %> </h1>
             <h2> Do all Lebanese citizens have <br> equal voting powers? </h2>
+            <p class="attribution"> <%= attribution %> </p>
             <p id='desc'>
                 <%= desc %>
             </p>
@@ -73,23 +74,6 @@
               
         </script>
 
-        <script type='text/template' id='time_section_template'>
-            <div id='<%= id %>' class='time_section clearfix'>
-                <div id='timepicker'></div>
-                <div id='time'> <%= text.ttime %> </div>
-                <div id='time_desc'> <%= text.time_desc %> </div> 
-            </div>
-        </script>
-
-        <script type='text/template' id='base_text_template'>
-            <h1>Lebanon Electoral Open Data </h1>
-            <h2>Lade</h2>
-
-            <ul id = 'toc'>
-                <li id='rv'></li> <!-- registered voters -->
-                <li id='wb'></li> <!-- white ballots -->
-            </ul>
-        </script>
 
         <script type='text/template' id='tooltip-template'>
             <div id='tooltip-content'>

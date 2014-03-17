@@ -3,17 +3,8 @@ content = {};
 content.baseMap = 'mayakreidieh.map-dfh9esrb';
 content.textTemplateId = '#rv_text_overlay_template';
 
-/* EN */
-content.textEn =  {
-	title: 'Voters by Confession',
-	desc : 'Hover over a district to see the change in population.'
-};
-
-/* AR */
-content.textAr = {
-	title : 'قوة <fh>الاقتراع بيضاء</fh>',
-	desc : 'الاقتراع الأبيض يرمز إلى رفض قوي من النظام السياسي ونظام الحكم والقانون الانتخابي. أنه ليس لديه اعتراف الدينية وصوت الثابت الوحيد في لبنان.'
-};
+content.textEn =  confessions.textEn;
+content.textAr = confessions.textAr;
 
 content.layers = [];
 
@@ -95,9 +86,9 @@ options.setTooltip = function( that ){
 
 //Red increase, blue decrease
 function getColor(d) {
-	return d > 1.5 ? '#2166ac' :
-	d > 1  ? '#67a9cf' :
-	d > 0.3  ? '#d1e5f0' :
+	return d > 1.5 ? '#1a9850' :
+	d > 1  ? '#91cf60' :
+	d > 0.3  ? '#d9ef8b' :
 	d >= -0.05   ? '#ffffbf' :
 	d > -0.3   ? '#fddbc7' :
 	d > -1   ? '#ef8a62' :
@@ -105,8 +96,8 @@ function getColor(d) {
 }
 
 function getTooltipColor(d) {
-	return d > 1.5 ? '#2166ac' :
-	d > 0.3  ?  '#67a9cf':
+	return d > 1.5 ? '#1a9850' :
+	d > 0.3  ?  '#91cf60':
 	d > -0.05   ? '#0000' :
 	d > -1   ? '#ef8a62' :
 	'#b2182b';

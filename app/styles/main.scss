@@ -30,6 +30,25 @@ box-sizing: border-box;         /* Opera/IE 8+ */
 
 }
 
+.partners {
+	width: 400px;
+	margin-top: 30px;
+	line-height: 50px;
+	img {
+		height: 50px;
+		width: auto;
+		float: right;
+		margin: 5px;
+	}
+}
+
+.attribution {
+	font-size: 0.8em;
+	font-style: italic;
+	font-weight: 100;
+	margin-top: 15px !important;
+}
+
 body{
 	border: 12px solid black;
 
@@ -142,7 +161,7 @@ $col : rgb(40,40,60);
 	}
 }
 
-#download-data {
+#home-btn {
 	margin-left: 60px;
 }
 

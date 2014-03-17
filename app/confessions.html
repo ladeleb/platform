@@ -19,6 +19,7 @@
 <body>
 
     <ul id='toolbar'>
+        <li class='langbtn' id="home-btn">HOME</li>
         <li class='langbtn' id='download-data'>DOWNLOAD DATA
             <ul id='toolbar-download'>
                 <a href="data/confessions/confessions.csv" > <li class='download-li'>CSV</li> </a> 
@@ -26,7 +27,6 @@
             </ul>
         </li>
         <!-- <li class='langbtn'>ABOUT THIS DATA</li> -->
-        <li class='langbtn' id="map-btn">MAPS</li>
         <li class='langbtn'><div class="fa fa-twitter fa-1x"></div></li>
         <li class='langbtn'><div class="fa fa-facebook fa-1x"></div></li>
         <!-- <li class='langbtn'><div class="fa fa-google-plus fa-1x"></div></li> -->
@@ -59,35 +59,38 @@
 
             <script type='text/template' id='rv_text_overlay_template'>
                 <h1> <%= title %> </h1>
-               <!-- <h2 id="desc2"> How have the Lebanese confessions changed over time?</h2> -->
-                <p id='desc'>
-                 A district color represents the population change of one confession as a percentage of the other confessions. Blue indicates an increase in influence, while red indicates a decrease in influence.
-                </p>
+                <p class='attribution'> <%= attribution %> </p>
+                <p id='desc'> <%= desc %></p>
                 <div id="select-container">
                 
-                <div id="select2" style="float: left; display: block;">
+                <div id="select2" style="float: left; display: block; width: 60%">
                     <h4>Select a confession</h4>
-                    <ul>
+                    <div>
+                    <ul style="float:left; display: block; width: 50%; margin-left: 0px">
                         <li class="select2" id="alawite">Alawite</li>
+                        <li class="select2" id="armorth">Armenian Orthodox</li>
+                        <li class="select2" id="armcth">Armenian Catholic</li>
+                        <li class="select2" id="evang">Evangelical Protestant</li>
+                        <li class="select2" id="minorities">Minorities</li>
+                    </ul><ul style="float:left; display: block; width: 40%; margin-left: 20px">
                         <li class="select2" id="sunni">Sunni</li>
                         <li class="select2" id="shia">Shia</li>
                         <li class="select2" id="maronite">Maronite</li>
                         <li class="select2" id="druze">Druze</li>
                         <li class="select2" id="grkorth">Greek Orthodox</li>
                         <li class="select2" id="grkcth">Greek Catholic</li>
-                        <li class="select2" id="armorth">Armenian Orthodox</li>
-                        <li class="select2" id="armcth">Armenian Catholic</li>
-                        <li class="select2" id="evang">Evangelical Protestant</li>
-                        <li class="select2" id="minorities">Minorities</li>
+
                     </ul>
+                    </div>
                 </div>
-                <div id="select1" style="float:left; display: block; margin-left: 50px">
+                <div id="select1" style="float:right; display: block; margin-left: 50px">
                     <h4>Select a year</h4>
                     <ul>
                         <li class="select1" id="1">2005 to 2009</li>
                         <li class="select1" id="2">2009 to 2013</li>
                     </ul>
                 </div>
+                
             </script>
 
             <script type='text/template' id='time_section_template'>

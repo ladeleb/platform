@@ -4,16 +4,10 @@ content.baseMap = 'mayakreidieh.map-dfh9esrb';
 content.textTemplateId = '#rv_text_overlay_template';
 
 /* EN */
-content.textEn =  {
-	title: 'Voters by Gender',
-	desc : ''
-};
+content.textEn =  genderText.textEn;
 
 /* AR */
-content.textAr = {
-	title : 'قوة <fh>الاقتراع بيضاء</fh>',
-	desc : 'الاقتراع الأبيض يرمز إلى رفض قوي من النظام السياسي ونظام الحكم والقانون الانتخابي. أنه ليس لديه اعتراف الدينية وصوت الثابت الوحيد في لبنان.'
-};
+content.textAr = genderText.textAr;
 
 content.layers = [];
 

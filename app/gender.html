@@ -19,6 +19,7 @@
 <body>
 
     <ul id='toolbar'>
+       <li class='langbtn' id="home-btn">HOME</li>
         <li class='langbtn' id='download-data'>DOWNLOAD DATA
             <ul id='toolbar-download'>
                 <!-- <a href="data/confessions/confessions.csv" > <li class='download-li'>CSV</li> </a>  -->
@@ -26,7 +27,7 @@
             </ul>
         </li>
         <!-- <li class='langbtn'>ABOUT THIS DATA</li> -->
-        <li class='langbtn' id="map-btn">MAPS</li>
+        
         <li class='langbtn'><div class="fa fa-twitter fa-1x"></div></li>
         <li class='langbtn'><div class="fa fa-facebook fa-1x"></div></li>
         <!-- <li class='langbtn'><div class="fa fa-google-plus fa-1x"></div></li> -->
@@ -59,10 +60,8 @@
 
             <script type='text/template' id='rv_text_overlay_template'>
                 <h1> <%= title %> </h1>
-                <p id='desc'>
-                 The registered voter map shows the breakdown of registered voters by gender. The voter turnout map shows the percentages of males and females that showed up to vote.
-                
-                </p>
+                <p class='attribution'> <%= attribution %> </p>
+                <p id='desc'> <%= desc %> </p>
                 <div id="select-container">
                 <div id="select1">
                     <h4>Select a map:</h4>
@@ -72,9 +71,15 @@
                     </ul>
                 </div>
                  <div>
-                    <ul style="list-style-type:none;font-weight:normal;margin-top: 100px; ">
-                    <li style="line-height:30px;"><div id='legcol' style='background-color:#5e3c99;float:left; margin-right:10px'></div>Female</li>
-                    <li style="line-height:30px;"><div id='legcol' style='background-color:#e66101;float:left; margin-right:10px'></div>Male</li>
+                    <ul style="list-style-type:none;font-weight:normal;margin-top: 40px; ">
+                    <li style="line-height:30px;">
+                    <div id='legcol' style='background-color:#5e3c99;float:left; margin-right:10px'></div> <%= f_maj1 %></li>
+                    <li style="line-height:30px;">
+                    <div id='legcol' style='background-color:#b2abd2;float:left; margin-right:10px'></div> <%= f_maj2 %></li>
+                    <li style="line-height:30px;">
+                    <div id='legcol' style='background-color:#fdb863;float:left; margin-right:10px'></div> <%= m_maj1 %></li>
+                    <li style="line-height:30px;">
+                    <div id='legcol' style='background-color:#e66101;float:left; margin-right:10px'></div> <%= m_maj2 %> </li>
                     </ul>
                  </div>
             </script>

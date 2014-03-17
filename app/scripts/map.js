@@ -123,7 +123,7 @@ M.Map.prototype.init = function(){
 	$('.download-li').on('click', function(){
 		$('#toolbar-download').fadeOut(75);
 	});
-	$("#map-btn").on('click', function() {
+	$("#home-btn").on('click', function() {
 		var s = window.location.href;
 		var a = s.split('/');
 		a.pop();

@@ -4,16 +4,9 @@ content.baseMap = 'mayakreidieh.map-dfh9esrb';
 content.textTemplateId = '#rv_text_overlay_template';
 
 /* EN */
-content.textEn =  {
-	title: 'Voter Power',
-	desc : 'This map shows the representation of voters in parliament. By calculating the ratio between the percentage of voters in a ' +
-	'district and the percentage of seats that represent them, we show inequality. Ideally, 1 seat should represent 25,000 voters.'
-};
+content.textEn =  powerText.textEn;
 /* AR */
-content.textAr = {
-	title : 'قوة <fh>الاقتراع بيضاء</fh>',
-	desc : 'الاقتراع الأبيض يرمز إلى رفض قوي من النظام السياسي ونظام الحكم والقانون الانتخابي. أنه ليس لديه اعتراف الدينية وصوت الثابت الوحيد في لبنان.'
-};
+content.textAr = powerText.textEn;
 
 content.layers = [];
 content.layers[0] =  L.mapbox.tileLayer('mayakreidieh.voter_power');

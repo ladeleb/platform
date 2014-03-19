@@ -108,7 +108,15 @@ ul#social{
 	}
 }
 
-
+#links {
+	li img {
+		max-height:30px;
+		margin-bottom: 10px;
+		margin-right: 10px;
+		text-align: left;
+		width: auto;
+	}
+}
 #toolbar-download, #toolbar-share{
 	position: absolute;
 	display:none;

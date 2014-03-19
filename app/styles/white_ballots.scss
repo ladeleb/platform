@@ -83,7 +83,7 @@ h1{
 	text-align:center;
 }
 
-.control{
+.control, .control2{
 	width:100px;
 	padding: 5px;
 	text-align:center;
@@ -96,6 +96,20 @@ h1{
 		color: lighten($red, 20%);
 	}
 }
+
+.control2 {
+	width:100px;
+	padding: 5px;
+	text-align:center;
+	font: 15px Helvetica Neue;
+	font-weight: 700 ;
+	background-color:white;
+	display:inline-block;
+	&:hover{
+		color: black;
+	}
+}
+
 .selected {
 	color: white;
 	background-color: $red;

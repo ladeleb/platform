@@ -27,7 +27,7 @@ var confessions;
 
 var options = {};
 var info = L.control();
-var year = 2, denom = "grkcth";
+var year = 2, denom = "minorities";
 
 options.control = function() {
 	var that = this;

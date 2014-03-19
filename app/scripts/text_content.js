@@ -72,7 +72,7 @@ confessions.textEn = {
 	// title : 'The <fc>Power</fc> of the <fh>White Ballot</fh>',
 	// title: '<span style="font-family: serif !important;font-weight:700;font-size:0.8em"> The power of the </span><br> <span style="font-family:Helvetica Neue;font-weight: 100">W H I T E  .  B A L L O T</span>',
 	title: 'Registered voters by confession',
-	desc : 'The following map shows the variance (between two consecutive parliamentary elections) in the total number of the registered voters of each sect per electoral district and their percentages (in respect to the total number of voters in that district). Green indicates an increase in influence, while red indicates a decrease in influence.',
+	desc : 'The following map shows the variance (between two consecutive parliamentary elections) in the total number of the registered voters of each sect per electoral district and their percentages (in respect to the total number of voters in that district). Green indicates an increase in influence, while red indicates a decrease in influence. Yellow represents no or minimal change in influence.',
 	attribution: 'Data by Lebanese Association for Democratic Elections',
 	confession: "Select a confession",
 	year: "Select a year",
@@ -91,7 +91,7 @@ confessions.textEn = {
 
 confessions.textAr = {
 	title : 'الناخبين المسجلين حسب الطائفة',
-	desc : 'تظهر هذه الخريطة الفارق (في دورتين انتخابيتين نيابيتين متتاليتين) بين العدد الجملي  للناخبين عن كل طائفة في كل دائرة انتخابية، كما تظهر النسب (بالنسبة لمجمل  عدد الناخبين عن هذه الدائرة). اللون الأخضر يشير إلى تزايد تأثير ناخبي هذه الطائفة، في حين أنّ اللون الأحمر يشير إلى انخفاض هذا التأثير.',
+	desc : 'تظهر هذه الخريطة الفارق (في دورتين انتخابيتين نيابيتين متتاليتين) بين العدد الجملي  للناخبين عن كل طائفة في كل دائرة انتخابية، كما تظهر النسب (بالنسبة لمجمل  عدد الناخبين عن هذه الدائرة). اللون الأخضر يشير إلى تزايد تأثير ناخبي هذه الطائفة، في حين أنّ اللون الأحمر يشير إلى انخفاض هذا التأثير. اللون الأصفر يشير الى لا تغيير أو تغيير ضئيل في التأثير.',
 	attribution: 'الجمعية اللبنانية من أجل ديمقراطية الإنتخابات',
 	confession: ":اختر طائفة",
 	year: ":اختر السنة",
@@ -113,7 +113,7 @@ confessions.textAr = {
 /* The text content of the page in English */
 genderText.textEn = {
 	title: 'Voters by Gender',
-	desc : 'The following map shows the variance (between two consecutive parliamentary elections) in the total number of male and female per electoral district. Orange indicates that male voters are more than female voters (either in registered voters or Electors), purple indicates that female voters are more than male voters.',
+	desc : 'The following map shows the variance (between two consecutive parliamentary elections) in the total number of male and female per electoral district. Green indicates that male voters are more than female voters (either in registered voters or Electors), pink indicates that female voters are more than male voters.',
 	attribution: 'Data by Lebanese Association for Democratic Elections',
 	select: "Select a map:",
 	voter_turnout: "Voter Turnout",
@@ -128,7 +128,7 @@ genderText.textEn = {
 
 genderText.textAr = {
 	title : 'الناخبين المسجلين حسب الجنس',
-	desc :'تظهر هذه الخريطة الفارق (في دورتين انتخابيتين نيابيتين متتاليتين) بين العدد الجملي  للناخبين الذكور والإناث (الناخبين المسجلين والمقترعين) في كل دائرة انتخابية. اللون البرتقالي يشير إلى أنّ عدد الذكور أكبر من عدد الإناث (سواء كانوا أعداد الناخبين المسجلين أم المقترعين). اللون البنفسجي يشير إلى أنّ عدد الإناث أكبر من عدد الذكور.',
+	desc :'تظهر هذه الخريطة الفارق (في دورتين انتخابيتين نيابيتين متتاليتين) بين العدد الجملي  للناخبين الذكور والإناث (الناخبين المسجلين والمقترعين) في كل دائرة انتخابية. اللون الأخضر يشير إلى أنّ عدد الذكور أكبر من عدد الإناث (سواء كانوا أعداد الناخبين المسجلين أم المقترعين). اللون الزهري يشير إلى أنّ عدد الإناث أكبر من عدد الذكور.',
 	attribution: 'الجمعية اللبنانية من أجل ديمقراطية الإنتخابات',
 	select: ":اختر خريطة",
 	voter_turnout: " الناخبين حسب المشاركة ",

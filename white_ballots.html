@@ -27,8 +27,14 @@
             </li>
             <!-- <li class='langbtn'>ABOUT THIS DATA</li> -->
           
-            <li class="langbtn"><div class="fa fa-twitter fa-1x"></div></li>
-            <li class="langbtn"><div class="fa fa-facebook fa-1x"></div></li>
+            <li class="langbtn" id="share-data">SHARE
+            <ul id="toolbar-share">
+                <a class="tweet" href="http://github.com/ladeleb/platform" title="Awesome platform by LADE">
+                <li class="share-li"><div class="fa fa-twitter fa-1x"></div></li></a>
+                <a class="fb" href="http://github.com/ladeleb/platform" title="Awesome Platform by LADE">
+                <li class="share-li"><div class="fa fa-facebook fa-1x"></div></li></a>
+            </ul>
+        </li>
 <!--             <li class='langbtn'><div class="fa fa-google-plus fa-1x"></div></li>-->            
             <li id="ar" class="langbtn lang">عربي</li>
         </ul>
@@ -63,14 +69,22 @@
                     <%= desc %>
                 </p>
                 <p> <%= select %> </p>
+                <div style="display:block">
                 <div class='time_section clearfix'>
                     <div class="control" id="invalid_2005"><%= content[0].time_desc %></div>
                 </div>
+                <div class='time_section clearfix'>
+                    <div class="control" id="white_2005"><%= content[1].time_desc %></div>
+                </div>
+                </div>
+               
+               <div style="margin-top: 20px">
                  <div class='time_section clearfix'>
-                    <div class="control" id="invalid_2009"><%= content[1].time_desc %></div>
+                    <div class="control" id="invalid_2009"><%= content[2].time_desc %></div>
                 </div>
                 <div class='time_section clearfix'>
-                    <div class="control" id="white_2009"><%= content[2].time_desc %></div>
+                    <div class="control" id="white_2009"><%= content[3].time_desc %></div>
+                </div>
                 </div>
         </script>
 

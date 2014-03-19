@@ -42,16 +42,18 @@ options.setTooltip = function( that ){
 			'total': props.total,
 			'perc_male': props.perc_male,
 			'perc_female': props.perc_female,
-			'color': getColor(props.diff)
+			'color': getTooltipColor(props.diff),
 		}) || '');
 	};
 };
 
 function getColor(d) {
-	return d > 1 ? '#e66101' :
-	d >= 0   ? '#fdb863' :
-	d > -2   ? '#b2abd2' :
-	'#5e3c99';
+	return d > 1 ? '#b8e186' :
+	d >= 0   ? '#e6f5d0' :
+	d > -2   ? '#fde0ef' :
+	d > -3   ? '#f1b6da' :
+	d > -5   ? '#de77ae' :
+	'#c51b7d';
 }
 function getColorAlternate(d) {
 	return d > 1 ? '#0571b0' :
@@ -60,11 +62,11 @@ function getColorAlternate(d) {
 	'#d01c8b';
 }
 function getTooltipColor(d) {
-	return d > 1.5 ? '#b2182b' :
-	d > 0.3  ? '#ef8a62' :
+	return d > 1.5 ? '#b8e186' :
+	d > 0.3  ? '#e6f5d0' :
 	d > -0.05   ? '#0000' :
-	d > -1   ? '#67a9cf' :
-	'#2166ac';
+	d > -1   ? '#de77ae' :
+	'#c51b7d';
 }
 
 function style(diff) {

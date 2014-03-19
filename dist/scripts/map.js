@@ -49,7 +49,7 @@ M.Map.prototype._renderText = function( lang ){
 	$(".text_overlay.en").html(_.template( template,  this.content.textEn));
 	$(".text_overlay.ar").html(_.template( template,  this.content.textAr));
 
-	this.control();
+	if (typeof(this.control) === 'function') this.control();
 };
 
 M.Map.prototype._renderLegend = function(){
@@ -114,6 +114,33 @@ M.Map.prototype.init = function(){
 	});
 	var that = this;
 
+	$('.tweet').click(function(e){
+		e.preventDefault();
+		var loc = $(this).attr('href');
+		var title  = escape($(this).attr('title'));
+		window.open('http://twitter.com/share?url=' + loc + '&text=' + title + '&', 'twitterwindow', 'height=450, width=550, top='+($(window).height()/2 - 225) +', left='+$(window).width()/2 +', toolbar=0, location=0, menubar=0, directories=0, scrollbars=0');
+	});
+
+	$('.fb').click(function(e) {
+		e.preventDefault();
+		var loc = $(this).attr('href');
+		var title = escape($(this).attr('title'));
+		window.open('http://www.facebook.com/sharer.php?s=100&p[url]=' + loc ,  'sharer', 'height=450, width=550, top='+($(window).height()/2 - 225) +', left='+$(window).width()/2 +', toolbar=0, location=0, menubar=0, directories=0, scrollbars=0');
+    });
+
+    $("#share-data").on('click', function() {
+		if ($('#toolbar-share').is(':visible')) {
+			$('#toolbar-share').fadeOut(75);
+		}
+		else {
+			$('#toolbar-share').fadeIn(75);
+		}
+	});
+	$('.share-li').on('click', function(){
+		$('#toolbar-share').fadeOut(75);
+	});
+
+
 	$('#download-data').on('click', function(){
 		if ($('#toolbar-download').is(':visible'))
 			$('#toolbar-download').fadeOut(75);
@@ -123,6 +150,7 @@ M.Map.prototype.init = function(){
 	$('.download-li').on('click', function(){
 		$('#toolbar-download').fadeOut(75);
 	});
+
 	$("#home-btn").on('click', function() {
 		var s = window.location.href;
 		var a = s.split('/');

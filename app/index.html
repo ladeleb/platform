@@ -22,8 +22,14 @@
 <body>
 
     <ul id='toolbar'>
-        <li class='langbtn'><div class="fa fa-twitter fa-1x"></div></li>
-        <li class='langbtn'><div class="fa fa-facebook fa-1x"></div></li>
+        <li class='langbtn' id='share-data' style="margin-left: 60px">SHARE
+            <ul id='toolbar-share'>
+                <a class='tweet' href="http://github.com/ladeleb/platform" title="Awesome platform by LADE">
+                <li class="share-li"><div class="fa fa-twitter fa-1x"></div></li></a>
+                <a class="fb" href="http://github.com/ladeleb/platform" title="Awesome Platform by LADE">
+                <li class="share-li"><div class="fa fa-facebook fa-1x"></div></li></a>
+            </ul>
+        </li>
         <li id='ar' class='langbtn'>عربي</li>
     </ul> 
 
@@ -95,7 +101,6 @@
             main = new M.Map(content,options);
             main.init();
         </script>
-
 
     </body>
     </html>

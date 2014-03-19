@@ -17,7 +17,12 @@ whiteBallotText.textEn = {
 	content: [
 		{
 			ttime : '2005',
-			time_desc : 'Invalid + White votes of 2005: 13994 votes'//The white ballot does not have an electoral voice.'
+			time_desc : 'Invalid votes of 2005: 13994 votes'//The white ballot does not have an electoral voice.'
+			// need to add map layer
+		},
+		{
+			ttime : '2005',
+			time_desc : 'White votes of 2005: Not counted'//The white ballot does not have an electoral voice.'
 			// need to add map layer
 		},
 		{
@@ -41,8 +46,12 @@ whiteBallotText.textAr = {
 	content: [
 		{
 			ttime : '2005',
-			time_desc : ' الأصوات الباطلة والبيضاء عام 2005 '
+			time_desc : ' الأصوات الباطلة عام 2005 '
 			// need to add map layer
+		},
+		{
+			ttime : '2005',
+			time_desc : 'الأصوات البيضاء عام 2005'
 		},
 		{
 			ttime : '2009',
@@ -109,8 +118,10 @@ genderText.textEn = {
 	select: "Select a map:",
 	voter_turnout: "Voter Turnout",
 	voter_registration: "Voter Registration",
-	f_maj1: "Female majority (> 1%)",
-    f_maj2: "Female majority (0% - 1%)",
+	f_maj1: "Female majority (0% - 1%)",
+    f_maj2: "Female majority (1% - 2%)",
+    f_maj3: "Female majority (3% - 5%)",
+    f_maj4: "Female majority (> 5%)",
     m_maj1: "Male majority (0% - 1%)",
     m_maj2: "Male majority (> 1%)"
 };
@@ -122,8 +133,10 @@ genderText.textAr = {
 	select: ":اختر خريطة",
 	voter_turnout: " الناخبين حسب المشاركة ",
 	voter_registration: "الناخبين حسب التسجيل",
-	f_maj1: "(> 1%)   الاغلبية إناث",
-    f_maj2: "(0% - 1%)   الاغلبية إناث",
+	f_maj1: "(0% - 1%)    الاغلبية إناث",
+    f_maj2: "(1% - 2%)  الاغلبية إناث",
+   	f_maj3: "(3% - 5%)  الاغلبية إناث",
+    f_maj4: "(> 5%)   الاغلبية إناث",
     m_maj1: "(0% - 1%)   الاغلبية ذكور",
     m_maj2: " (> 1%)   الاغلبية ذكور"
 };

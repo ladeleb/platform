@@ -28,8 +28,14 @@
         </li>
         <!-- <li class='langbtn'>ABOUT THIS DATA</li> -->
         
-        <li class='langbtn'><div class="fa fa-twitter fa-1x"></div></li>
-        <li class='langbtn'><div class="fa fa-facebook fa-1x"></div></li>
+        <li class='langbtn' id='share-data'>SHARE
+            <ul id='toolbar-share'>
+                <a class='tweet' href="http://github.com/ladeleb/platform" title="Awesome platform by LADE">
+                <li class="share-li"><div class="fa fa-twitter fa-1x"></div></li></a>
+                <a class="fb" href="http://github.com/ladeleb/platform" title="Awesome Platform by LADE">
+                <li class="share-li"><div class="fa fa-facebook fa-1x"></div></li></a>
+            </ul>
+        </li>
         <!-- <li class='langbtn'><div class="fa fa-google-plus fa-1x"></div></li> -->
         <li id='ar' class='langbtn'>عربي</li>
     </ul>
@@ -65,21 +71,25 @@
                 <div id="select-container">
                 <div id="select1">
                     <h4> <%= select %></h4>
-                    <ul>
-                        <li class="select1" id="voter_turnout"> <%= voter_turnout %></li>
+                    <ul style="width: 300px">
+                        <li class="select1" id="voter_turnout" style="float:left; margin-right: 5px"> <%= voter_turnout %></li>
                         <li class="select1" id="voter_registration"> <%= voter_registration %></li>
                     </ul>
                 </div>
                  <div>
-                    <ul style="list-style-type:none;font-weight:normal;margin-top: 40px; ">
-                    <li style="line-height:30px;">
-                    <div id='legcol' style='background-color:#5e3c99;float:left; margin-right:10px'></div> <%= f_maj1 %></li>
-                    <li style="line-height:30px;">
-                    <div id='legcol' style='background-color:#b2abd2;float:left; margin-right:10px'></div> <%= f_maj2 %></li>
-                    <li style="line-height:30px;">
-                    <div id='legcol' style='background-color:#fdb863;float:left; margin-right:10px'></div> <%= m_maj1 %></li>
-                    <li style="line-height:30px;">
-                    <div id='legcol' style='background-color:#e66101;float:left; margin-right:10px'></div> <%= m_maj2 %> </li>
+                    <ul style="list-style-type:none;font-weight:normal;margin-top:30px; font-size: 13px;">
+                    <li style="line-height:25px;">
+                    <div id='legcol2' style='background-color:#c51b7d;float:left; margin-right:10px'></div> <%= f_maj4 %></li>
+                    <li style="line-height:25px;">
+                    <div id='legcol2' style='background-color:#de77ae;float:left; margin-right:10px'></div> <%= f_maj3 %></li>
+                    <li style="line-height:25px;">
+                    <div id='legcol2' style='background-color:#f1b6da;float:left; margin-right:10px'></div> <%= f_maj2 %></li>
+                    <li style="line-height:25px;">
+                    <div id='legcol2' style='background-color:#fde0ef;float:left; margin-right:10px'></div> <%= f_maj1 %></li>
+                    <li style="line-height:25px;">
+                    <div id='legcol2' style='background-color:#e6f5d0;float:left; margin-right:10px'></div> <%= m_maj1 %></li>
+                    <li style="line-height:25px;">
+                    <div id='legcol2' style='background-color:#b8e186;float:left; margin-right:10px'></div> <%= m_maj2 %> </li>
                     </ul>
                  </div>
             </script>

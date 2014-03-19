@@ -7100,8 +7100,8 @@ ul#social li {
   color: black !important;
 }
 
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/marcfarra\/Code\/ladeleb\/platform\/app\/styles\/main\.scss}line{font-family:\00003111}}
-#toolbar-download {
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/marcfarra\/Code\/ladeleb\/platform\/app\/styles\/main\.scss}line{font-family:\00003112}}
+#toolbar-download, #toolbar-share {
   position: absolute;
   display: none;
   top: 120%;
@@ -7111,15 +7111,15 @@ ul#social li {
   float: left;
   background: white;
 }
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/marcfarra\/Code\/ladeleb\/platform\/app\/styles\/main\.scss}line{font-family:\00003120}}
-#toolbar-download li {
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/marcfarra\/Code\/ladeleb\/platform\/app\/styles\/main\.scss}line{font-family:\00003121}}
+#toolbar-download li, #toolbar-share li {
   color: black;
   width: 100%;
   list-style-type: none;
   padding: 10px 0 10px 0;
 }
 
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/marcfarra\/Code\/ladeleb\/platform\/app\/styles\/main\.scss}line{font-family:\00003131}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/marcfarra\/Code\/ladeleb\/platform\/app\/styles\/main\.scss}line{font-family:\00003132}}
 .langbtn {
   padding: 16px;
   text-align: center;
@@ -7137,18 +7137,18 @@ ul#social li {
   transition: background-color 200ms ease-in;
   cursor: pointer;
 }
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/marcfarra\/Code\/ladeleb\/platform\/app\/styles\/main\.scss}line{font-family:\00003147}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/marcfarra\/Code\/ladeleb\/platform\/app\/styles\/main\.scss}line{font-family:\00003148}}
 .langbtn a {
   width: 100%;
   height: 100%;
   color: black;
 }
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/marcfarra\/Code\/ladeleb\/platform\/app\/styles\/main\.scss}line{font-family:\00003152}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/marcfarra\/Code\/ladeleb\/platform\/app\/styles\/main\.scss}line{font-family:\00003153}}
 .langbtn a:hover {
   color: white;
   text-decoration: none;
 }
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/marcfarra\/Code\/ladeleb\/platform\/app\/styles\/main\.scss}line{font-family:\00003157}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/marcfarra\/Code\/ladeleb\/platform\/app\/styles\/main\.scss}line{font-family:\00003158}}
 .langbtn:hover {
   -webkit-transition: background-color 200ms ease-in;
   -moz-transition: background-color 200ms ease-in;
@@ -7158,27 +7158,27 @@ ul#social li {
   color: white;
 }
 
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/marcfarra\/Code\/ladeleb\/platform\/app\/styles\/main\.scss}line{font-family:\00003164}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/marcfarra\/Code\/ladeleb\/platform\/app\/styles\/main\.scss}line{font-family:\00003165}}
 #home-btn {
   margin-left: 60px;
 }
 
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/marcfarra\/Code\/ladeleb\/platform\/app\/styles\/main\.scss}line{font-family:\00003168}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/marcfarra\/Code\/ladeleb\/platform\/app\/styles\/main\.scss}line{font-family:\00003169}}
 .langbtn:last-child {
   border: none;
 }
 
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/marcfarra\/Code\/ladeleb\/platform\/app\/styles\/main\.scss}line{font-family:\00003173}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/marcfarra\/Code\/ladeleb\/platform\/app\/styles\/main\.scss}line{font-family:\00003174}}
 #ar, #en {
   color: #28283c;
 }
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/marcfarra\/Code\/ladeleb\/platform\/app\/styles\/main\.scss}line{font-family:\00003176}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/marcfarra\/Code\/ladeleb\/platform\/app\/styles\/main\.scss}line{font-family:\00003177}}
 #ar:hover, #en:hover {
   background-color: white;
   color: #28283c;
 }
 
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/marcfarra\/Code\/ladeleb\/platform\/app\/styles\/main\.scss}line{font-family:\00003182}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/marcfarra\/Code\/ladeleb\/platform\/app\/styles\/main\.scss}line{font-family:\00003183}}
 #ar {
   font-size: 1.3em;
 }

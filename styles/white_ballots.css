@@ -80,7 +80,7 @@ h1 {
 
 @media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/marcfarra\/Code\/ladeleb\/platform\/app\/styles\/white_ballots\.scss}line{font-family:\0000386}}
 .control {
-  width: 300px;
+  width: 100px;
   padding: 5px;
   text-align: center;
   font: 15px Helvetica Neue;
@@ -102,7 +102,7 @@ h1 {
 
 @media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/marcfarra\/Code\/ladeleb\/platform\/app\/styles\/white_ballots\.scss}line{font-family:\00003104}}
 .time_section {
-  display: block;
+  display: inline-block;
   position: relative;
 }
 

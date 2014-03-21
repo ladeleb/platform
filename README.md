@@ -19,3 +19,4 @@ If you want to contribute, contact us!
   * Maya Kreidieh ([acrylc](http://github.com/acrylc))
   * Marc Farra ([kamicut](http://github.com/kamicut))
   * Radhouane Fazai ([radproject](http://github.com/radproject))
+  * Ian Villeda ([ian29](http://github.com/ian29))

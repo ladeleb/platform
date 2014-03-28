@@ -9,7 +9,7 @@ content.textEn =  powerText.textEn;
 content.textAr = powerText.textAr;
 
 content.layers = [];
-content.layers[0] =  L.mapbox.tileLayer('mayakreidieh.voter_power');
+content.layers[0] =  L.mapbox.tileLayer('kamicut.vote_power');
 
 content.el = 'map';
 
@@ -37,25 +37,21 @@ options.legend = {
 
 };
 options.setTooltip = function( that ){
-	var gridLayer = L.mapbox.gridLayer('mayakreidieh.voter_power');
+	var gridLayer = L.mapbox.gridLayer('kamicut.vote_power');
 	that.map.addLayer(gridLayer);
 	var template = $( '#tooltip-template' ).html();
 	
 	gridLayer.on('mousemove',function(o) {
 		if (o.data!== undefined){
 			var color;
-			var index = (o.data['Seat Perce']/o.data['Voter Perc']);
-			for (var i = 0;i<that.options.legend.colors.length-1;i++){
-				if (index < Number(that.options.legend.colors[i].label) && index >= Number(that.options.legend.colors[i+1].label) ){
+			var index = o.data['Index'];
+			console.log(o);
+			for (var i = that.options.legend.colors.length-1;i>0;i--){
+				if (index >= Number(that.options.legend.colors[i].label)) {
 					color = that.options.legend.colors[i].color;
 				}
-				if (index >= Number(that.options.legend.colors[0].label))
-					color = that.options.legend.colors[0].color;
-				if (index <= Number(that.options.legend.colors[i].label))
-					color = that.options.legend.colors[i].color;
-
 				//Updates for yellow
-				if (index < 1.1 && index > 0.8) {
+				if (Number(index) < 1.1 && Number(index) > 0.9) {
 					color = 'rgb(66,66,66)';
 				}
 			}

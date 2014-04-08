@@ -29,14 +29,14 @@
         <li class="langbtn" id="home-btn">HOME</li>
         <li class='langbtn' id='share-data' style="margin-left: 60px">SHARE
             <ul id='toolbar-share'>
-                <a class='tweet' href="http://ladeleb.github.io/ladeleb/platform" title="Check out the open election data platform for Lebanon!">
+                <a class='tweet' href="http://ladeleb.github.io/ladeleb/platform" title="Check out #Lebanon election data in the last decade by @ladeleb">
                 <li class="share-li"><div class="fa fa-twitter fa-1x"></div></li></a>
                 <a class="fb" href="http://ladeleb.github.io/ladeleb/platform">
                 <li class="share-li"><div class="fa fa-facebook fa-1x"></div></li></a>
             </ul>
         </li>
         <li id='ar' class='langbtn'>عربي</li>
-    </ul> 
+    </ul>
 
     <div id='map_container'>
         <div class='text_overlay ar'></div>
@@ -53,12 +53,11 @@
                 <p id='desc'>
                     <%= desc %>
                 </p>
-
-                <div class="partners">Partners: 
+                <div class="partners">
                         <a href="http://developmentseed.org"><img src="images/devseed.jpg"></img></a>
                         <a href="http://democracyinternational.com/"><img src="images/DI.jpg"></img></a>
                         <a href="http://lambalabs.org/"><img src="images/lamba.png"></img></a>
-                         <a href="http://www.lade.org.lb"><img src="images/lade.png"></img></a>
+                        <a href="http://www.lade.org.lb"><img src="images/lade.png"></img></a>
                 </div>
             </script>
 
@@ -67,7 +66,7 @@
         <![endif]-->
 
         <script src="bower_components/jquery/jquery.js"></script>
-        <script src='bower_components/underscore/underscore-min.js'></script> 
+        <script src='bower_components/underscore/underscore-min.js'></script>
         <script src="scripts/text_content.js"></script>
         <script src="scripts/map.js"></script>
         <script>
@@ -76,14 +75,14 @@
             content.textTemplateId = '#wb_text_overlay_template';
             content.textEn = {
                 title: "Lebanese Electoral Data",
-                desc: "Lebanese Elections Data Analysis (LEDA) is a joint effort of Lebanese Association for Democratic Elections (LADE) and Lamba Labs with the support of Democracy Elections (DI) and Development Seed. LEDA visualizes the Lebanese elections' data according to the voters' confessions, gender, votes and districts aiming to narrate by images and stories regarding various variations in the mentioned factors since 2005.",
-                footer: "A project exploring open data. The data is licensed under CC By S.A 3.0 and can be downloaded <a href='https://www.github.com/ladeleb/platform'>here.</a>"
+                desc: "Lebanese Elections Data Analysis (LEDA) is a joint effort of Lebanese Association for Democratic Elections (LADE) and Lamba Labs with the support of Democracy Elections (DI) and Development Seed. LEDA visualizes the Lebanese elections' data according to the voters' confessions, gender, votes and districts aiming to narrate by images and stories regarding various variations in the mentioned factors since 2005. <br><br>LEDA is a project exploring open data. The data is licensed under CC By S.A 3.0 and can be downloaded on <a href='http://github.com/ladeleb/platform'>Github</a>, contribute!",
             };
             content.textAr = {
                 title: "تحليل بيانات الإنتخابات النيابيّة",
-                desc: 'يهدف مشروع "تحليل بيانات الإنتخابات النيابيّة" إلى عرض من خلال الخرائط وبالأرقام عدد المسجلين في لوائح الشطب، نتائج تصويتهم، مناطق تواجدهم في الدوائر الإنتخابية، جنسهم وطوائفهم منذ العام 2005. إنّ مشروع "تحليل بيانات الإنتخابات النيابيّة" هو ثمرة عمل مشترك بين الجمعية اللبنانية من أجل ديمقراطيّة الإنتخاباتط وبين "لامبا لابز" بدعم من "الديمقراطيّة الدوليّة" ومعهد "ديفيلوبمينت سيد"',
-                footer: "The data is licensed under CC By S.A 3.0 and can be downloaded <a href='https://www.github.com/ladeleb/platform'>here.</a>"
-            };
+                desc:'هذا المشروع يستكشف البيانات المفتوحة. تم ترخيص البيانات تحت CC SA 3.0 ويمكن تحميلها على جيثب، يمكنك المساهمة! ."يهدف مشروع "تحليل بيانات الإنتخابات النيابيّة" إلى عرض من خلال الخرائط وبالأرقام عدد المسجلين في لوائح الشطب، نتائج تصويتهم، مناطق تواجدهم في الدوائر الإنتخابية، جنسهم وطوائفهم منذ العام 2005. إنّ مشروع "تحليل بيانات الإنتخابات النيابيّة" هو ثمرة عمل مشترك بين الجمعية اللبنانية من أجل ديمقراطيّة الإنتخاباتط وبين "لامبا لابز" بدعم من "الديمقراطيّة الدوليّة" ومعهد "ديفيلوبمينت سيد"' +
+          "<br><br>" + 
+"هذا المشروع يستكشف البيانات المفتوحة. تم ترخيص البيانات تحت CC SA 3.0 ويمكن تحميلها على <a href='http://github.com/ladeleb/platform'>جيثب</a>." 		  
+ };
             options = {}; options.control = {};
             content.layers = []
             content.layers[0] = L.mapbox.tileLayer('kamicut.electoral_districts');

@@ -25,7 +25,7 @@
         <li class="langbtn" id="about-btn"  style="margin-left: 60px">ABOUT</li>
         <li class='langbtn' id='share-data'>SHARE
             <ul id='toolbar-share'>
-                <a class='tweet' href="http://ladeleb.github.io/ladeleb/platform" title="Check out the open election data platform for Lebanon!">
+                <a class='tweet' href="http://ladeleb.github.io/ladeleb/platform" title="Check out #Lebanon election data in the last decade by @ladeleb">
                 <li class="share-li"><div class="fa fa-twitter fa-1x"></div></li></a>
                 <a class="fb" href="http://ladeleb.github.io/ladeleb/platform">
                 <li class="share-li"><div class="fa fa-facebook fa-1x"></div></li></a>
@@ -56,8 +56,10 @@
                     <li><img src="images/ballot.png"></img><a href="white_ballots.html"><%= white_ballots %></a></li>
                     <li><img src="images/parliament.png"></img><a href="vote_power.html"><%= voter_power %></a></li>
                 </ul>
+                <!--
                 <div class="llabel" style="margin-top: 30px;font-family: Lato; font-weight:300; font-size:0.8em;"><p><%= footer %></p></div>
-                <div class="partners">Partners: 
+                -->
+                <div class="partners">
                         <a href="http://developmentseed.org"><img src="images/devseed.jpg"></img></a>
                         <a href="http://democracyinternational.com/"><img src="images/DI.jpg"></img></a>
                         <a href="http://lambalabs.org/"><img src="images/lamba.png"></img></a>
@@ -87,12 +89,12 @@
                 footer: "A project exploring open data. The data is licensed under CC By S.A 3.0 and can be downloaded <a href='https://www.github.com/ladeleb/platform'>here.</a>"
             };
             content.textAr = {
-                title: "Lebanese Electoral Data",
-                desc: "These maps show trends in voter registration by confession, gender, white ballots and representation.",
-                confessions: "Voter trends by confessions",
-                gender: "Voter trends by gender",
-                white_ballots: "White ballots of 2005, 2009",
-                voter_power: "Voter representation in the parliament",
+                title: "تحليل بيانات الإنتخابات النيابيّة",
+                desc: "هذه الخرائط إظهار التغييرات في تسجيل الناخبين من خلال الطائفة والجنس والأصوات البيضاء والتمثيل في البرلمان عبر السنوات.",
+                confessions: "الناخبين المسجلين حسب الطائفة",
+                gender: "الناخبين المسجلين حسب الجنس",
+                white_ballots: "قوة الاقتراع صوت أبيض",
+                voter_power: "مساواة التمثيل بين الناخبي",
                 footer: "The data is licensed under CC By S.A 3.0 and can be downloaded <a href='https://www.github.com/ladeleb/platform'>here.</a>"
             };
             options = {}; options.control = {};

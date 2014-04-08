@@ -14,7 +14,11 @@
     <link href="//netdna.bootstrapcdn.com/font-awesome/4.0.0/css/font-awesome.css" rel="stylesheet">
     <link rel="stylesheet" href="styles/white_ballots.css">
     <link rel="stylesheet" href="styles/main.css">
-
+    <style>
+        #share-data {
+            margin-left: 0px !important;
+        }
+    </style>
     <script src="//api.tiles.mapbox.com/mapbox.js/v1.5.2/mapbox.js"></script>
     <link href="//api.tiles.mapbox.com/mapbox.js/v1.5.2/mapbox.css" rel="stylesheet">
 
@@ -22,8 +26,8 @@
 <body>
 
     <ul id="toolbar">
-        <li class="langbtn" id="about-btn" style="margin-left: 60px">ABOUT</li>
-        <li class="langbtn" id="share-data">SHARE
+        <li class="langbtn" id="home-btn">HOME</li>
+        <li class="langbtn" id="share-data" style="margin-left: 60px">SHARE
             <ul id="toolbar-share">
                 <a class="tweet" href="http://ladeleb.github.io/ladeleb/platform" title="Check out the open election data platform for Lebanon!">
                 <li class="share-li"><div class="fa fa-twitter fa-1x"></div></li></a>
@@ -50,13 +54,6 @@
                     <%= desc %>
                 </p>
 
-                <ul id="links">
-                    <li><img src="images/religion.png"></img><a href="confessions.html"><%= confessions %></a></li>
-                    <li><img src="images/gender.png"></img><a href="gender.html"><%= gender %></a></li>
-                    <li><img src="images/ballot.png"></img><a href="white_ballots.html"><%= white_ballots %></a></li>
-                    <li><img src="images/parliament.png"></img><a href="vote_power.html"><%= voter_power %></a></li>
-                </ul>
-                <div class="llabel" style="margin-top: 30px;font-family: Lato; font-weight:300; font-size:0.8em;"><p><%= footer %></p></div>
                 <div class="partners">Partners: 
                         <a href="http://developmentseed.org"><img src="images/devseed.jpg"></img></a>
                         <a href="http://democracyinternational.com/"><img src="images/DI.jpg"></img></a>
@@ -79,20 +76,12 @@
             content.textTemplateId = '#wb_text_overlay_template';
             content.textEn = {
                 title: "Lebanese Electoral Data",
-                desc: "These maps show trends in voter registration by confession, gender, white ballots and representation.",
-                confessions: "Voter trends by confessions",
-                gender: "Voter trends by gender",
-                white_ballots: "White and invalid ballots",
-                voter_power: "Voter representation in the parliament",
+                desc: "Lebanese Elections Data Analysis (LEDA) is a joint effort of Lebanese Association for Democratic Elections (LADE) and Lamba Labs with the support of Democracy Elections (DI) and Development Seed. LEDA visualizes the Lebanese elections' data according to the voters' confessions, gender, votes and districts aiming to narrate by images and stories regarding various variations in the mentioned factors since 2005.",
                 footer: "A project exploring open data. The data is licensed under CC By S.A 3.0 and can be downloaded <a href='https://www.github.com/ladeleb/platform'>here.</a>"
             };
             content.textAr = {
-                title: "Lebanese Electoral Data",
-                desc: "These maps show trends in voter registration by confession, gender, white ballots and representation.",
-                confessions: "Voter trends by confessions",
-                gender: "Voter trends by gender",
-                white_ballots: "White ballots of 2005, 2009",
-                voter_power: "Voter representation in the parliament",
+                title: "تحليل بيانات الإنتخابات النيابيّة",
+                desc: 'يهدف مشروع "تحليل بيانات الإنتخابات النيابيّة" إلى عرض من خلال الخرائط وبالأرقام عدد المسجلين في لوائح الشطب، نتائج تصويتهم، مناطق تواجدهم في الدوائر الإنتخابية، جنسهم وطوائفهم منذ العام 2005. إنّ مشروع "تحليل بيانات الإنتخابات النيابيّة" هو ثمرة عمل مشترك بين الجمعية اللبنانية من أجل ديمقراطيّة الإنتخاباتط وبين "لامبا لابز" بدعم من "الديمقراطيّة الدوليّة" ومعهد "ديفيلوبمينت سيد"',
                 footer: "The data is licensed under CC By S.A 3.0 and can be downloaded <a href='https://www.github.com/ladeleb/platform'>here.</a>"
             };
             options = {}; options.control = {};

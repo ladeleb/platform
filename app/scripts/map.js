@@ -157,5 +157,9 @@ M.Map.prototype.init = function(){
 		a.pop();
 		window.location.href = a.join('/');
 	});
+
+	$("#about-btn").on('click', function() {
+		window.location.href = 'about.html';
+	});
 };
 

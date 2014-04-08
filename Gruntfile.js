@@ -219,7 +219,8 @@ module.exports = function (grunt) {
                         'scripts/*',
                         'styles/{,*/}*.css',
                         'bower_components/**',
-                        'data/**'
+                        'data/**',
+                        'CNAME'
                     ]
                 }]
             }

@@ -7,7 +7,8 @@
     "Leaflet.markercluster": "git://github.com/Leaflet/Leaflet.markercluster.git",
     "leaflet": "~0.7.1",
     "underscore": "~1.5.2",
-    "d3": "~3.4.1"
+    "d3": "~3.4.1",
+    "multiline": "~0.3.2"
   },
   "devDependencies": {}
 }

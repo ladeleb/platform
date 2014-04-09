@@ -12,11 +12,20 @@
     <!-- Place favicon.ico and apple-touch-icon.png in the root directory -->
 
     <link href="//netdna.bootstrapcdn.com/font-awesome/4.0.0/css/font-awesome.css" rel="stylesheet">
-    <link rel="stylesheet" href="styles/white_ballots.css">
+    <link rel="stylesheet" href="styles/about.css">
     <link rel="stylesheet" href="styles/main.css">
     <style>
         #share-data {
             margin-left: 0px !important;
+        }
+        .text-overlay {
+            max-width: 80%;
+            width: 80%;
+        }
+        .text-overlay p {
+            max-width: 80%;
+            width: 80%;
+            font-weight: 200 !important;
         }
     </style>
     <script src="//api.tiles.mapbox.com/mapbox.js/v1.5.2/mapbox.js"></script>
@@ -53,7 +62,7 @@
                 <p id='desc'>
                     <%= desc %>
                 </p>
-                <div class="partners">
+                <div class="partners"> Partners: <br>
                         <a href="http://developmentseed.org"><img src="images/devseed.jpg"></img></a>
                         <a href="http://democracyinternational.com/"><img src="images/DI.jpg"></img></a>
                         <a href="http://lambalabs.org/"><img src="images/lamba.png"></img></a>
@@ -67,15 +76,44 @@
 
         <script src="bower_components/jquery/jquery.js"></script>
         <script src="bower_components/underscore/underscore-min.js"></script>
+        <script src="bower_components/multiline/browser.js"></script>
         <script src="scripts/text_content.js"></script>
         <script src="scripts/map.js"></script>
         <script>
+var about = multiline(function() {/*
+<h2>About the Platform</h2>
+<p>The Lebanese Elections Data Analysis (LEDA) browser is a project to collect, visualize, and analyze election-related data. The LEDA browser is a joint effort of the <a href="http://www.lade.org.lb">Lebanese Association for Democracy of Elections (LADE)</a> and <a href="http://lamblabs.org">Lamba Labs</a>, with the support of <a href="http://democracyinternational.com">Democracy International (DI)</a> and <a href="http://developmentseed.org">Development Seed.</a></p>
+<p>The overarching goal of the LEDA browser is to present a range of stakeholders – electoral officials, parliamentarians, political parties, civil society, media, citizens, etc. – with better information to facilitate better decisions that lead to better outcomes.  We aim to achieve this goal by:
+<ul>
+<li>
+Creating a centralized hub of election-related data, maps, and analysis to promote data-driven decision-making and reforms to improve the electoral process;</li>
+<li>
+Presenting information in a highly accessible and digestible way so that stakeholders can measuring progress and identify trends from one election cycle to the next; and</li>
+<li>
+Providing a meaningful lens through which electoral developments and observation findings can be contextualized and understood.
+</li></ul>
+</p>
+<p>
+As a first step, LADE collected, analyzed, and visualized data on voter registration trends since 2005 and voter turnout trends in the 2009 parliamentary elections on the LEDA browser. LADE believes that the visualization of these datasets will help to foster evidence-based discussions and data-driven debate on election laws, policies, and reforms. Additional visualizations have been added such as white and invalid ballots cast, and voter representation in parliament.</p>
+<p>
+The initial visualizations presented on LEDA are based on data collected by LADE and adapted from data published by the <a href="http://www.moim.org.lb">Ministry of the Interior and Municipalities (MoIM)</a>, the <a href="http://www.dgps.gov.lb">Directorate General of Personal Services (DGPS)</a>, and the <a href="http://www.elections.gov.lb>www.elections.gov.lb</a> website.  
+</p><p>
+LADE will continue to open and visualize election-related data, including past and future election data and LADE observation data, through the website.  Non-election-related, but contextually relevant datasets - socio-economic, demographic, infrastructural, etc. - may be included for reference in the future.</p>
+<h2>About the Maps</h2>
+<p>
+The maps were made using <a href="http://www.mapbox.com">Mapbox</a> and <a href="http://www.mapbox.com/tilemill">Tilemill</a> using publicly available data and can be freely incorporated into other projects.
+</p>
+<h2>Open Source</h2>
+<p>
+The tools used to build this site are open source and the project is hosted on <a href="http://github.com/ladeleb/platform">github</a>. The data is licensed under CC By S.A 3.0.
+</p>
+*/});
             content = {};
             content.baseMap = 'kamicut.hd1mnn1i';
             content.textTemplateId = '#wb_text_overlay_template';
             content.textEn = {
-                title: "Lebanese Electoral Data",
-                desc: "Lebanese Elections Data Analysis (LEDA) is a joint effort of Lebanese Association for Democratic Elections (LADE) and Lamba Labs with the support of Democracy Elections (DI) and Development Seed. LEDA visualizes the Lebanese elections' data according to the voters' confessions, gender, votes and districts aiming to narrate by images and stories regarding various variations in the mentioned factors since 2005. <br><br>LEDA is a project exploring open data. The data is licensed under CC By S.A 3.0 and can be downloaded on <a href='http://github.com/ladeleb/platform'>Github</a>, contribute!",
+                title: "Lebanese Elections Data",
+                desc: about
             };
             content.textAr = {
                 title: "تحليل بيانات الإنتخابات النيابيّة",

@@ -90,7 +90,7 @@ h2 {
 }
 @media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/marcfarra\/Code\/ladeleb\/platform\/app\/styles\/vote_power\.scss}line{font-family:\0000387}}
 .text_overlay #desc {
-  font-weight: 300;
+  font-weight: normal;
   font-size: 1em;
   font-family: "Lato", Helvetica Neue, serif;
   color: #787878;

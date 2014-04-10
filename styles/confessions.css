@@ -116,7 +116,7 @@ h2 {
 }
 @media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/marcfarra\/Code\/ladeleb\/platform\/app\/styles\/confessions\.scss}line{font-family:\00003123}}
 .text_overlay #desc {
-  font-weight: 300;
+  font-weight: normal;
   font-size: 1em;
   font-family: "Lato", Helvetica Neue, serif;
   color: #787878;

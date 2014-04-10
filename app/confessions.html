@@ -121,14 +121,14 @@
                 <div id='tooltip-content'>
                     <h2><div id='district' > <%= district %> </div></h2>
                     <em><%= year_1 %></em>
-                    <div class="llabel">Total voters of <%= district %>: <%= total_1 %></div>
-                    <div class='llabel'><%= denom %> voters: <%= perc_1 %>% (<%= voters_1 %>) </div>
+                    <div class="llabel">Total (كامل):<div style="float:right; margin-right: 5px;"><%= total_1 %></div></div>
+                    <div class='llabel'><%= denom %> (<%= denom_ar %>): <div style="float:right; margin-right: 5px;"><%= perc_1 %>% (<%= voters_1 %>)</div></div>
                     <br>
                     <em><%= year_2 %></em>
-                    <div class="llabel">Total voters of <%= district %>: <%= total_2 %></div>
-                    <div class='llabel'><%= denom %> voters: <%= perc_2 %>% (<%= voters_2 %>) </div>
+                    <div class="llabel">Total (كامل):<div style="float:right; margin-right: 5px;"><%= total_2 %></div></div>
+                    <div class='llabel'><%= denom %> (<%= denom_ar %>): <div style="float:right; margin-right: 5px;"><%= perc_2 %>% (<%= voters_2 %>)</div></div>
                     <br>
-                    <span>Percent change: <div class='perce' style='color: <%=color%>'><%= voters_diff %>% </div></span>
+                    <span>Change (الفرق): <div class='perce' style='color: <%=color%>'><%= voters_diff %>% </div></span>
                 </div>
             </script>
 

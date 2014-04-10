@@ -51,10 +51,10 @@
                 </p>
 
                 <ul id="links">
-                    <li><img src="images/religion.png"></img><a href="confessions.html"><%= confessions %></a></li>
-                    <li><img src="images/gender.png"></img><a href="gender.html"><%= gender %></a></li>
-                    <li><img src="images/ballot.png"></img><a href="white_ballots.html"><%= white_ballots %></a></li>
-                    <li><img src="images/parliament.png"></img><a href="vote_power.html"><%= voter_power %></a></li>
+                    <li><a href="confessions.html"><%= confessions %></a></li>
+                    <li><a href="gender.html"><%= gender %></a></li>
+                    <li><a href="white_ballots.html"><%= white_ballots %></a></li>
+                    <li><a href="vote_power.html"><%= voter_power %></a></li>
                 </ul>
                 <!--
                 <div class="llabel" style="margin-top: 30px;font-family: Lato; font-weight:300; font-size:0.8em;"><p><%= footer %></p></div>
@@ -82,19 +82,19 @@
             content.textEn = {
                 title: "Lebanese Elections Data",
                 desc: "This is a project exploring open data. These visualizations show trends in voter registration by confession, gender, as well as white ballots cast and voter representation in parliament.",
-                confessions: "Voter trends by confessions",
-                gender: "Voter trends by gender",
-                white_ballots: "White and invalid ballots",
-                voter_power: "Voter representation in the parliament",
+                confessions: "<img src='images/religion.png'></img>Voter trends by confessions",
+                gender: "<img src='images/gender.png'></img>Voter trends by gender",
+                white_ballots: "<img src='images/ballot.png'></img>White and invalid ballots",
+                voter_power: "<img src='images/parliament.png'></img>Voter representation in the parliament",
                 footer: "A project exploring open data. The data is licensed under CC By S.A 3.0 and can be downloaded <a href='https://www.github.com/ladeleb/platform'>here.</a>"
             };
             content.textAr = {
                 title: "تحليل بيانات الإنتخابات النيابيّة",
-                desc: "هذه الخرائط إظهار التغييرات في تسجيل الناخبين من خلال الطائفة والجنس والأصوات البيضاء والتمثيل في البرلمان عبر السنوات.",
-                confessions: "الناخبين المسجلين حسب الطائفة",
-                gender: "الناخبين المسجلين حسب الجنس",
-                white_ballots: "قوة الاقتراع صوت أبيض",
-                voter_power: "مساواة التمثيل بين الناخبي",
+                desc: ".تظهر هذه الخرائط التغييرات  في تسجيل الناخبين من خلال الطائفة والجنس والأصوات البيضاء والتمثيل في البرلمان عبر السنوات",
+                confessions: "الناخبين المسجلون حسب الطائفة<img src='images/religion.png'></img>",
+                gender: "الناخبين المسجلون حسب الجنس<img src='images/gender.png'></img>",
+                white_ballots: "الاوراق البيضاء والملغاة" +"<img src='images/ballot.png'></img>",
+                voter_power: "تمثيل الناخبين في البرلمان" + "<img src='images/parliament.png'></img>",
                 footer: "The data is licensed under CC By S.A 3.0 and can be downloaded <a href='https://www.github.com/ladeleb/platform'>here.</a>"
             };
             options = {}; options.control = {};

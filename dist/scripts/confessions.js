@@ -9,18 +9,32 @@ content.textAr = confessions.textAr;
 content.layers = [];
 
 var confessionsReverse = {
+    sunni: "Sunni", 
+	shia: "Shia", 
+    maronite: "Maronite",
+    druze: "Druze",
+    grkorth: "Greek Orthodox",
+    grkcth: "Greek Catholic", 
 	alawite: "Alawite", 
 	armcth: "Armenian Catholic", 
-	sunni: "Sunni", 
-	shia: "Shia", 
-	maronite: "Maronite", 
-	grkorth: "Greek Orthodox", 
-	druze: "Druze",
-	grkcth: "Greek Catholic", 
-	armorth: "Armenian Orthodox", 
+	armorth: "Armenian Orthodox",
+    evangelical: "Evangelical",
 	minorities: "Minorities",
-	evangelical: "Evangelical"
 };
+
+var confessionsArabic = {
+	alawite: "علوية",
+    armorth: "ارمن الارثوذكس",
+    armcth: "ارمن الكاثوليك ",
+    evang: "بروتستانتية ",
+    minorities: "الأقليات",
+    sunni: "سني",
+    shia: "شيعة",
+    maronite: "موارنة",
+    druze: "دروز",
+    grkorth: "روم الارثوذكس",
+    grkcth: "روم الكاثوليك",
+}
 
 content.el = 'map';
 var confessions;
@@ -60,7 +74,8 @@ options.setTooltip = function( that ){
 		document.getElementById('tooltip-overlay').innerHTML = (props && _.template( template,  {
 				'district':props.district,
 				'denom': confessionsReverse[props.denom],
-				'voters_diff': Number(props.diff).toFixed(2),
+                'denom_ar': confessionsArabic[props.denom],
+				'voters_diff': Number(props.diff).toFixed(2) > 0? '+' + Number(props.diff).toFixed(2): Number(props.diff).toFixed(2),
 				'voters_1': props.num_1,
 				'voters_2': props.num_2,
 				'year_1': props.year_1,

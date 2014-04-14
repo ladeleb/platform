@@ -18,7 +18,8 @@ module.exports = function (grunt) {
     // configurable paths
     var yeomanConfig = {
         app: 'app',
-        dist: 'dist'
+        dist: 'dist',
+        root: '.'
     };
 
     grunt.initConfig({
@@ -206,6 +207,17 @@ module.exports = function (grunt) {
         },
         // Put files not handled in other tasks here
         copy: {
+            server: {
+                files: [{
+                    expand: true,
+                    dot: true,
+                    cwd: '<%= yeoman.root %>',
+                    dest: '<%= yeoman.app %>',
+                    src: [
+                        'data/**',
+                    ]
+                }]
+            },
             dist: {
                 files: [{
                     expand: true,
@@ -250,6 +262,7 @@ module.exports = function (grunt) {
 
         grunt.task.run([
             'clean:server',
+            'copy:server',
             'concurrent:server',
             'livereload-start',
             'connect:livereload',

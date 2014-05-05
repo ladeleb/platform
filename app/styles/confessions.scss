@@ -31,7 +31,10 @@ h2{
         display: inline-block;
     }
 }
-
+.select2 {
+    display: inline;
+    cursor: pointer;
+}
 #select-container {
     position: relative;
     font-weight: 300;

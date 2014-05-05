@@ -10,8 +10,8 @@ var genderText = {};
 whiteBallotText.textEn = {
 	// title : 'The <fc>Power</fc> of the <fh>White Ballot</fh>',
 	// title: '<span style="font-family: serif !important;font-weight:700;font-size:0.8em"> The power of the </span><br> <span style="font-family:Helvetica Neue;font-weight: 100">W H I T E  .  B A L L O T</span>',
-	title: 'The power of the <br> WHITE BALLOT',
-	desc : 'The White Ballot symbolizes a strong refusal of the political system and its ruling regime and the electoral law. It wasn\'t until 2009 that the Lebanese Government recognized the White Ballot as a electoral power and started counting White Ballots. ',
+	title: 'Blank and invalid votes',
+	desc : 'Blank (or white) ballots are ballots cast by voters without choosing a candidate. It wasn\'t until 2009 that the Lebanese Government recognized the White Ballot as a electoral power and started counting White Ballots. ',
 	select: 'Select a map:',
 	attribution: 'Data by Lebanese Association for Democratic Elections',
 	content: [
@@ -46,7 +46,7 @@ whiteBallotText.textAr = {
 	content: [
 		{
 			ttime : '2005',
-			time_desc :  ' الأصوات الباطلة عام 2005: '+'13394'
+			time_desc :  ' الأصوات الملغاة عام 2005: '+'13394'
 			// need to add map layer
 		},
 		{
@@ -55,7 +55,7 @@ whiteBallotText.textAr = {
 		},
 		{
 			ttime : '2009',
-			time_desc : 'الأصوات الباطلة عام 2009: '+'11390'
+			time_desc : 'الأصوات الملغاة عام 2009: '+'11390'
 			// need to add map layer
 		},
 		{

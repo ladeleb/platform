@@ -203,7 +203,7 @@ $('document').ready(function(){
 	content.layers[0] = changeLayer(denom, year);
 	confessions = new M.Map(content, options);
 	confessions.init();
-	$("li#"+denom).click();
-	$("li#"+year+".select1").click();
+	$(".select2#"+denom).click();
+	$("#"+year+".select1").click();
 });
 

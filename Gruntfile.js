@@ -215,6 +215,7 @@ module.exports = function (grunt) {
                     dest: '<%= yeoman.app %>',
                     src: [
                         'data/**',
+                        'data.zip'
                     ]
                 }]
             },
@@ -232,7 +233,8 @@ module.exports = function (grunt) {
                         'styles/{,*/}*.css',
                         'bower_components/**',
                         'data/**',
-                        'CNAME'
+                        'CNAME',
+                        'data.zip'
                     ]
                 }]
             }

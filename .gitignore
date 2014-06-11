@@ -4,3 +4,4 @@ node_modules
 .tmp
 .sass-cache
 experiments
+*.zip

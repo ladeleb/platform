@@ -141,15 +141,15 @@ M.Map.prototype.init = function(){
 	});
 
 
-	$('#download-data').on('click', function(){
-		if ($('#toolbar-download').is(':visible'))
-			$('#toolbar-download').fadeOut(75);
-		else
-			$('#toolbar-download').fadeIn(75);
-	});
-	$('.download-li').on('click', function(){
-		$('#toolbar-download').fadeOut(75);
-	});
+	// $('#download-data').on('click', function(){
+	// 	if ($('#toolbar-download').is(':visible'))
+	// 		$('#toolbar-download').fadeOut(75);
+	// 	else
+	// 		$('#toolbar-download').fadeIn(75);
+	// });
+	// $('.download-li').on('click', function(){
+	// 	$('#toolbar-download').fadeOut(75);
+	// });
 
 	$("#home-btn").on('click', function() {
 		var s = window.location.href;

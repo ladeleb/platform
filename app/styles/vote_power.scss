@@ -23,7 +23,17 @@ h2{
 	color:black;
 	text-align:center;
 }
+.selected {
+    color: #b2182b;
+}
 
+#select1 {
+	    font-weight: normal;
+    font-size:.9em;
+	li {
+		cursor: pointer;
+	}
+}
 #voters, #seats{
 	display:inline-block;
 	margin: 20px 15px 10px 15px;

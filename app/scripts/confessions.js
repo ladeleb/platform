@@ -158,13 +158,20 @@ function onEachFeature(denom, year) {
 			feature.properties.num_2 = feature.properties[denom+'_2009'];
 			feature.properties.total_1 = feature.properties.total_2005;
 			feature.properties.total_2 = feature.properties.total_2009;
-		} else {
+		} else if (year == 2) {
 			feature.properties.year_1 = 2009;
 			feature.properties.year_2 = 2013;
 			feature.properties.num_1 = feature.properties[denom+'_2009'];
 			feature.properties.num_2 = feature.properties[denom+'_2013'];
 			feature.properties.total_1 = feature.properties.total_2009;
 			feature.properties.total_2 = feature.properties.total_2013;
+		} else {
+			feature.properties.year_1 = 2013;
+			feature.properties.year_2 = 2014;
+			feature.properties.num_1 = feature.properties[denom+'_2013'];
+			feature.properties.num_2 = feature.properties[denom+'_2014'];
+			feature.properties.total_1 = feature.properties.total_2013;
+			feature.properties.total_2 = feature.properties.total_2014;
 		}
 		layer.on({
 			mouseover: highlightFeature,

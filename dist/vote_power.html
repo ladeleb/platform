@@ -71,6 +71,15 @@
             <p id='desc'>
                 <%= desc %>
             </p>
+            <div id="select1" style="float:left; display: block; margin-left: 50px">
+                    <h4><%= select_year %> </h4>
+                <ul>
+                    <li class="select" id="2009">2009</li>
+                    <li class="select" id="2013">2013</li>
+                    <li class="select" id="2014">2014</li>
+                </ul>
+            </div>
+
             <div class='legend clearfix'>
                 <div><b>Over</b> represented</div>
                 <div class='legend inner'></div>
@@ -92,7 +101,7 @@
                 <div id='voters' style="width: 150px;">  
                     <div class='llabel' > VOTERS - مسجلين</div>
                     <div class='perc' style='color: <%=color%>'> <%= (Number(voters_perc)*100).toFixed(2)%>%   </div>
-                    <div class='total'> <%=voters_total%>/3.2M </div>
+                    <div class='total'> <%=voters_total%>/<%=voters%> </div>
                 </div>
             </div>
         </script>
@@ -107,6 +116,7 @@
         <script src="bower_components/underscore/underscore-min.js"></script> 
         <script src="scripts/text_content.js"></script>
         <script src="scripts/map.js"></script>
+        <script src="data/vote_power/vote_power.js"></script>
         <script src="scripts/vote_power.js"></script>
 </body>
 </html>

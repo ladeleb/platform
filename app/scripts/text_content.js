@@ -149,6 +149,7 @@ powerText.textEn = {
 	'<br><br>The numbers shown are percentage of registered voters in the district out of total voters compared to percent of seats allocated for that district.' + 
 	'Ideally, 25,000 voters should be represented by one parliamentary member.',
 	attribution: 'Data by Lebanese Association for Democratic Elections',
+	select_year: 'Select a year:',
 
 };
 
@@ -156,5 +157,6 @@ powerText.textAr = {
 	title : "تمثيل الناخبين في البرلمان" ,
 	desc : ' تظهر هذه الخريطة تمثيل كل دائرة انتخابيّة في البرلمان.يتم الحصول على النتيجة من خلال قسمة عدد الناخبين المحتملين في كل دائرة انتخابيّة على كامل عدد الناخبين في كل لبنان وقسمة عدد المقاعد النيابيّة المرصودة لهذه الدائرة الانتخابية على كامل عدد المقاعد النيابيّة في لبنان  <br><br>. يشير اللون الأزرق إلى الدوائر التي يعتبر فيها التمثيل النيابي لهذه الدائرة ضئيلاً، في حين يشير اللون الأحمر إلى الدوائر التي يعتبر فيها التمثيل النيابي لهذه الدائرة مبالغا فيه',
 	attribution: 'الجمعية اللبنانية من أجل ديمقراطية الإنتخابات',
+	select_year: ":اختر السنة",
 
 };

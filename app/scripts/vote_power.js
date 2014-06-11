@@ -9,7 +9,7 @@ content.textEn =  powerText.textEn;
 content.textAr = powerText.textAr;
 
 content.layers = [];
-content.layers[0] =  L.mapbox.tileLayer('kamicut.vote_power');
+var year = 2013;
 
 content.el = 'map';
 
@@ -36,6 +36,28 @@ options.legend = {
 	]
 
 };
+
+var population = {
+	"2009": "3.2M",
+	"2013": "3.45M",
+	"2014": "3.5M"
+};
+
+options.control = function() {
+	var that = this;
+	$('.select').each(function() {
+		console.log(this);
+		$(this).on('click', function() {
+			console.log(this);
+			$('.select.selected').removeClass('selected');
+			year = $(this).attr('id');
+			content.layers[0] = changeYear(Number(year));
+			$("message").html("<p>You are viewing the "+"</p>");
+			$(this).addClass('selected');
+		});
+	})
+}
+
 options.setTooltip = function( that ){
 	var gridLayer = L.mapbox.gridLayer('kamicut.vote_power');
 	that.map.addLayer(gridLayer);
@@ -45,7 +67,6 @@ options.setTooltip = function( that ){
 		if (o.data!== undefined){
 			var color;
 			var index = o.data['Index'];
-			console.log(o);
 			for (var i = that.options.legend.colors.length-1;i>0;i--){
 				if (index >= Number(that.options.legend.colors[i].label)) {
 					color = that.options.legend.colors[i].color;
@@ -55,13 +76,15 @@ options.setTooltip = function( that ){
 					color = 'rgb(66,66,66)';
 				}
 			}
+			district_data = vote_power[o.data.DISTRICT];
 			document.getElementById('tooltip-overlay').innerHTML = (o.data && _.template( template,  {
 				'color':color,
 				'district':o.data.DISTRICT,
-				'voters_perc': o.data['Voter Perc'],
-				'voters_total': o.data.Registered,
+				'voters_perc': district_data[year + "_ratio"],
+				'voters_total': district_data[year + "_registered"],
 				'seats_perc': o.data['Seat Perce'],
-				'seats_total': o.data.Total
+				'seats_total': o.data.Total,
+				'voters': population[year]
 			}) || '');
 		}
     }).on('mouseout', function(o) {
@@ -70,7 +93,16 @@ options.setTooltip = function( that ){
 };
 
 voterPower = new M.Map(content, options);
-
+var currentLayer = L.mapbox.tileLayer('kamicut.vote_power_2009');
+content.layers[0] = currentLayer;
+function changeYear(new_year) {
+	year = new_year;
+	voterPower.map.removeLayer(currentLayer);
+	currentLayer = L.mapbox.tileLayer('kamicut.vote_power_' + year);
+	voterPower.map.addLayer(currentLayer);
+	return currentLayer;
+}
 $('document').ready(function(){
 	voterPower.init();
+	$("#"+year+".select").click();
 });

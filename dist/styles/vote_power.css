@@ -1,11 +1,11 @@
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/marcfarra\/Code\/ladeleb\/platform\/app\/styles\/vote_power\.scss}line{font-family:\000032}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/marcfarra\/code\/ladeleb\/platform\/app\/styles\/vote_power\.scss}line{font-family:\000032}}
 h1 {
   margin: 0 0 0px 0;
   font-weight: 700;
   font-size: 50px;
 }
 
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/marcfarra\/Code\/ladeleb\/platform\/app\/styles\/vote_power\.scss}line{font-family:\000037}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/marcfarra\/code\/ladeleb\/platform\/app\/styles\/vote_power\.scss}line{font-family:\000037}}
 h2 {
   font-size: 25px;
   line-height: 30px;
@@ -13,7 +13,7 @@ h2 {
   color: #64646e;
 }
 
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/marcfarra\/Code\/ladeleb\/platform\/app\/styles\/vote_power\.scss}line{font-family:\0000315}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/marcfarra\/code\/ladeleb\/platform\/app\/styles\/vote_power\.scss}line{font-family:\0000315}}
 #tooltip-content {
   padding: 10px;
   z-index: 9999;
@@ -25,32 +25,47 @@ h2 {
   text-align: center;
 }
 
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/marcfarra\/Code\/ladeleb\/platform\/app\/styles\/vote_power\.scss}line{font-family:\0000327}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/marcfarra\/code\/ladeleb\/platform\/app\/styles\/vote_power\.scss}line{font-family:\0000326}}
+.selected {
+  color: #b2182b;
+}
+
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/marcfarra\/code\/ladeleb\/platform\/app\/styles\/vote_power\.scss}line{font-family:\0000330}}
+#select1 {
+  font-weight: normal;
+  font-size: .9em;
+}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/marcfarra\/code\/ladeleb\/platform\/app\/styles\/vote_power\.scss}line{font-family:\0000333}}
+#select1 li {
+  cursor: pointer;
+}
+
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/marcfarra\/code\/ladeleb\/platform\/app\/styles\/vote_power\.scss}line{font-family:\0000337}}
 #voters, #seats {
   display: inline-block;
   margin: 20px 15px 10px 15px;
   min-width: 100px;
 }
 
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/marcfarra\/Code\/ladeleb\/platform\/app\/styles\/vote_power\.scss}line{font-family:\0000333}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/marcfarra\/code\/ladeleb\/platform\/app\/styles\/vote_power\.scss}line{font-family:\0000343}}
 .perc {
   font-size: 40px;
   margin: 7px 0 10px 0;
 }
 
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/marcfarra\/Code\/ladeleb\/platform\/app\/styles\/vote_power\.scss}line{font-family:\0000337}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/marcfarra\/code\/ladeleb\/platform\/app\/styles\/vote_power\.scss}line{font-family:\0000347}}
 .total {
   font-size: 18px;
   font-weight: 100;
 }
 
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/marcfarra\/Code\/ladeleb\/platform\/app\/styles\/vote_power\.scss}line{font-family:\0000341}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/marcfarra\/code\/ladeleb\/platform\/app\/styles\/vote_power\.scss}line{font-family:\0000351}}
 .llabel {
   font-weight: 100;
   font-size: 16px;
 }
 
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/marcfarra\/Code\/ladeleb\/platform\/app\/styles\/vote_power\.scss}line{font-family:\0000348}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/marcfarra\/code\/ladeleb\/platform\/app\/styles\/vote_power\.scss}line{font-family:\0000358}}
 #tloc {
   font-family: Helvetica, sans-serif;
   font-weight: 400;
@@ -59,7 +74,7 @@ h2 {
   padding-bottom: 0.8em;
 }
 
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/marcfarra\/Code\/ladeleb\/platform\/app\/styles\/vote_power\.scss}line{font-family:\0000356}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/marcfarra\/code\/ladeleb\/platform\/app\/styles\/vote_power\.scss}line{font-family:\0000366}}
 #tnum {
   font-family: Helvetica, sans-serif;
   font-color: #28283c;
@@ -67,7 +82,7 @@ h2 {
   font-weight: 800;
 }
 
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/marcfarra\/Code\/ladeleb\/platform\/app\/styles\/vote_power\.scss}line{font-family:\0000365}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/marcfarra\/code\/ladeleb\/platform\/app\/styles\/vote_power\.scss}line{font-family:\0000375}}
 .text_overlay {
   margin: 75px 0 50px 50px;
   padding: 20px;
@@ -81,14 +96,14 @@ h2 {
   z-index: 4;
   font-size: 1.3em;
 }
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/marcfarra\/Code\/ladeleb\/platform\/app\/styles\/vote_power\.scss}line{font-family:\0000380}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/marcfarra\/code\/ladeleb\/platform\/app\/styles\/vote_power\.scss}line{font-family:\0000390}}
 .text_overlay p {
   max-width: 550px;
   text-align: justify;
   line-height: 1.4em;
   margin: 30px 0 20px 0;
 }
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/marcfarra\/Code\/ladeleb\/platform\/app\/styles\/vote_power\.scss}line{font-family:\0000387}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/marcfarra\/code\/ladeleb\/platform\/app\/styles\/vote_power\.scss}line{font-family:\0000397}}
 .text_overlay #desc {
   font-weight: normal;
   font-size: 1em;
@@ -96,11 +111,11 @@ h2 {
   color: #787878;
 }
 
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/marcfarra\/Code\/ladeleb\/platform\/app\/styles\/vote_power\.scss}line{font-family:\0000396}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/marcfarra\/code\/ladeleb\/platform\/app\/styles\/vote_power\.scss}line{font-family:\00003106}}
 .text_overlay.en {
   text-align: left;
 }
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/marcfarra\/Code\/ladeleb\/platform\/app\/styles\/vote_power\.scss}line{font-family:\00003100}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/marcfarra\/code\/ladeleb\/platform\/app\/styles\/vote_power\.scss}line{font-family:\00003110}}
 .text_overlay.en .time_section #time, .text_overlay.en .time_section #time_desc {
   float: left;
 }

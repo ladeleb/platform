@@ -1,4 +1,4 @@
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/marcfarra\/Code\/ladeleb\/platform\/app\/styles\/confessions\.scss}line{font-family:\000032}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/marcfarra\/code\/ladeleb\/platform\/app\/styles\/confessions\.scss}line{font-family:\000032}}
 h1 {
   margin: 0 0 0px 0;
   font-weight: 700;
@@ -6,7 +6,7 @@ h1 {
   line-height: 48px;
 }
 
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/marcfarra\/Code\/ladeleb\/platform\/app\/styles\/confessions\.scss}line{font-family:\000038}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/marcfarra\/code\/ladeleb\/platform\/app\/styles\/confessions\.scss}line{font-family:\000038}}
 h2 {
   font-size: 25px;
   line-height: 30px;
@@ -14,7 +14,7 @@ h2 {
   color: #64646e;
 }
 
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/marcfarra\/Code\/ladeleb\/platform\/app\/styles\/confessions\.scss}line{font-family:\0000316}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/marcfarra\/code\/ladeleb\/platform\/app\/styles\/confessions\.scss}line{font-family:\0000316}}
 #tooltip-content {
   min-width: 335px;
   padding: 10px;
@@ -25,63 +25,63 @@ h2 {
   background: white;
   color: black;
 }
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/marcfarra\/Code\/ladeleb\/platform\/app\/styles\/confessions\.scss}line{font-family:\0000328}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/marcfarra\/code\/ladeleb\/platform\/app\/styles\/confessions\.scss}line{font-family:\0000328}}
 #tooltip-content .perce {
   padding: 2px;
   font-size: 20px;
   display: inline-block;
 }
 
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/marcfarra\/Code\/ladeleb\/platform\/app\/styles\/confessions\.scss}line{font-family:\0000334}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/marcfarra\/code\/ladeleb\/platform\/app\/styles\/confessions\.scss}line{font-family:\0000334}}
 .select2 {
   display: inline;
   cursor: pointer;
 }
 
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/marcfarra\/Code\/ladeleb\/platform\/app\/styles\/confessions\.scss}line{font-family:\0000338}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/marcfarra\/code\/ladeleb\/platform\/app\/styles\/confessions\.scss}line{font-family:\0000338}}
 #select-container {
   position: relative;
-  font-weight: 300;
+  font-weight: normal;
   font-size: .9em;
   font-family: "Lato", Helvetica Neue, serif;
   color: #787878;
 }
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/marcfarra\/Code\/ladeleb\/platform\/app\/styles\/confessions\.scss}line{font-family:\0000344}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/marcfarra\/code\/ladeleb\/platform\/app\/styles\/confessions\.scss}line{font-family:\0000344}}
 #select-container li {
   cursor: pointer;
 }
 
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/marcfarra\/Code\/ladeleb\/platform\/app\/styles\/confessions\.scss}line{font-family:\0000348}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/marcfarra\/code\/ladeleb\/platform\/app\/styles\/confessions\.scss}line{font-family:\0000348}}
 .selected {
   color: #b2182b;
 }
 
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/marcfarra\/Code\/ladeleb\/platform\/app\/styles\/confessions\.scss}line{font-family:\0000365}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/marcfarra\/code\/ladeleb\/platform\/app\/styles\/confessions\.scss}line{font-family:\0000365}}
 #voters, #seats {
   display: inline-block;
   margin: 20px 15px 10px 15px;
   min-width: 100px;
 }
 
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/marcfarra\/Code\/ladeleb\/platform\/app\/styles\/confessions\.scss}line{font-family:\0000371}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/marcfarra\/code\/ladeleb\/platform\/app\/styles\/confessions\.scss}line{font-family:\0000371}}
 .perc {
   font-size: 40px;
   margin: 7px 0 10px 0;
 }
 
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/marcfarra\/Code\/ladeleb\/platform\/app\/styles\/confessions\.scss}line{font-family:\0000375}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/marcfarra\/code\/ladeleb\/platform\/app\/styles\/confessions\.scss}line{font-family:\0000375}}
 .total {
   font-size: 18px;
   font-weight: 100;
 }
 
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/marcfarra\/Code\/ladeleb\/platform\/app\/styles\/confessions\.scss}line{font-family:\0000379}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/marcfarra\/code\/ladeleb\/platform\/app\/styles\/confessions\.scss}line{font-family:\0000379}}
 .llabel {
   font-weight: 100;
   font-size: 16px;
 }
 
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/marcfarra\/Code\/ladeleb\/platform\/app\/styles\/confessions\.scss}line{font-family:\0000386}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/marcfarra\/code\/ladeleb\/platform\/app\/styles\/confessions\.scss}line{font-family:\0000386}}
 #tloc {
   font-family: Helvetica, sans-serif;
   font-weight: 400;
@@ -90,7 +90,7 @@ h2 {
   padding-bottom: 0.8em;
 }
 
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/marcfarra\/Code\/ladeleb\/platform\/app\/styles\/confessions\.scss}line{font-family:\0000394}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/marcfarra\/code\/ladeleb\/platform\/app\/styles\/confessions\.scss}line{font-family:\0000394}}
 #tnum {
   font-family: Helvetica, sans-serif;
   font-color: #28283c;
@@ -98,7 +98,7 @@ h2 {
   font-weight: 800;
 }
 
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/marcfarra\/Code\/ladeleb\/platform\/app\/styles\/confessions\.scss}line{font-family:\00003103}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/marcfarra\/code\/ladeleb\/platform\/app\/styles\/confessions\.scss}line{font-family:\00003103}}
 .text_overlay {
   margin: 75px 0 50px 50px;
   margin-bottom: 0px;
@@ -113,14 +113,14 @@ h2 {
   z-index: 4;
   font-size: 1.2chem;
 }
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/marcfarra\/Code\/ladeleb\/platform\/app\/styles\/confessions\.scss}line{font-family:\00003119}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/marcfarra\/code\/ladeleb\/platform\/app\/styles\/confessions\.scss}line{font-family:\00003119}}
 .text_overlay p {
   max-width: 550px;
   text-align: justify;
   line-height: 1.4em;
   margin: 20px 0 20px 0;
 }
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/marcfarra\/Code\/ladeleb\/platform\/app\/styles\/confessions\.scss}line{font-family:\00003126}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/marcfarra\/code\/ladeleb\/platform\/app\/styles\/confessions\.scss}line{font-family:\00003126}}
 .text_overlay #desc {
   font-weight: normal;
   font-size: 1em;
@@ -128,16 +128,16 @@ h2 {
   color: #787878;
 }
 
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/marcfarra\/Code\/ladeleb\/platform\/app\/styles\/confessions\.scss}line{font-family:\00003135}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/marcfarra\/code\/ladeleb\/platform\/app\/styles\/confessions\.scss}line{font-family:\00003135}}
 .text_overlay.en {
   text-align: left;
 }
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/marcfarra\/Code\/ladeleb\/platform\/app\/styles\/confessions\.scss}line{font-family:\00003139}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/marcfarra\/code\/ladeleb\/platform\/app\/styles\/confessions\.scss}line{font-family:\00003139}}
 .text_overlay.en .time_section #time, .text_overlay.en .time_section #time_desc {
   float: left;
 }
 
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/marcfarra\/Code\/ladeleb\/platform\/app\/styles\/confessions\.scss}line{font-family:\00003146}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/marcfarra\/code\/ladeleb\/platform\/app\/styles\/confessions\.scss}line{font-family:\00003146}}
 #map_container {
   height: 0px;
 }

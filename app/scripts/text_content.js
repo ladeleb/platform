@@ -72,7 +72,7 @@ confessions.textEn = {
 	// title : 'The <fc>Power</fc> of the <fh>White Ballot</fh>',
 	// title: '<span style="font-family: serif !important;font-weight:700;font-size:0.8em"> The power of the </span><br> <span style="font-family:Helvetica Neue;font-weight: 100">W H I T E  .  B A L L O T</span>',
 	title: 'Registered voters by confession',
-	desc : 'The following map shows the variance (between two consecutive parliamentary elections) in the total number of the registered voters of each sect per electoral district and their percentages (in respect to the total number of voters in that district). Green indicates an increase in influence, while red indicates a decrease in influence. Yellow represents no or minimal change in influence.',
+	desc : 'The following map shows the variance (between two consecutive parliamentary elections in addition to the 2013 and 2014 voter lists) in the total number of the registered voters of each sect per electoral district and their percentages (in respect to the total number of voters in that district). Green indicates an increase in influence, while red indicates a decrease in influence. Yellow represents no or minimal change in influence.',
 	attribution: 'Data by Lebanese Association for Democratic Elections',
 	confession: "Select a confession",
 	year: "Select a year",
@@ -91,7 +91,7 @@ confessions.textEn = {
 
 confessions.textAr = {
 	title : 'الناخبون المسجلون حسب الطائفة',
-	desc : 'تظهر هذه الخريطة الفارق (في دورتين انتخابيتين نيابيتين متتاليتين) بين العدد الجملي  للناخبين عن كل طائفة في كل دائرة انتخابية، كما تظهر النسب (بالنسبة لمجمل  عدد الناخبين عن هذه الدائرة). اللون الأخضر يشير إلى تزايد تأثير ناخبي هذه الطائفة، في حين أنّ اللون الأحمر يشير إلى انخفاض هذا التأثير. اللون الأصفر يشير الى لا تغيير أو تغيير ضئيل في التأثير',
+	desc : 'تظهر هذه الخريطة الفارق (في دورتين انتخابيتين نيابيتين متتاليتين 2005 و 2009 اضافة الى المسجلين على لوائح 2013 و 2014) بين العدد الاجمالي  للناخبين عن كل طائفة في كل دائرة انتخابية، كما تظهر النسب (بالنسبة لمجمل عدد الناخبين عن هذه الدائرة). اللون الأخضر يشير إلى تزايد تأثير ناخبي هذه الطائفة، في حين أنّ اللون الأحمر يشير إلى انخفاض هذا التأثير. اللون الأصفر يشير الى انه لا تغيير أو تغيير ضئيل في التأثير',
 	attribution: 'الجمعية اللبنانية من أجل ديمقراطية الإنتخابات',
 	confession: ":اختر طائفة",
 	year: ":اختر السنة",

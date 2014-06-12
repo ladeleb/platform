@@ -22,7 +22,8 @@ options.control = function() {
 	var that = this;
 	$('.select1').on('click', function() {
 		$('.select1').removeClass('selected');
-		content.layers[0] = changeLayer($(this).attr('id'));
+		var spl = $(this).attr('id').split('-');
+		content.layers[0] = changeLayer(spl[0], spl[1]);
 		$(this).addClass('selected');
 	});
 };
@@ -104,19 +105,19 @@ function onEachFeature(datalayer) {
 		if (datalayer == 'voter_turnout') {
 			feature.properties.diff_name = 'turnout';
             feature.properties.diff_label = 'Turnout - مشاركة';
-			feature.properties.total = feature.properties.voter_turnout;
-			feature.properties.num_male = feature.properties.voter_turnout_male;
-			feature.properties.num_female = feature.properties.voter_turnout_female;
-			feature.properties.perc_male = feature.properties.voter_turnout_male_pct;
-			feature.properties.perc_female = feature.properties.voter_turnout_female_pct;
+			feature.properties.total = Number(feature.properties.voter_turnout);
+			feature.properties.num_male = Number(feature.properties.voter_turnout_male);
+			feature.properties.num_female = Number(feature.properties.voter_turnout_female);
+			feature.properties.perc_male = Number(feature.properties.voter_turnout_male_pct);
+			feature.properties.perc_female = Number(feature.properties.voter_turnout_female_pct);
 		} else {
 			feature.properties.diff_name = 'registered';
             feature.properties.diff_label = 'Registered - تسجيل';
-			feature.properties.total = feature.properties.total_registered;
-			feature.properties.num_male = feature.properties.registered_male;
-			feature.properties.num_female = feature.properties.registered_female;
-			feature.properties.perc_male = feature.properties.registered_male_pct;
-			feature.properties.perc_female = feature.properties.registered_female_pct;
+			feature.properties.total = Number(feature.properties.total_registered);
+			feature.properties.num_male = Number(feature.properties.registered_male);
+			feature.properties.num_female = Number(feature.properties.registered_female);
+			feature.properties.perc_male = Number(feature.properties.registered_male_pct);
+			feature.properties.perc_female = Number(feature.properties.registered_female_pct);
 		}
 		feature.properties.diff = feature.properties[diff];
 		feature.properties.datalayer = datalayer;
@@ -138,12 +139,20 @@ function zoomToFeature(e) {
 	map.fitBounds(e.target.getBounds());
 }
 
-function changeLayer(datalayer) {
+var years = {
+	"2009": genderData2009,
+	"2013": genderData2013,
+	"2014": genderData2014,
+};
+
+function changeLayer(datalayer, year) {
 	diff = 'diff_'+datalayer;
+	console.log(datalayer + ", " + year);
 	if (typeof(geojson) !== "undefined") {
 		gender.map.removeLayer(geojson);
 	}
-	geojson = L.geoJson(genderData, {
+	console.log(years[year]);
+	geojson = L.geoJson(years[year], {
 		style: style(diff),
 		onEachFeature: onEachFeature(datalayer)
 	});
@@ -154,9 +163,9 @@ function changeLayer(datalayer) {
 }	
 
 $('document').ready(function(){
-	content.layers[0] = changeLayer(datalayer);
+	content.layers[0] = changeLayer(datalayer, "2009");
 	gender = new M.Map(content, options);
 	gender.init();
-	$("li#"+datalayer).click();
+	$("li#"+datalayer+"-2009").click();
 });
 

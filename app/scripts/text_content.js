@@ -113,7 +113,7 @@ confessions.textAr = {
 /* The text content of the page in English */
 genderText.textEn = {
 	title: 'Voters by Gender',
-	desc : 'The following map shows the total number of male and female per electoral district in 2009. Green indicates that male voters are more than female voters (either in registered voters or Electors), pink indicates that female voters are more than male voters.',
+	desc : 'The following map shows the total number of male and female per electoral district in 2009 in addition to voter lists of 2013 and 2014. Green indicates that male voters are more than female voters (either in registered voters or Electors), pink indicates that female voters are more than male voters.',
 	attribution: 'Data by Lebanese Association for Democratic Elections',
 	select: "Select a map:",
 	voter_turnout: "Voter Turnout",
@@ -128,7 +128,7 @@ genderText.textEn = {
 
 genderText.textAr = {
 	title : 'الناخبون المسجلون حسب الجنس',
-	desc :'تظهر هذه الخريطة العدد الاجمالي للناخلين الذكور والاناث ( الناخبين المسجلين والمقترعين) في كل دائرة انتخابية في انتخابات 2009. اللون الأخضر يشير إلى أنّ عدد الذكور أكبر من عدد الإناث (سواء كانوا أعداد الناخبين المسجلين أم المقترعين). اللون الزهري يشير إلى أنّ عدد الإناث أكبر من عدد الذكور',
+	desc :'تظهر هذه الخريطة العدد الاجمالي للناخبين الذكور والاناث ( الناخبين المسجلين والمقترعين) في كل دائرة انتخابية في انتخابات 2009 اضافة الى المسجلين على لوائح 2013 و 2014. اللون الأخضر يشير إلى أنّ عدد الذكور أكبر من عدد الإناث (سواء كانوا أعداد الناخبين المسجلين أم المقترعين). اللون الزهري يشير إلى أنّ عدد الإناث أكبر من عدد الذكور',
 	attribution: 'الجمعية اللبنانية من أجل ديمقراطية الإنتخابات',
 	select: ":اختر خريطة",
 	voter_turnout: " الناخبين حسب المشاركة ",

@@ -4,7 +4,7 @@ Election Data Platform
 A website for LADE's lebanese election data
   * Voter registration trends by confession [link](http://ladeleb.github.io/platform/confessions.html)  
   * Voter registration trends by gender [link](http://ladeleb.github.io/platform/gender.html)
-  * White Ballots of 2005-2009 [link](http://ladeleb.github.io/platform/white_ballots.html)
+  * Protest Votes (White Ballots) [link](http://ladeleb.github.io/platform/white_ballots.html)
   * Voter representation per district [link](http://ladeleb.github.io/platform/vote_power.html)
     
 License

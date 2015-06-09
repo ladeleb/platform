@@ -12,8 +12,8 @@
     <!-- Place favicon.ico and apple-touch-icon.png in the root directory -->
 
     <link href="//netdna.bootstrapcdn.com/font-awesome/4.0.0/css/font-awesome.css" rel="stylesheet">
-    <link rel="stylesheet" href="styles/white_ballots.css">
     <link rel="stylesheet" href="styles/main.css">
+    <link rel="stylesheet" href="styles/monkeypatch.css">
 
     <script src="//api.tiles.mapbox.com/mapbox.js/v1.5.2/mapbox.js"></script>
     <link href="//api.tiles.mapbox.com/mapbox.js/v1.5.2/mapbox.css" rel="stylesheet">
@@ -32,71 +32,132 @@
             </ul>
         </li>
         <li id="ar" class="langbtn">عربي</li>
-    </ul> 
+        <li id="en" class="langbtn">EN</li>
+    </ul>
 
     <div id="map_container">
-        <div class="text_overlay ar"></div>
-        <div class="text_overlay en"></div>
+      <div class="hero en">
+          <div class="panel panel-white">
+                    <div class="panel-heading">
+                      <h4 class="panel-title">Lebanese Elections Data</h4>
+                    </div>
+                    <div class="panel-body">
+                      <p>
+                        This is a project exploring open data. These visualizations show trends in voter registration by confession, gender, as well as white
+                        ballots cast and voter representation in parliament.
+                      </p>
+                       <ul>
+                         <li><a href="confessions.html">Voter trends by confessions</a></li>
+                         <li><a href="gender.html">Voter trends by gender</a></li>
+                         <li><a href="white_ballots.html">White and invalid ballots</a></li>
+                         <li><a href="vote_power.html">Voter representation in the parliament</a></li>
+                       </ul>
+
+                    </div>
+          </div>
+          <div class="panel panel-white">
+                    <div class="panel-heading">
+                      <h4 class="panel-title">Election-related issues poll</h4>
+                    </div>
+                    <div class="panel-body">
+                      <p>
+                        Information and figures about some of the electoral issues that LADE polled the views and positions of the Lebanese around , these figures highlight the extent of involvement in  political life, the degree of satisfaction with the performance
+                        of the  municipal councils and the nature of the electoral system favored by the Lebanese.
+                      </p>
+                       <ul>
+                         <li><a href="interest.html">The extent of citizens involvement in political life</a></li>
+                         <li><a href="satisfaction.html">Citizens satisfaction with the municipal councils</a></li>
+                         <li><a href="system.html">Citizens satisfaction with the performance of municipal councils</a></li>
+                       </ul>
+
+                    </div>
+          </div>
+</div>
+<div class="hero ar">
+    <div class="panel panel-white">
+              <div class="panel-heading">
+                <h4 class="panel-title">تحليل بيانات الإنتخابات النيابيّة</h4>
+              </div>
+              <div class="panel-body">
+                <p>.تظهر هذه الخرائط التغييرات في تسجيل الناخبين من خلال الطائفة والجنس والأصوات البيضاء والتمثيل في البرلمان عبر السنوات</p>
+                 <ul>
+                   <li><a href="confessions.html">الناخبون المسجلون حسب الطائفة</a></li>
+                   <li><a href="gender.html">الناخبون المسجلون حسب الجنس</a></li>
+                   <li><a href="white_ballots.html">الاوراق البيضاء والملغاة</a></li>
+                   <li><a href="vote_power.html">تمثيل الناخبين في البرلمان</a></li>
+                 </ul>
+
+              </div>
+    </div>
+    <div class="panel panel-white">
+              <div class="panel-heading">
+                <h4 class="panel-title">سبر أراء متعلق بالقضايا الانتخابية</h4>
+              </div>
+              <div class="panel-body">
+                <p>
+                  تبرز هذه الارقام مدى انخراط اللبنانيين في الحياة السياسية، مدى رضى اللبنانيين عن أداء مجالسهم البلدية  وماهية النظام الانتخابي الذي يفضّله اللبنانيون.
+                </p>
+                 <ul>
+                   <li><a href="interest.html">مدى انخراط المواطنين بالحياة السياسية</a></li>
+                   <li><a href="satisfaction.html">رضى المواطنين عن أداء مجالسهم البلدية</a></li>
+                   <li><a href="system.html">ما هو النظام الانتخابي الذي يفضّله اللبنانيون</a></li>
+                 </ul>
+
+              </div>
+    </div>
+</div>
         <div id="map"></div>
     </div>
 
-        <!--[if lt IE 7]>
-            <p class="browsehappy">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
-            <![endif]-->
-
-            <script type="text/template" id="wb_text_overlay_template">
-                <h1> <%= title %> </h1>
-                <p id='desc'>
-                    <%= desc %>
-                </p>
-
-                <ul id="links">
-                    <li><a href="confessions.html"><%= confessions %></a></li>
-                    <li><a href="gender.html"><%= gender %></a></li>
-                    <li><a href="white_ballots.html"><%= white_ballots %></a></li>
-                    <li><a href="vote_power.html"><%= voter_power %></a></li>
-                </ul>
-                <!--
-                <div class="llabel" style="margin-top: 30px;font-family: Lato; font-weight:300; font-size:0.8em;"><p><%= footer %></p></div>
-                -->
-            </script>
-
-
-        <!--[if lte IE 8]>
-        <![endif]-->
 
         <script src="bower_components/jquery/jquery.js"></script>
-        <script src="bower_components/underscore/underscore-min.js"></script> 
-        <script src="scripts/text_content.js"></script>
-        <script src="scripts/map.js"></script>
         <script>
-            content = {};
-            content.baseMap = 'kamicut.hd1mnn1i';
-            content.textTemplateId = '#wb_text_overlay_template';
-            content.textEn = {
-                title: "Lebanese Elections Data",
-                desc: "This is a project exploring open data. These visualizations show trends in voter registration by confession, gender, as well as white ballots cast and voter representation in parliament.",
-                confessions: "<img src='images/group.png'></img>Voter trends by confessions",
-                gender: "<img src='images/gender.png'></img>Voter trends by gender",
-                white_ballots: "<img src='images/ballot.png'></img>White and invalid ballots",
-                voter_power: "<img src='images/parliament.png'></img>Voter representation in the parliament",
-                footer: "A project exploring open data. The data is licensed under CC By S.A 3.0 and can be downloaded <a href='https://www.github.com/ladeleb/platform'>here.</a>"
-            };
-            content.textAr = {
-                title: "تحليل بيانات الإنتخابات النيابيّة",
-                desc: ".تظهر هذه الخرائط التغييرات  في تسجيل الناخبين من خلال الطائفة والجنس والأصوات البيضاء والتمثيل في البرلمان عبر السنوات",
-                confessions: "الناخبون المسجلون حسب الطائفة<img src='images/group.png'></img>",
-                gender: "الناخبون المسجلون حسب الجنس<img src='images/gender.png'></img>",
-                white_ballots: "الاوراق البيضاء والملغاة" +"<img src='images/ballot.png'></img>",
-                voter_power: "تمثيل الناخبين في البرلمان" + "<img src='images/parliament.png'></img>",
-                footer: "The data is licensed under CC By S.A 3.0 and can be downloaded <a href='https://www.github.com/ladeleb/platform'>here.</a>"
-            };
-            options = {}; options.control = {};
-            content.layers = []
-            content.layers[0] = L.mapbox.tileLayer('kamicut.electoral_districts');
-            content.el = 'map';
-            main = new M.Map(content,options);
-            main.init();
+        L.mapbox.accessToken = 'pk.eyJ1IjoidHVuaXNpYSIsImEiOiJwelVyLW1JIn0.mBhvyh8Ui8NzOq8Bpzl83g';
+        L.mapbox.map('map', 'tunisia.h2h6215h',{ zoomControl:false })
+                .setView([33.894286, 35.67231], 10);
+
+          $("#ar").on("click",function(){
+          console.log('switching lang');
+          $(".en").hide();
+          $(".ar").show();
+          $("#ar").hide();
+          $("#en").show();
+
+        });
+        $("#en").on("click",function(){
+          console.log('switching lang');
+          $(".ar").hide();
+          $(".en").show();
+          $("#en").hide();
+          $("#ar").show();
+
+        });
+          $( document ).ready(function() {
+            $("#en").hide()
+            $(".ar").hide()
+        });
+        $("#share-data").on('click', function() {
+           if ($('#toolbar-share').is(':visible')) {
+             $('#toolbar-share').fadeOut(75);
+           }
+           else {
+             $('#toolbar-share').fadeIn(75);
+           }
+         });
+         $('.share-li').on('click', function(){
+           $('#toolbar-share').fadeOut(75);
+         });
+
+         $("#home-btn").on('click', function() {
+           var s = window.location.href;
+           var a = s.split('/');
+           a.pop();
+           window.location.href = a.join('/');
+         });
+
+         $("#about-btn").on('click', function() {
+           window.location.href = 'about.html';
+         });
         </script>
         <script>
           (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){

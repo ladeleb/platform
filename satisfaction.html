@@ -1,0 +1,235 @@
+<html lang="en">
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0">
+  <meta name="description" content="">
+  <title></title>
+  <link href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.2/css/bootstrap.min.css" rel="stylesheet">
+  <link href="https://api.tiles.mapbox.com/mapbox.js/v2.1.9/mapbox.css" rel="stylesheet">
+  <link href="styles/poll.css" rel="stylesheet">
+
+</head>
+
+<body>
+    <main>
+      <nav class="navbar navbar-default navbar-static-top">
+        <div class="container">
+          <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+        <ul class="nav navbar-nav">
+          <li><a href="#">HOME</a></li>
+          <li><a href="#">ABOUT</a></li>
+          <li><a href="#"> DATA</a></li>
+           <li><a href="#" id="en">EN</a></li>
+           <li><a href="#" id="ar">عربي</a></li>
+        </ul>
+
+
+      </div><!-- /.navbar-collapse -->
+
+        </div>
+      </nav>
+
+        <div>
+          <div class="panel panel-white">
+
+              <div class="panel-body">
+                <div class="left-zone">
+                  <div class="row question title">
+                    <div class="col-md-12 en">
+                      <h3>Citizens satisfaction with the performance of municipal councils</h3>
+                      <p> The goal of these maps is to show the degree of satisfaction or dissatisfaction Lebanese citizens on the performance of municipal councils elected in 2010  before the upcoming municipal elections in May 2016. </p>
+                      <p>This section of maps is devided is devided into 3 main categories :
+                        <ul>
+                          <li>Citizens satisfaction with the performance of municipal councils by  province</li>
+                          <li>Citizens satisfaction with the performance of municipal councils by age category</li>
+                          <li>Citizens satisfaction with the performance of municipal councils by gender</li>
+
+                        </ul>
+                      </p>
+                      <p>These maps are important references upon which LADE  will rely to carry its work plan in favor of  hodling the next the municipal elections on time.</p>
+
+                  </div>
+                  <div class="col-md-12 ar">
+                    <h3>رضى المواطنين عن أداء مجالسهم البلدية</h3>
+                    <p>الهدف من هذه الخرائط اظهار مدى رضى او عدم رضى المواطنين اللبنانيين على أداء مجالسهم البلدية المنتخبة العام 2010 وذلك على مشارف الانتخابات البلدية القادمة في أيّار 2016.</p>
+                    <p>
+                      ويقسّم هذا القسم من الخرائط الى ثلاثة أنواع أساسيّة وهي:
+                      <ul>
+                        <li>رضى المواطنين على أداء مجالسهم البلدية بحسب المحافظات</li>
+                        <li>رضى المواطنين على أداء مجالسهم البلدية بحسب العمر</li>
+                        <li>رضى المواطنين على أداء مجالسهم البلدية بحسب الجنس</li>
+
+                      </ul>
+                    </p>
+                    <p>وتعتبر هذه الخرائط من المراجع المهمّة التي ستعوّل عليها الجمعيّة في خطة عملها القادمة المتعلّقة باجراء الانتخابات البلديّة والاختيارية في موعدها.</p>
+                </div>
+                  </div>
+                  <h3 class="en">Explore results</h3>
+                  <h3 class="ar">فحص النتائج</h3>
+                      <div class="row en">
+                      <div class="col-md-3"><h5>By answer</h5></div>
+                      <div class="col-md-9">  <div class="btn-group" id="satisfaction-group" data-toggle="buttons">
+                       <label class="btn btn-primary active">
+                         <input type="radio" name="satisfaction-options" id="satisfied" value="satisfied" autocomplete="off" checked="checked"> Very satisfied
+                       </label>
+                       <label class="btn btn-primary">
+                         <input type="radio" name="satisfaction-options" id="satisfied" value="shsatisfied" autocomplete="off"> To some extent
+                       </label>
+                       <label class="btn btn-primary">
+                         <input type="radio" name="satisfaction-options" id="satisfied" value="nsatisfied" autocomplete="off">Not satisfied
+                       </label>
+                      </div></div>
+                    </div>
+                    <div class="row ar">
+                      <div class="col-md-3"><h5>حسب الاجابة</h5></div>
+                    <div class="col-md-9">  <div class="btn-group" id="satisfaction-group" data-toggle="buttons">
+                     <label class="btn btn-primary active">
+                       <input type="radio" name="satisfaction-options" id="satisfied" value="satisfied" autocomplete="off" checked="checked"> راضٍ
+                     </label>
+                     <label class="btn btn-primary">
+                       <input type="radio" name="satisfaction-options" id="satisfied" value="shsatisfied" autocomplete="off"> إلى حد ما
+                     </label>
+                     <label class="btn btn-primary">
+                       <input type="radio" name="satisfaction-options" id="satisfied" value="nsatisfied" autocomplete="off">غير راض
+                     </label>
+                    </div></div>
+                  </div>
+                    <div class="row en">
+                      <div class="col-md-3"><h5>By gender</h5></div>
+                      <div class="col-md-9">  <div class="btn-group" id="gender-group" data-toggle="buttons">
+                         <label class="btn btn-primary active">
+                           <input type="radio" name="gender-options" id="All" value="a" autocomplete="off" checked="checked"> All
+                         </label>
+                         <label class="btn btn-primary">
+                           <input type="radio" name="gender-options" id="Female" value="f" autocomplete="off"> Female
+                         </label>
+                         <label class="btn btn-primary">
+                           <input type="radio" name="gender-options" id="Male" value="m" autocomplete="off"> Male
+                         </label>
+                        </div>
+                        </div>
+
+                    </div>
+                    <div class="row ar">
+                      <div class="col-md-3"><h5>حسب الجنس</h5></div>
+                      <div class="col-md-9">  <div class="btn-group" id="gender-group" data-toggle="buttons">
+                         <label class="btn btn-primary active">
+                           <input type="radio" name="gender-options" id="All" value="a" autocomplete="off" checked="checked"> الجميع
+                         </label>
+                         <label class="btn btn-primary">
+                           <input type="radio" name="gender-options" id="Female" value="f" autocomplete="off"> أنثى
+                         </label>
+                         <label class="btn btn-primary">
+                           <input type="radio" name="gender-options" id="Male" value="m" autocomplete="off"> ذكر
+                         </label>
+                        </div>
+                        </div>
+
+                    </div>
+                    <div class="row en">
+                      <div class="col-md-3"><h5>By Age</h5></div>
+                      <div class="col-md-9">
+                        <div class="btn-group" id="age-group" data-toggle="buttons">
+                         <label class="btn btn-primary active">
+                           <input type="radio" name="age-options" id="All" value="a" autocomplete="off" checked="checked"> All
+                         </label>
+                         <label class="btn btn-primary">
+                           <input type="radio" name="age-options" id="iu25" value="u25" autocomplete="off"> Under 25
+                         </label>
+                         <label class="btn btn-primary">
+                           <input type="radio" name="age-options" id="i2534" value="2564" autocomplete="off"> 25-64
+                         </label>
+
+                         <label class="btn btn-primary">
+                           <input type="radio" name="age-options" id="io64" value="o64" autocomplete="off"> Above 65
+                         </label>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="row ar">
+                      <div class="col-md-3"><h5>حسب الفئة العمرية </h5></div>
+                          <div class="col-md-9">
+                            <div class="btn-group" id="age-group" data-toggle="buttons">
+                           <label class="btn btn-primary active">
+                           <input type="radio" name="age-options" id="All" value="a" autocomplete="off" checked="checked"> الجميع
+                             </label>
+                           <label class="btn btn-primary">
+                            <input type="radio" name="age-options" id="iu25" value="u25" autocomplete="off"> دون 25
+                          </label>
+                         <label class="btn btn-primary">
+                          <input type="radio" name="age-options" id="i2534" value="2564" autocomplete="off"> 25-64
+                         </label>
+
+                       <label class="btn btn-primary">
+                         <input type="radio" name="age-options" id="io64" value="o64" autocomplete="off">  فوق 65
+                       </label>
+                    </div>
+                  </div>
+                  </div>
+
+               </div>
+                    <div id="map"></div>
+              </div>
+              <div class="row wax-legend" id="l1">
+                <div class="legend-title">
+                  <div class="en">Percentage of "very satisfied" answers</div>
+                  <div class="ar">"نسبة الاجابة ب " راضٍ(ية) تماماً</div>
+                </div>
+                  <div class="legend-scale">
+                  <ul class="legend-labels">
+                  <li><span style="background:#ffffcc"></span>0-10%</li>
+                  <li><span style="background:#c7e9b4"></span>10-20%</li>
+                  <li><span style="background:#7fcdbb"></span>20-40%</li>
+                  <li><span style="background:#41b6c4"></span>40-60%</li>
+                  <li><span style="background:#2c7fb8"></span>60-80%</li>
+                  <li><span style="background:#253494"></span> >80%</li>
+                  </ul>
+                  </div>
+              </div>
+              <div class="row wax-legend" id="l2">
+                <div class="legend-title">
+                  <div class="en">Percentage of "Satisfied to some extent" answers</div>
+                  <div class="ar">نسبة الاجابة ب-"إلى حدٍ ما"</div>
+                </div>
+                  <div class="legend-scale">
+                  <ul class="legend-labels">
+                  <li><span style="background:#edf8fb"></span>0-10%</li>
+                  <li><span style="background:#bfd3e6"></span>10-20%</li>
+                  <li><span style="background:#9ebcda"></span>20-40%</li>
+                  <li><span style="background:#8c96c6"></span>40-60%</li>
+                  <li><span style="background:#8856a7"></span>60-80%</li>
+                  <li><span style="background:#810f7c"></span> >80%</li>
+                  </ul>
+                  </div>
+              </div>
+              <div class="row wax-legend" id="l3">
+                <div class="legend-title">
+                  <div class="en">Percentage of "very satisfied" answers</div>
+                  <div clas="ar">نسبة الاجابة ب-"غير راضٍ(ية)"</div>
+                </div>
+                  <div class="legend-scale">
+                  <ul class="legend-labels">
+                  <li><span style="background:#f1eef6"></span>0-10%</li>
+                  <li><span style="background:#d4b9da"></span>10-20%</li>
+                  <li><span style="background:#c994c7"></span>20-40%</li>
+                  <li><span style="background:#df65b0"></span>40-60%</li>
+                  <li><span style="background:#dd1c77"></span>60-80%</li>
+                  <li><span style="background:#980043"></span> >80%</li>
+                </ul>
+                </div>
+            </div>
+        </div>
+
+
+      </div>
+
+  </main>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
+    <script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.2/js/bootstrap.min.js"></script>
+    <script src="https://api.tiles.mapbox.com/mapbox.js/v2.1.9/mapbox.js"></script>
+
+    <script src="scripts/smaps.js"></script>
+
+</body>
+
+</html>

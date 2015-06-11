@@ -259,3 +259,7 @@ text-align: right;
 .btn{
   border-radius:0px !important;
 }
+.btn-answer {
+width: 80%;
+margin-bottom: 4px;
+}

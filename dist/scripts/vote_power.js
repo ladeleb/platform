@@ -40,7 +40,8 @@ options.legend = {
 var population = {
 	"2009": "3.2M",
 	"2013": "3.45M",
-	"2014": "3.5M"
+	"2014": "3.5M",
+	"2015": "3.5M"
 };
 
 options.control = function() {
@@ -98,7 +99,12 @@ content.layers[0] = currentLayer;
 function changeYear(new_year) {
 	year = new_year;
 	voterPower.map.removeLayer(currentLayer);
-	currentLayer = L.mapbox.tileLayer('kamicut.vote_power_' + year);
+	if (year == '2015')
+		currentLayer = L.mapbox.tileLayer('tunisia.vp');
+
+	else
+
+		currentLayer = L.mapbox.tileLayer('kamicut.vote_power_' + year);
 	voterPower.map.addLayer(currentLayer);
 	return currentLayer;
 }

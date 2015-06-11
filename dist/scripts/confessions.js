@@ -71,6 +71,7 @@ options.setTooltip = function( that ){
 
 	var template = $( '#tooltip-template' ).html();
 	info.update = function (props) {
+		console.log(props.diff);
 		document.getElementById('tooltip-overlay').innerHTML = (props && _.template( template,  {
 				'district':props.district,
 				'denom': confessionsReverse[props.denom],
@@ -165,13 +166,21 @@ function onEachFeature(denom, year) {
 			feature.properties.num_2 = feature.properties[denom+'_2013'];
 			feature.properties.total_1 = feature.properties.total_2009;
 			feature.properties.total_2 = feature.properties.total_2013;
-		} else {
+		} else if (year == 3) {
 			feature.properties.year_1 = 2013;
 			feature.properties.year_2 = 2014;
 			feature.properties.num_1 = feature.properties[denom+'_2013'];
 			feature.properties.num_2 = feature.properties[denom+'_2014'];
 			feature.properties.total_1 = feature.properties.total_2013;
 			feature.properties.total_2 = feature.properties.total_2014;
+		}
+		 else  {
+			feature.properties.year_1 = 2014;
+			feature.properties.year_2 = 2015;
+			feature.properties.num_1 = feature.properties[denom+'_2014'];
+			feature.properties.num_2 = feature.properties[denom+'_2015'];
+			feature.properties.total_1 = feature.properties.total_2014;
+			feature.properties.total_2 = feature.properties.total_2015;
 		}
 		layer.on({
 			mouseover: highlightFeature,

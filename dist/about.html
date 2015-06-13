@@ -27,6 +27,9 @@
             width: 80%;
             font-weight: 200 !important;
         }
+        .text_overlay.ar p{
+            direction: rtl; 
+        }
     </style>
     <script src="//api.tiles.mapbox.com/mapbox.js/v1.5.2/mapbox.js"></script>
     <link href="//api.tiles.mapbox.com/mapbox.js/v1.5.2/mapbox.css" rel="stylesheet">
@@ -81,6 +84,12 @@
         <script src="scripts/map.js"></script>
         <script>
 var about = multiline(function() {/*
+<p>The “Data Analysis for Parliamentary Elections” was launched in Spring 2013, upon a joint initiative between LADE and Democracy International. </p>
+<p> The objective of this project is to provide a visual comparative presentation of some basic information about the electoral bodies in Lebanon in the form of data and user-friendly visuals (maps). These maps present the numbers of the registered voter rolls, the results of their votes, their presence in the areas of electoral districts, their sex and their confessions since 2005 until today.</p>
+<p>However, the second section of the site features information and figures of views and positions of the Lebanese people on some election-related issues.  The data gathered is through a poll done by LADE. The statistics are based on the answers of a scientific national sample of 2,500 people dispersed on all the Lebanese provinces taking into account the age and sex of respondents. </p>
+<p> These figures underline the extent of involvement in Lebanese political life, the degree of satisfaction with the performance of the Lebanese municipal councils and the nature of the electoral system favored by the Lebanese.</p>
+<p>The poll was done by the Consultation and Research Institute on LADE’s behalf.</p>
+<p>You can find the entire poll results on the following link: <a href="http://bit.ly/1ROT0ju">http://bit.ly/1ROT0ju</a></p>
 <h2>About the Platform</h2>
 <p>The Lebanese Elections Data Analysis (LEDA) browser is a project to collect, visualize, and analyze election-related data. The LEDA browser is a joint effort of the <a href="http://www.lade.org.lb">Lebanese Association for Democracy of Elections (LADE)</a> and <a href="http://lamblabs.org">Lamba Labs</a>, with the support of <a href="http://democracyinternational.com">Democracy International (DI)</a> and <a href="http://developmentseed.org">Development Seed.</a></p>
 <p>The overarching goal of the LEDA browser is to present a range of stakeholders – electoral officials, parliamentarians, political parties, civil society, media, citizens, etc. – with better information to facilitate better decisions that lead to better outcomes.  We aim to achieve this goal by:
@@ -117,7 +126,13 @@ The tools used to build this site are open source and the project is hosted on <
             };
             content.textAr = {
                 title: "تحليل بيانات الإنتخابات النيابيّة",
-                desc:'يهدف مشروع "تحليل بيانات الإنتخابات النيابيّة" إلى عرض من خلال الخرائط وبالأرقام عدد المسجلين في لوائح الشطب، نتائج تصويتهم، مناطق تواجدهم في الدوائر الإنتخابية، جنسهم وطوائفهم منذ العام 2005. إنّ مشروع "تحليل بيانات الإنتخابات النيابيّة" هو ثمرة عمل مشترك بين الجمعية اللبنانية من أجل ديمقراطيّة الإنتخاباتط وبين "لامبا لابز" بدعم من "الديمقراطيّة الدوليّة" ومعهد "ديفيلوبمينت سيد"' +
+                desc:'<p>أطلق مشروع "تحليل بيانات الإنتخابات النيابيّة" في ربيع 2013 بمبادرة من "الجمعيّة اللبنانيّة من أجل ديمقراطية الانتخابات" وبتمويل من "الديمقراطية الدولية".</p>' +
+                '<p>هدف هذا المشروع الى تقديم عرض مقارن لبعض المعلومات الانتخابية الاساسية حول الهيئات الناخبة في لبنان على شكل خرائط وبيانات واضحة القراءة</p>' +
+                '<p>فالخرائط تعرض وبالأرقام عدد المسجلين في لوائح الشطب، نتائج تصويتهم، مناطق تواجدهم في الدوائر الإنتخابية، جنسهم وطوائفهم منذ العام2005 حتّى اليوم</p>' +
+                '<p>أما القسم الثاني من الموقع فهو يضمّ معلومات وأرقام حول بعض القضايا الانتخابية التي استطلعت الجمعية آراء ومواقف اللبنانيين حولها ، وقد شملت العينة التي خضعت لهذا الاستطلاع على 2500 فردا توزعوا على جميع الطوائف اللبنانية وجميع المحافظات اللبنانيّة بشكل علمي مع الاخذ بعين الاعتبار عمر وجنس المستطلع.</p>' +
+                '<p>تبرز هذه الارقام مدى انخراط اللبنانيين في الحياة السياسية، مدى رضى اللبنانيين عن أداء مجالسهم البلدية  وماهية النظام الانتخابي الذي يفضّله اللبنانيون.</p>' +
+                '<p> وقد قام بهذا الاستطلاع مؤسسة البحوث والاستشارات بتكليف من الجمعية اللبنانية من أجل ديمقراطية الانتخابات.</p>' +
+                '<p> تجدون النتائج الكاملة لهذا الاستطلاع على الرابط التالي : <a href="http://bit.ly/1ROT0ju">http://bit.ly/1ROT0ju</a></p>' +
           "<br><br>" + 
 " <a href='http://github.com/ladeleb/platform'>Github </a>يمكن تحميل البيانات على .CC SA 3.0 هذا المشروع يستكشف البيانات المفتوحة. تم ترخيص البيانات تحت"
                 

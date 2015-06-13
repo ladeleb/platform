@@ -15,12 +15,12 @@
       <nav class="navbar navbar-default navbar-static-top">
         <div class="container">
           <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
-        <ul class="nav navbar-nav">
-          <li><a href="#">HOME</a></li>
-          <li><a href="#">ABOUT</a></li>
-          <li><a href="#"> DATA</a></li>
-           <li><a href="#" id="en">EN</a></li>
-           <li><a href="#" id="ar">عربي</a></li>
+       <ul class="nav navbar-nav">
+          <li><a id="home-btn">HOME</a></li>
+          <li><a id="about-btn">ABOUT</a></li>
+          <li> <a href="https://github.com/ladeleb/platform/releases/latest" target="_blank"> DOWNLOAD DATA</a></li>
+           <li><a id="en">EN</a></li>
+           <li><a id="ar">عربي</a></li>
         </ul>
 
 
@@ -50,7 +50,7 @@
 
                   </div>
                   <div class="col-md-12 ar">
-                    <h3>نسبة رضى المواطنين عن أداء مجالسهم البلدية</h3>
+                    <h3>رضى المواطنين عن أداء مجالسهم البلدية</h3>
                     <p>الهدف من هذه الخرائط اظهار مدى رضى او عدم رضى المواطنين اللبنانيين على أداء مجالسهم البلدية المنتخبة العام 2010 وذلك على مشارف الانتخابات البلدية القادمة في أيّار 2016.</p>
                     <p>
                       ويقسّم هذا القسم من الخرائط الى ثلاثة أنواع أساسيّة وهي:
@@ -65,7 +65,7 @@
                 </div>
                   </div>
                   <h3 class="en">Explore results</h3>
-                  <h3 class="ar">فحص النتائج</h3>
+                  <h3 class="ar">النتائج</h3>
                       <div class="row en">
                       <div class="col-md-3"><h5>Answers</h5></div>
                       <div class="col-md-9">  <div class="btn-group" id="satisfaction-group" data-toggle="buttons">
@@ -84,7 +84,7 @@
                       <div class="col-md-3"><h5>الاجوية</h5></div>
                     <div class="col-md-9">  <div class="btn-group" id="satisfaction-group" data-toggle="buttons">
                      <label class="btn btn-primary active">
-                       <input type="radio" name="satisfaction-options" id="satisfied" value="satisfied" autocomplete="off" checked="checked">  راضٍ (ية) تمام</label>
+                       <input type="radio" name="satisfaction-options" id="satisfied" value="satisfied" autocomplete="off" checked="checked">  راضٍ (ية) تماما</label>
                      <label class="btn btn-primary">
                        <input type="radio" name="satisfaction-options" id="satisfied" value="shsatisfied" autocomplete="off"> راضٍ (ية) الى حد ما
                      </label>
@@ -94,7 +94,7 @@
                     </div></div>
                   </div>
                     <div class="row en">
-                      <div class="col-md-3"><h5>Answers gender</h5></div>
+                      <div class="col-md-3"><h5>Answers by gender</h5></div>
                       <div class="col-md-9">  <div class="btn-group" id="gender-group" data-toggle="buttons">
                          <label class="btn btn-primary active">
                            <input type="radio" name="gender-options" id="All" value="a" autocomplete="off" checked="checked"> All
@@ -168,11 +168,12 @@
 
                </div>
                     <div id="map"></div>
+                    <div id="tooltip-overlay"></div>
               </div>
               <div class="row wax-legend" id="l1">
                 <div class="legend-title">
                   <div class="en">Percentage of "very satisfied" answers</div>
-                  <div class="ar">"نسبة الاجابة ب " راضٍ(ية) تماماً</div>
+                  <div class="ar">"نسبة الاجابة " راضٍ(ية) تماماً</div>
                 </div>
                   <div class="legend-scale">
                   <ul class="legend-labels">
@@ -188,7 +189,7 @@
               <div class="row wax-legend" id="l2">
                 <div class="legend-title">
                   <div class="en">Percentage of "Satisfied to some extent" answers</div>
-                  <div class="ar">نسبة الاجابة ب-"إلى حدٍ ما"</div>
+                  <div class="ar">نسبة الاجابة "إلى حدٍ ما"</div>
                 </div>
                   <div class="legend-scale">
                   <ul class="legend-labels">
@@ -203,8 +204,8 @@
               </div>
               <div class="row wax-legend" id="l3">
                 <div class="legend-title">
-                  <div class="en">Percentage of "very satisfied" answers</div>
-                  <div clas="ar">نسبة الاجابة ب-"غير راضٍ(ية)"</div>
+                  <div class="en">Percentage of "Not satisfied" answers</div>
+                  <div class="ar">نسبة الاجابة  "غير راضٍ(ية)"</div>
                 </div>
                   <div class="legend-scale">
                   <ul class="legend-labels">

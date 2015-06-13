@@ -263,3 +263,29 @@ text-align: right;
 width: 80%;
 margin-bottom: 4px;
 }
+.leaflet-control-grid.map-tooltip {
+  display: none !important;
+}
+#tooltip-overlay{
+  min-width: 250px;
+  padding: 10px;
+  z-index: 9999;
+  position: absolute;
+  top: 50px;
+  right: 50px;
+  background: white;
+  display: none;
+}
+.t-label {
+float: left;
+margin-right: 20px;
+}
+.ar .t-label {
+float: right !important;
+margin-left: 20px !important;
+margin-right: 0px;
+} 
+.t-value{
+  color:#607D8B;
+  font-weight: 600;
+}

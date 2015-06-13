@@ -7,7 +7,7 @@
   <link href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.2/css/bootstrap.min.css" rel="stylesheet">
   <link href="https://api.tiles.mapbox.com/mapbox.js/v2.1.9/mapbox.css" rel="stylesheet">
   <link href="styles/poll.css" rel="stylesheet">
-
+ 
 </head>
 
 <body>
@@ -68,7 +68,7 @@
                 </div>
                   </div>
                   <h3 class="en">Explore results</h3>
-                  <h3 class="ar">فحص النتائج</h3>
+                  <h3 class="ar">النتائج</h3>
                     <div class="row en">
                       <div class="col-md-3"><h5>Answers</h5></div>
                       <div class="col-md-9">  <div class="btn-group" id="affiliation-group" data-toggle="buttons">
@@ -79,7 +79,7 @@
                          <input type="radio" name="affiliation-options" id="affiliated" value="activist" autocomplete="off"> Civil society activist
                        </label>
                        <label class="btn btn-primary btn-answer">
-                         <input type="radio" name="affiliation-options" id="affiliated" value="ninterested" autocomplete="off">Not interested
+                         <input type="radio" name="affiliation-options" id="affiliated" value="ninterested" autocomplete="off">Interested in politics but not affiliated to a political party
                        </label>
                       </div></div>
                     </div>
@@ -91,7 +91,7 @@
                        <label class="btn btn-primary btn-answer">
                          <input type="radio" name="affiliation-options" id="affiliated" value="activist" autocomplete="off">ناشط (ة) في المجتمع المدني</label>
                        <label class="btn btn-primary btn-answer">
-                         <input type="radio" name="affiliation-options" id="affiliated" value="ninterested" autocomplete="off">غير مهتم (ة)
+                         <input type="radio" name="affiliation-options" id="affiliated" value="ninterested" autocomplete="off">اهتم بالسياسة لكن لا أميل إلى أي طرف سياسي 
                        </label>
                       </div></div>
                     </div>
@@ -173,11 +173,12 @@
 
                </div>
                     <div id="map"></div>
+                    <div id="tooltip-overlay"></div>
               </div>
               <div class="row wax-legend" id="l1">
                 <div class="legend-title">
-                  <div class="en">Percentage of "Afiliated to a political party" answers</div>
-                  <div class="ar">نسبة الاجابة  ب-"منتمي إلى حزب سياسي" </div>
+                  <div class="en">Percentage of "Afiliated to a political party" </div>
+                  <div class="ar">نسبة الاجابة "منتمي إلى حزب سياسي" </div>
                 </div>
                   <div class="legend-scale">
                   <ul class="legend-labels">
@@ -192,8 +193,8 @@
               </div>
               <div class="row wax-legend" id="l2">
                 <div class="legend-title">
-                  <div class="en">Percentage of "Civil society activist" answers</div>
-                  <div class="ar"> نسبة الاجابة ب-"ناشط(ة) في المجتمع المدني"</div>
+                  <div class="en">Percentage of "Civil society activist" </div>
+                  <div class="ar"> نسبة الاجابة "ناشط(ة) في المجتمع المدني"</div>
                 </div>
                   <div class="legend-scale">
                   <ul class="legend-labels">
@@ -208,8 +209,8 @@
               </div>
               <div class="row wax-legend" id="l3">
                 <div class="legend-title">
-                  <div class="en">Percentage of "Not interested" answers</div>
-                  <div clas="ar">نسبة الاجابة ب-" لا تهمّني السياسة"</div>
+                  <div class="en">Percentage of "interested in politics but not affiliated to a political party"</div>
+                  <div class="ar">نسبة الاجابة "اهتم بالسياسة لكن لا أميل إلى أي طرف سياسي "</div>
                 </div>
                   <div class="legend-scale">
                   <ul class="legend-labels">

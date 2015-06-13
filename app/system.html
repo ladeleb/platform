@@ -15,12 +15,12 @@
       <nav class="navbar navbar-default navbar-static-top">
         <div class="container">
           <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
-        <ul class="nav navbar-nav">
-          <li><a href="#">HOME</a></li>
-          <li><a href="#">ABOUT</a></li>
-          <li><a href="#"> DATA</a></li>
-           <li><a href="#" id="en">EN</a></li>
-           <li><a href="#" id="ar">عربي</a></li>
+      <ul class="nav navbar-nav">
+          <li><a id="home-btn">HOME</a></li>
+          <li><a id="about-btn">ABOUT</a></li>
+          <li> <a href="https://github.com/ladeleb/platform/releases/latest" target="_blank"> DOWNLOAD DATA</a></li>
+           <li><a id="en">EN</a></li>
+           <li><a id="ar">عربي</a></li>
         </ul>
 
 
@@ -51,7 +51,7 @@
                 <h3>ما هو النظام الانتخابي الامثل بحسب اللبنانيين</h3>
                 <p>الهدف من هذه الخرائط اظهار مدى تأييد المواطنين اللبنانيين للنسبيّة حيث حقّق هذا النوع من الأنظمة بأشكاله المختلفة النسبة الاعلى بين الانظمة المقترحة</p>
                 <p>
-                  ويقسّم هذا القسم من الخرائط الى ثلاثة أنواع أساسيّة وهي:
+                  و يوزّع هذا القسم من الخرائط الى ثلاثة أنواع أساسيّة وهي:
                   <ul>
                     <li>تأييد النظام النسبي من قبل المواطنين بحسب المحافظات</li>
                     <li>تأييد النظام النسبي من قبل المواطنين بحسب العمر</li>
@@ -63,7 +63,7 @@
             </div>
               </div>
               <h3 class="en">Explore results</h3>
-              <h3 class="ar">فحص النتائج</h3>
+              <h3 class="ar">النتائج</h3>
                     <div class ="row en">
                       <div class="col-md-3"><h5>Answers</h5></div>
                       <div class="col-md-9">  <div class="btn-group" id="system-group" data-toggle="buttons">
@@ -85,7 +85,7 @@
                          <input type="radio" name="system-options" id="proportional" value="proportional" autocomplete="off" checked>النظام النسبي
                        </label>
                        <label class="btn btn-primary">
-                         <input type="radio" name="system-options" id="proportional" value="mixed" autocomplete="off"> النظام المختلظ
+                         <input type="radio" name="system-options" id="proportional" value="mixed" autocomplete="off"> النظام المختلط
                        </label>
                        <label class="btn btn-primary">
                          <input type="radio" name="system-options" id="proportional" value="other" autocomplete="off">أنظمة أخرى
@@ -168,6 +168,7 @@
 
                </div>
                     <div id="map"></div>
+                    <div id='tooltip-overlay'></div>
               </div>
               <div class= "row wax-legend" id="l1">
                 <div class="legend-title">
@@ -204,7 +205,7 @@
               <div class= "row wax-legend" id="l3">
                 <div class="legend-title">
                   <div class = "en">Percentage of "Other systems" answers</div>
-                  <div clas="ar"> نسبة أنظمة أخرى </div>
+                  <div class="ar"> نسبة أنظمة أخرى </div>
                 </div>
                   <div class="legend-scale">
                   <ul class="legend-labels">

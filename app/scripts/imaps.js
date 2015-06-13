@@ -32,7 +32,7 @@ var map = L.map('map', {
   zoomControl: false
 }).setView([33.894286, 35.37371], 9);
 L.tileLayer('https://{s}.tiles.mapbox.com/v3/{id}/{z}/{x}/{y}.png', {
-  attribution: 'Map data &copy; <a href="http://openstreetmap.org">OpenStreetMap</a> contributors, ' + '<a href="http://creativecommons.org/licenses/by-sa/2.0/">CC-BY-SA</a>, ' + 'Imagery  &copy; <a href="http://mapbox.com">Mapbox</a>, ' + 'Poll data  &copy; <a href="www.lade.org.lb">Lade</a>',
+  attribution: 'Map data &copy; <a href="http://openstreetmap.org">OpenStreetMap</a> contributors, ' + '<a href="http://creativecommons.org/licenses/by-sa/2.0/">CC-BY-SA</a>, ' + 'Imagery  &copy; <a href="http://mapbox.com">Mapbox</a>, ' + 'Poll data  &copy; <a href="http://www.lade.org.lb">Lade</a>',
   id: 'mayakreidieh.map-dfh9esrb'
 }).addTo(map);
 new L.Control.Zoom({
@@ -257,7 +257,45 @@ L.mapbox.gridLayer('tunisia.nq24_m_a65')]),
 }
 ];
 
+function wrap_indef(x){
+  if (x == undefined)
+    return 0 ;
+  return x;
+}
+
+function makeTeaser(d){
+
+  var teaser ='';
+  if ($('#ar').css('display') =='none'){
+    teaser = teaser + '<div class="ar">'+
+                            '<div class="gov"> '+ d.name_ar+'</div>'+
+                            '<div class="t-line">'+
+                                '<div class="t-label">منتمي (ة) الى حزب سياسي</div>'+
+                                '<div class="t-value">'+ wrap_indef(d.n_interested_p) +'%</div>'+
+                            '</div>' +
+                            '<div class="t-line">'+
+                               '<div class="t-label">ناشط (ة) في المجتمع المدني</div>'+
+                                '<div class="t-value">'+ wrap_indef(d.n_activist_p) +'%</div>'+
+                           ' </div>' +
+                            '<div class="t-line">'+
+                               '<div class="t-label">اهتم بالسياسة لكن لا أميل إلى أي طرف سياسي </div>'+
+                               '<div class="t-value">'+ wrap_indef(d.n_ninterested_p) +'%</div>'+
+                             '</div>'+
+                      '</div>';
+  }
+  else{
+ teaser = teaser + '<div class="gov"> '+ d.name_en+'</div><div class="t-line"><div class="t-label">Afiliated to a political party</div> <div class="t-value">'+ wrap_indef(d.n_interested_p) +'%</div></div>' +
+               '<div class="t-line"><div class="t-label">Civil society activist</div> <div class="t-value">'+ wrap_indef(d.n_activist_p) +'%</div></div>' +
+               '<div class="t-line"><div class="t-label">Interested in politics but not affiliated to a political party</div> <div class="t-value">'+ wrap_indef(d.n_ninterested_p) +'%</div></div>';
+
+  }
+  $('#tooltip-overlay').html(teaser);
+
+}
+
+
 function changelayer(s, g, a) {
+  $('.leaflet-control-grid').remove();
   if (s == 'affiliated') {
     $('#l2').hide();
     $('#l3').hide();
@@ -280,13 +318,25 @@ function changelayer(s, g, a) {
       $.each(layers, function(i, l) {
         if (l.layer !== layer.layer && map.hasLayer(l.layer)) {
           map.removeLayer(l.layer);
-          $('.leaflet-control-grid').remove();
+          
         }
       });
       setTimeout(function() {
         if (gridControl) map.removeControl(gridControl);
         layer.control = L.mapbox.gridControl(layer.layer.getLayers()[1]);
         layer.layer.addTo(map);
+        layer.layer.getLayers()[1].on('mouseover', function(e) {
+          if (e.data){
+          makeTeaser(e.data);
+          $('#tooltip-overlay').show();}
+        });
+        
+         layer.layer.getLayers()[1].on('mouseout', function(e) {
+
+          $('#tooltip-overlay').empty();
+          $('#tooltip-overlay').hide();
+
+          });
         if (!gridControl) {
           gridControl = layer.control.addTo(map);
         }

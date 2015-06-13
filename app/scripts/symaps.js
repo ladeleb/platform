@@ -3,12 +3,17 @@ $("#ar").on("click", function() {
   $(".ar").show();
   $("#ar").hide();
   $("#en").show();
+  $(".en").css('dislpay','none');
+  $(".ar").css('dislpay','block');
+
 });
 $("#en").on("click", function() {
   $(".ar").hide();
   $(".en").show();
   $("#en").hide();
   $("#ar").show();
+  $(".ar").css('dislpay','none');
+  $(".en").css('dislpay','block');
 });
 $(document).ready(function() {
   $("#en").hide()
@@ -29,10 +34,12 @@ L.mapbox.accessToken = 'pk.eyJ1IjoidHVuaXNpYSIsImEiOiJwelVyLW1JIn0.mBhvyh8Ui8NzO
 var map = L.map('map', {
   zoomControl: false
 }).setView([33.894286, 35.37371], 9);
-L.tileLayer('https://{s}.tiles.mapbox.com/v3/{id}/{z}/{x}/{y}.png', {
-  attribution: 'Map data &copy; <a href="http://openstreetmap.org">OpenStreetMap</a> contributors, ' + '<a href="http://creativecommons.org/licenses/by-sa/2.0/">CC-BY-SA</a>, ' + 'Imagery  &copy; <a href="http://mapbox.com">Mapbox</a>, ' + 'Poll data  &copy; <a href="www.lade.org.lb">Lade</a>',
+var baseLayer = L.tileLayer('https://{s}.tiles.mapbox.com/v3/{id}/{z}/{x}/{y}.png', {
+  attribution: 'Map data &copy; <a href="http://openstreetmap.org">OpenStreetMap</a> contributors, ' + '<a href="http://creativecommons.org/licenses/by-sa/2.0/">CC-BY-SA</a>, ' + 'Imagery  &copy; <a href="http://mapbox.com">Mapbox</a>, ' + 'Poll data  &copy; <a href="http://www.lade.org.lb">Lade</a>',
   id: 'mayakreidieh.map-dfh9esrb'
 }).addTo(map);
+
+
 new L.Control.Zoom({
   position: 'topright'
 }).addTo(map);
@@ -255,6 +262,44 @@ L.mapbox.gridLayer('tunisia.oq37_m_a65')]),
 }
 ];
 
+function wrap_indef(x){
+  if (x == undefined)
+    return 0 ;
+  return x;
+}
+
+function makeTeaser(d){
+
+  var teaser ='';
+  if ($('#ar').css('display') =='none'){
+    teaser = teaser + '<div class="ar">'+
+                            '<div class="gov"> '+ d.name_ar+'</div>'+
+                            '<div class="t-line">'+
+                                '<div class="t-label">النظام النسبي</div>'+
+                                '<div class="t-value">'+ wrap_indef(d.n_proportional_p) +'%</div>'+
+                            '</div>' +
+                            '<div class="t-line">'+
+                               '<div class="t-label">النظام المختلط</div>'+
+                                '<div class="t-value">'+ wrap_indef(d.n_mixed_p) +'%</div>'+
+                           ' </div>' +
+                            '<div class="t-line">'+
+                               '<div class="t-label">غيره</div>'+
+                               '<div class="t-value">'+ wrap_indef(d.n_other_p) +'%</div>'+
+                             '</div>'+
+                      '</div>';
+  }
+  else{
+ teaser = teaser + '<div class="gov"> '+ d.name_en+'</div><div class="t-line"><div class="t-label">Proportional sytstem</div> <div class="t-value">'+ wrap_indef(d.n_proportional_p) +'%</div></div>' +
+               '<div class="t-line"><div class="t-label">Mixed system</div> <div class="t-value">'+ wrap_indef(d.n_mixed_p) +'%</div></div>' +
+               '<div class="t-line"><div class="t-label">Other</div> <div class="t-value">'+ wrap_indef(d.n_other_p) +'%</div></div>';
+
+  }
+  $('#tooltip-overlay').html(teaser);
+
+}
+ 
+
+
 function changelayer(s, g, a) {
   if (s == 'proportional') {
     $('#l2').hide();
@@ -278,13 +323,25 @@ function changelayer(s, g, a) {
       $.each(layers, function(i, l) {
         if (l.layer !== layer.layer && map.hasLayer(l.layer)) {
           map.removeLayer(l.layer);
-          $('.leaflet-control-grid').remove();
+         
         }
       });
       setTimeout(function() {
         if (gridControl) map.removeControl(gridControl);
         layer.control = L.mapbox.gridControl(layer.layer.getLayers()[1]);
         layer.layer.addTo(map);
+        layer.layer.getLayers()[1].on('mouseover', function(e) {
+          if (e.data){
+          makeTeaser(e.data);
+          $('#tooltip-overlay').show();}
+        });
+        
+         layer.layer.getLayers()[1].on('mouseout', function(e) {
+
+          $('#tooltip-overlay').empty();
+          $('#tooltip-overlay').hide();
+
+          });
         if (!gridControl) {
           gridControl = layer.control.addTo(map);
         }

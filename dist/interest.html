@@ -1,0 +1,239 @@
+<html lang="en">
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0">
+  <meta name="description" content="">
+  <title></title>
+  <link href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.2/css/bootstrap.min.css" rel="stylesheet">
+  <link href="https://api.tiles.mapbox.com/mapbox.js/v2.1.9/mapbox.css" rel="stylesheet">
+  <link href="styles/poll.css" rel="stylesheet">
+ 
+</head>
+
+<body>
+    <main>
+      <nav class="navbar navbar-default navbar-static-top">
+        <div class="container">
+          <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+        <ul class="nav navbar-nav">
+          <li><a id="home-btn">HOME</a></li>
+          <li><a id="about-btn">ABOUT</a></li>
+          <li> <a href="https://github.com/ladeleb/platform/releases/latest" target="_blank"> DOWNLOAD DATA</a></li>
+           <li><a id="en">EN</a></li>
+           <li><a id="ar">عربي</a></li>
+        </ul>
+
+
+      </div><!-- /.navbar-collapse -->
+
+        </div>
+      </nav>
+
+        <div>
+          <div class="panel panel-white">
+
+              <div class="panel-body">
+                <div class="left-zone">
+                  <div class="row question title">
+                    <div class="col-md-12 en">
+                      <h3>Citizens’ involvement in the Political System</h3>
+                      <p>TThe aim of these maps is to show the state of the citizen’s engagement in political activity, which will  in the identification of the target groups in any future civil mobilization movements </p>
+                      <p>They are distributed into three categories:
+                        <ul>
+                          <li>The extent of citizen involvement in the political activity by province</li>
+                          <li>The extent of citizen involvement in the political activity by age</li>
+                          <li>The extent of citizen involvement in the political activity by gender</li>
+
+                        </ul>
+                      </p>
+                      <p>
+                         These maps highlight important indicators concerning the increase of political party adherence in relation to geographical distribution with discrepancies pertaining to age groups and gender. 
+                      </p>
+                  </div>
+                  <div class="col-md-12 ar">
+                    <h3> نسبة انخراط المواطن اللبناني بالعمل الحزبي</h3>
+                    <p> الهدف من هذه الخرائط إظهار واقع إنخراط او عدم إنخراط المواطنين اللبنانيين بالعمل السياسي مما سيؤثر في تحديد الفئات المستهدفة في أي تحرّك مدني مطلبي في هذه المرحلة </p>
+                    <p>
+                      ويقسّم هذا القسم من الخرائط الى ثلاثة أنواع أساسيّة وهي:
+                      <ul>
+                        <li>مدى انخراط المواطنين بالحياة السياسية بحسب المحافظات</li>
+                        <li>مدى انخراط المواطنين بالحياة السياسية بحسب العمر</li>
+                        <li> مدى انخراط المواطنين بالحياة السياسية بحسب الجنس </li>
+
+                      </ul>
+                    </p>
+                    <p>
+                      تبرز هذه الخرائط مؤشرّات مهمّة متعلّقة بارتفاع نسبة الانتماء اوالانخراط بحزب سياسي انطلاقا من التوزيع الجغرافي، واختلاف هذه النسب مقارنة مع الاعمار، واختلاف الانخراط بحزب سياسي بحسب الجنس.
+                    </p>
+                </div>
+                  </div>
+                  <h3 class="en">Explore results</h3>
+                  <h3 class="ar">النتائج</h3>
+                    <div class="row en">
+                      <div class="col-md-3"><h5>Answers</h5></div>
+                      <div class="col-md-9">  <div class="btn-group" id="affiliation-group" data-toggle="buttons">
+                       <label class="btn btn-primary btn-answer active">
+                         <input type="radio" name="affiliation-options" id="affiliated" value="affiliated" autocomplete="off" checked="checked">Afiliated to a political party
+                       </label>
+                       <label class="btn btn-primary btn-answer">
+                         <input type="radio" name="affiliation-options" id="affiliated" value="activist" autocomplete="off"> Civil society activist
+                       </label>
+                       <label class="btn btn-primary btn-answer">
+                         <input type="radio" name="affiliation-options" id="affiliated" value="ninterested" autocomplete="off">Interested in politics but not affiliated to a political party
+                       </label>
+                      </div></div>
+                    </div>
+                    <div class="row ar">
+                      <div class="col-md-3"><h5>الاجوبة</h5></div>
+                      <div class="col-md-9">  <div class="btn-group" id="affiliation-group" data-toggle="buttons">
+                       <label class="btn btn-primary btn-answer active">
+                         <input type="radio" name="affiliation-options" id="affiliated" value="affiliated" autocomplete="off" checked="checked">منتمي (ة) الى حزب سياسي </label>
+                       <label class="btn btn-primary btn-answer">
+                         <input type="radio" name="affiliation-options" id="affiliated" value="activist" autocomplete="off">ناشط (ة) في المجتمع المدني</label>
+                       <label class="btn btn-primary btn-answer">
+                         <input type="radio" name="affiliation-options" id="affiliated" value="ninterested" autocomplete="off">اهتم بالسياسة لكن لا أميل إلى أي طرف سياسي 
+                       </label>
+                      </div></div>
+                    </div>
+                    <div class="row en">
+                      <div class="col-md-3"><h5>Answers by gender</h5></div>
+                      <div class="col-md-9">  <div class="btn-group" id="gender-group" data-toggle="buttons">
+                         <label class="btn btn-primary active">
+                           <input type="radio" name="gender-options" id="All" value="a" autocomplete="off" checked="checked"> All
+                         </label>
+                         <label class="btn btn-primary">
+                           <input type="radio" name="gender-options" id="Female" value="f" autocomplete="off"> <span class="en">Female</span><span class="ar">أنثى</span>
+                         </label>
+                         <label class="btn btn-primary">
+                           <input type="radio" name="gender-options" id="Male" value="m" autocomplete="off"> Male
+                         </label>
+                        </div>
+                        </div>
+
+                    </div>
+               <div class="row ar">
+                      <div class="col-md-3"><h5>الاجوبة بحسب الجندر</h5></div>
+                      <div class="col-md-9">  <div class="btn-group" id="gender-group" data-toggle="buttons">
+                         <label class="btn btn-primary active">
+                           <input type="radio" name="gender-options" id="All" value="a" autocomplete="off" checked="checked"> المجموع
+                         </label>
+                         <label class="btn btn-primary">
+                           <input type="radio" name="gender-options" id="Female" value="f" autocomplete="off"> أنثى
+                         </label>
+                         <label class="btn btn-primary">
+                           <input type="radio" name="gender-options" id="Male" value="m" autocomplete="off"> ذكر
+                         </label>
+                        </div>
+                        </div>
+
+                    </div>
+
+                    <div class="row en">
+                      <div class="col-md-3"><h5> Answers by Age</h5></div>
+                      <div class="col-md-9">
+                        <div class="btn-group" id="age-group" data-toggle="buttons">
+                         <label class="btn btn-primary active">
+                           <input type="radio" name="age-options" id="All" value="a" autocomplete="off" checked="checked"> All
+                         </label>
+                         <label class="btn btn-primary">
+                           <input type="radio" name="age-options" id="iu25" value="u25" autocomplete="off"> Under 25
+                         </label>
+                         <label class="btn btn-primary">
+                           <input type="radio" name="age-options" id="i2534" value="2564" autocomplete="off"> 25-64
+                         </label>
+
+                         <label class="btn btn-primary">
+                           <input type="radio" name="age-options" id="io64" value="o64" autocomplete="off"> Above 65
+                         </label>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="row ar">
+                      <div class="col-md-3"><h5>الاجوبة بحسب العمر </h5></div>
+                          <div class="col-md-9">
+                            <div class="btn-group" id="age-group" data-toggle="buttons">
+                           <label class="btn btn-primary active">
+                           <input type="radio" name="age-options" id="All" value="a" autocomplete="off" checked="checked"> المجموع
+                             </label>
+                           <label class="btn btn-primary">
+                            <input type="radio" name="age-options" id="iu25" value="u25" autocomplete="off"> تحت ال 25
+                          </label>
+                         <label class="btn btn-primary">
+                          <input type="radio" name="age-options" id="i2534" value="2564" autocomplete="off">بين ال 25- 64
+                         </label>
+
+                       <label class="btn btn-primary">
+                         <input type="radio" name="age-options" id="io64" value="o64" autocomplete="off"> فوق ال 65
+                       </label>
+                    </div>
+                  </div>
+                  </div>
+
+
+
+               </div>
+                    <div id="map"></div>
+                    <div id="tooltip-overlay"></div>
+              </div>
+              <div class="row wax-legend" id="l1">
+                <div class="legend-title">
+                  <div class="en">Percentage of "Afiliated to a political party" </div>
+                  <div class="ar">نسبة الاجابة "منتمي إلى حزب سياسي" </div>
+                </div>
+                  <div class="legend-scale">
+                  <ul class="legend-labels">
+                  <li><span style="background:#ffffcc"></span>0-10%</li>
+                  <li><span style="background:#c7e9b4"></span>10-20%</li>
+                  <li><span style="background:#7fcdbb"></span>20-40%</li>
+                  <li><span style="background:#41b6c4"></span>40-60%</li>
+                  <li><span style="background:#2c7fb8"></span>60-80%</li>
+                  <li><span style="background:#253494"></span> >80%</li>
+                  </ul>
+                  </div>
+              </div>
+              <div class="row wax-legend" id="l2">
+                <div class="legend-title">
+                  <div class="en">Percentage of "Civil society activist" </div>
+                  <div class="ar"> نسبة الاجابة "ناشط(ة) في المجتمع المدني"</div>
+                </div>
+                  <div class="legend-scale">
+                  <ul class="legend-labels">
+                  <li><span style="background:#edf8fb"></span>0-10%</li>
+                  <li><span style="background:#bfd3e6"></span>10-20%</li>
+                  <li><span style="background:#9ebcda"></span>20-40%</li>
+                  <li><span style="background:#8c96c6"></span>40-60%</li>
+                  <li><span style="background:#8856a7"></span>60-80%</li>
+                  <li><span style="background:#810f7c"></span> >80%</li>
+                  </ul>
+                  </div>
+              </div>
+              <div class="row wax-legend" id="l3">
+                <div class="legend-title">
+                  <div class="en">Percentage of "interested in politics but not affiliated to a political party"</div>
+                  <div class="ar">نسبة الاجابة "اهتم بالسياسة لكن لا أميل إلى أي طرف سياسي "</div>
+                </div>
+                  <div class="legend-scale">
+                  <ul class="legend-labels">
+                  <li><span style="background:#f1eef6"></span>0-10%</li>
+                  <li><span style="background:#d4b9da"></span>10-20%</li>
+                  <li><span style="background:#c994c7"></span>20-40%</li>
+                  <li><span style="background:#df65b0"></span>40-60%</li>
+                  <li><span style="background:#dd1c77"></span>60-80%</li>
+                  <li><span style="background:#980043"></span> >80%</li>
+                  </ul>
+                  </div>
+              </div>
+          </div>
+
+
+        </div>
+
+    </main>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
+    <script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.2/js/bootstrap.min.js"></script>
+    <script src="https://api.tiles.mapbox.com/mapbox.js/v2.1.9/mapbox.js"></script>
+
+    <script src="scripts/imaps.js"></script>
+</body>
+
+</html>

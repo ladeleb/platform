@@ -143,6 +143,7 @@ var years = {
 	"2009": genderData2009,
 	"2013": genderData2013,
 	"2014": genderData2014,
+	"2015": genderData2015,
 };
 
 function changeLayer(datalayer, year) {

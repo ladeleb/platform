@@ -23,7 +23,7 @@
        <li class="langbtn" id="about-btn">ABOUT</li>
        <a href="https://github.com/ladeleb/platform/releases/latest" target="_blank"><li class='langbtn' id='download-data'>DOWNLOAD DATA</li></a>
         <!-- <li class='langbtn'>ABOUT THIS DATA</li> -->
-        
+
         <li class='langbtn' id='share-data'>SHARE
             <ul id='toolbar-share'>
                 <a class='tweet' href="http://ladeleb.github.io/platform/gender.html" title="Gender data of voters in #Lebanon - Visualization by @ladeleb">
@@ -42,7 +42,7 @@
         <div class='text_overlay en'></div>
 
         <div id='map'></div>
-        
+
         <div id='tooltip-overlay'></div>
     </div>
 
@@ -73,6 +73,8 @@
                         <li class="select1" id="voter_registration-2013"> <%= voter_registration %> - 2013</li>
                         <li class="select1" id="voter_registration-2014"> <%= voter_registration %> - 2014</li>
                         <li class="select1" id="voter_registration-2015"> <%= voter_registration %> - 2015</li>
+                        <li class="select1" id="voter_registration-2016"> <%= voter_registration %> - 2016</li>
+                        <li class="select1" id="voter_registration-2017"> <%= voter_registration %> - 2017</li>
                     </ul>
                 </div>
                  <div>
@@ -97,7 +99,7 @@
                 <div id='<%= id %>' class='time_section clearfix'>
                     <div id='timepicker'></div>
                     <div id='time'> <%= text.ttime %> </div>
-                    <div id='time_desc'> <%= text.time_desc %> </div> 
+                    <div id='time_desc'> <%= text.time_desc %> </div>
                 </div>
             </script>
 
@@ -127,7 +129,7 @@
             <script src="bower_components/Leaflet.markercluster/dist/leaflet.markercluster.js"></script>
             <script src="bower_components/jquery/jquery.js"></script>
             <script src="bower_components/d3/d3.min.js"></script>
-            <script src='bower_components/underscore/underscore-min.js'></script> 
+            <script src='bower_components/underscore/underscore-min.js'></script>
             <script src="scripts/text_content.js"></script>
             <script src="scripts/map.js"></script>
             <script src="scripts/gender.js"></script>

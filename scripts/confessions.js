@@ -9,14 +9,14 @@ content.textAr = confessions.textAr;
 content.layers = [];
 
 var confessionsReverse = {
-    sunni: "Sunni", 
-	shia: "Shia", 
+    sunni: "Sunni",
+	shia: "Shia",
     maronite: "Maronite",
     druze: "Druze",
     grkorth: "Greek Orthodox",
-    grkcth: "Greek Catholic", 
-	alawite: "Alawite", 
-	armcth: "Armenian Catholic", 
+    grkcth: "Greek Catholic",
+	alawite: "Alawite",
+	armcth: "Armenian Catholic",
 	armorth: "Armenian Orthodox",
     evangelical: "Evangelical",
 	minorities: "Minorities",
@@ -46,9 +46,7 @@ var year = 2, denom = "minorities";
 options.control = function() {
 	var that = this;
 	$('.select1').each(function() {
-		console.log(this);
 		$(this).on('click', function() {
-			console.log(this);
 			$('.select1.selected').removeClass('selected');
 			year = $(this).attr('id');
 			content.layers[0] = changeLayer(denom,year);
@@ -71,7 +69,6 @@ options.setTooltip = function( that ){
 
 	var template = $( '#tooltip-template' ).html();
 	info.update = function (props) {
-		console.log(props.diff);
 		document.getElementById('tooltip-overlay').innerHTML = (props && _.template( template,  {
 				'district':props.district,
 				'denom': confessionsReverse[props.denom],
@@ -173,15 +170,29 @@ function onEachFeature(denom, year) {
 			feature.properties.num_2 = feature.properties[denom+'_2014'];
 			feature.properties.total_1 = feature.properties.total_2013;
 			feature.properties.total_2 = feature.properties.total_2014;
-		}
-		 else  {
+		} else if (year == 4)  {
 			feature.properties.year_1 = 2014;
 			feature.properties.year_2 = 2015;
 			feature.properties.num_1 = feature.properties[denom+'_2014'];
 			feature.properties.num_2 = feature.properties[denom+'_2015'];
 			feature.properties.total_1 = feature.properties.total_2014;
 			feature.properties.total_2 = feature.properties.total_2015;
-		}
+    } else if (year == 5) {
+			feature.properties.year_1 = 2015;
+			feature.properties.year_2 = 2016;
+			feature.properties.num_1 = feature.properties[denom+'_2015'];
+			feature.properties.num_2 = feature.properties[denom+'_2016'];
+			feature.properties.total_1 = feature.properties.total_2015;
+			feature.properties.total_2 = feature.properties.total_2016;
+    } else {
+      feature.properties.year_1 = 2016;
+      feature.properties.year_2 = 2017;
+      feature.properties.num_1 = feature.properties[denom+'_2016'];
+      feature.properties.num_2 = feature.properties[denom+'_2017'];
+      feature.properties.total_1 = feature.properties.total_2016;
+      feature.properties.total_2 = feature.properties.total_2017;
+  }
+
 		layer.on({
 			mouseover: highlightFeature,
 			mouseout: resetHighlight,
@@ -213,7 +224,7 @@ function changeLayer(denom, year) {
 		confessions.map.addLayer(geojson);
 	}
 	return geojson;
-}	
+}
 
 $('document').ready(function(){
 	content.layers[0] = changeLayer(denom, year);
@@ -222,4 +233,3 @@ $('document').ready(function(){
 	$(".select2#"+denom).click();
 	$("#"+year+".select1").click();
 });
-

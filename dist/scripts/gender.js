@@ -144,6 +144,8 @@ var years = {
 	"2013": genderData2013,
 	"2014": genderData2014,
 	"2015": genderData2015,
+	"2016": genderData2016,
+	"2017": genderData2017
 };
 
 function changeLayer(datalayer, year) {
@@ -161,7 +163,7 @@ function changeLayer(datalayer, year) {
 		gender.map.addLayer(geojson);
 	}
 	return geojson;
-}	
+}
 
 $('document').ready(function(){
 	content.layers[0] = changeLayer(datalayer, "2009");
@@ -169,4 +171,3 @@ $('document').ready(function(){
 	gender.init();
 	$("li#"+datalayer+"-2009").click();
 });
-

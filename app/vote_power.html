@@ -9,7 +9,7 @@
         <title></title>
         <meta name="description" content="">
         <meta name="viewport" content="width=device-width">
-        
+
         <link href="//netdna.bootstrapcdn.com/font-awesome/4.0.0/css/font-awesome.css" rel="stylesheet">
         <link rel="stylesheet" href="styles/main.css">
         <link rel="stylesheet" href="styles/vote_power.css">
@@ -19,13 +19,13 @@
 
     </head>
     <body>
-        
+
         <ul id='toolbar'>
         <li class='langbtn' id="home-btn">HOME</li>
         <li class="langbtn" id="about-btn">ABOUT</li>
        <a href="https://github.com/ladeleb/platform/releases/latest" target="_blank"><li class='langbtn' id='download-data'>DOWNLOAD DATA</li></a>
             <!-- <li class='langbtn'>ABOUT THIS DATA</li> -->
-            
+
             <li class='langbtn' id='share-data'>SHARE
             <ul id='toolbar-share'>
                 <a class='tweet' href="http://ladeleb.github.io/platform/vote_power.html" title="Voter representation in #Lebanese Parliament - Visualization by @ladeleb">
@@ -46,7 +46,7 @@
             <div id='tooltip-overlay'></div>
         </div>
 
-        
+
         <!--[if lt IE 7]>
             <p class="browsehappy">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
         <![endif]-->
@@ -73,6 +73,8 @@
                     <li class="select" id="2013">2013</li>
                     <li class="select" id="2014">2014</li>
                     <li class="select" id="2015">2015</li>
+                    <li class="select" id="2016">2016</li>
+                    <li class="select" id="2017">2017</li>
                 </ul>
             </div>
 
@@ -82,7 +84,7 @@
                 <div><b>Under</b> represented</div>
 
             </div>
-              
+
         </script>
 
 
@@ -94,7 +96,7 @@
                     <div class='perc' style='color: <%=color%>'>  <%= (Number(seats_perc)*100).toFixed(2)%>%   </div>
                     <div class='total'> <%=seats_total%>/128 </div>
                 </div>
-                <div id='voters' style="width: 150px;">  
+                <div id='voters' style="width: 150px;">
                     <div class='llabel' > VOTERS - مسجلين</div>
                     <div class='perc' style='color: <%=color%>'> <%= (Number(voters_perc)*100).toFixed(2)%>%   </div>
                     <div class='total'> <%=voters_total%>/<%=voters%> </div>
@@ -102,14 +104,14 @@
             </div>
         </script>
 
- 
+
         <link rel="stylesheet" href="bower_components/Leaflet.markercluster/dist/MarkerCluster.css" />
         <link rel="stylesheet" href="bower_components/Leaflet.markercluster/dist/MarkerCluster.Default.css" />
         <!--[if lte IE 8]>
         <![endif]-->
         <script src="bower_components/Leaflet.markercluster/dist/leaflet.markercluster.js"></script>
         <script src="bower_components/jquery/jquery.js"></script>
-        <script src='bower_components/underscore/underscore-min.js'></script> 
+        <script src='bower_components/underscore/underscore-min.js'></script>
         <script src="scripts/text_content.js"></script>
         <script src="scripts/map.js"></script>
         <script src="data/vote_power/vote_power.js"></script>

@@ -63,7 +63,7 @@ options.setTooltip = function( that ){
 	var gridLayer = L.mapbox.gridLayer('kamicut.vote_power');
 	that.map.addLayer(gridLayer);
 	var template = $( '#tooltip-template' ).html();
-	
+
 	gridLayer.on('mousemove',function(o) {
 		if (o.data!== undefined){
 			var color;
@@ -99,11 +99,9 @@ content.layers[0] = currentLayer;
 function changeYear(new_year) {
 	year = new_year;
 	voterPower.map.removeLayer(currentLayer);
-	if (year == '2015')
+	if (parseInt(year) > 2014 ) // same distribution for 2015 2016 and 2017 so keep one map
 		currentLayer = L.mapbox.tileLayer('tunisia.vp');
-
 	else
-
 		currentLayer = L.mapbox.tileLayer('kamicut.vote_power_' + year);
 	voterPower.map.addLayer(currentLayer);
 	return currentLayer;

@@ -129,6 +129,7 @@ html[xmlns] .clearfix {
 @media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/marcfarra\/Code\/ladeleb\/platform\/app\/styles\/_map\.scss}line{font-family:\0000321}}
 .text_overlay.ar {
   text-align: right;
+  direction: rtl;
 }
 @media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/marcfarra\/Code\/ladeleb\/platform\/app\/styles\/_map\.scss}line{font-family:\0000325}}
 .text_overlay.ar .time_section #time, .text_overlay.ar .time_section #time_desc {

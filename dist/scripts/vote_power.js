@@ -41,7 +41,9 @@ var population = {
 	"2009": "3.2M",
 	"2013": "3.45M",
 	"2014": "3.5M",
-	"2015": "3.5M"
+	"2015": "3.5M",
+	"2016": "3.62M",
+	"2017": "3.68M"
 };
 
 options.control = function() {
@@ -49,7 +51,6 @@ options.control = function() {
 	$('.select').each(function() {
 		console.log(this);
 		$(this).on('click', function() {
-			console.log(this);
 			$('.select.selected').removeClass('selected');
 			year = $(this).attr('id');
 			content.layers[0] = changeYear(Number(year));

@@ -70,7 +70,7 @@ options.setTooltip = function( that ){
 	var template = $( '#tooltip-template' ).html();
 	info.update = function (props) {
 		document.getElementById('tooltip-overlay').innerHTML = (props && _.template( template,  {
-				'district':props.district,
+				'district':props.district_n,
 				'denom': confessionsReverse[props.denom],
                 'denom_ar': confessionsArabic[props.denom],
 				'voters_diff': Number(props.diff).toFixed(2) > 0? '+' + Number(props.diff).toFixed(2): Number(props.diff).toFixed(2),
@@ -184,12 +184,20 @@ function onEachFeature(denom, year) {
 			feature.properties.num_2 = feature.properties[denom+'_2016'];
 			feature.properties.total_1 = feature.properties.total_2015;
 			feature.properties.total_2 = feature.properties.total_2016;
-    } else {
+    } else if (year == 6){
       feature.properties.year_1 = 2016;
       feature.properties.year_2 = 2017;
       feature.properties.num_1 = feature.properties[denom+'_2016'];
       feature.properties.num_2 = feature.properties[denom+'_2017'];
       feature.properties.total_1 = feature.properties.total_2016;
+      feature.properties.total_2 = feature.properties.total_2017;
+  }
+  else {
+      feature.properties.year_1 = 2013;
+      feature.properties.year_2 = 2017;
+      feature.properties.num_1 = feature.properties[denom+'_2013'];
+      feature.properties.num_2 = feature.properties[denom+'_2017'];
+      feature.properties.total_1 = feature.properties.total_2013;
       feature.properties.total_2 = feature.properties.total_2017;
   }
 

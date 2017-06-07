@@ -2,6 +2,7 @@ var powerText = {};
 var whiteBallotText = {};
 var confessions = {};
 var genderText = {};
+var expatText = {};
 
 // *************** MAIN INDEX
 
@@ -134,7 +135,7 @@ genderText.textAr = {
 	voter_turnout: " الناخبين حسب المشاركة ",
 	voter_registration: "الناخبين حسب التسجيل",
 	f_maj1: "(0% - 1%)" + "اغلبية للاناث",
-    f_maj2: "(1% - 2%) " + "اغلبية للاناث", 
+    f_maj2: "(1% - 2%) " + "اغلبية للاناث",
    	f_maj3: "(3% - 5%) " + "اغلبية للاناث",
     f_maj4: "(> 5%) " + "اغلبية للاناث",
     m_maj1: "(0% - 1%) " + "اغلبية للذكور",
@@ -157,4 +158,17 @@ powerText.textAr = {
 	attribution: 'الجمعية اللبنانية من أجل ديمقراطية الإنتخابات',
 	select_year: ":اختر السنة",
 
+};
+
+expatText.textEn = {
+	title: 'Registered Expatriate Lebanese Voters',
+	desc : 'The following map shows the total number of the registered voters among Lebanese expatriates in 2017, according to the electoral districts they belong to. The map shows the names of the registred voters, the countries they reside in, alongside their gender, and confession. Green indicates the registred voters among expatriates in a specific district.',
+	attribution: 'Data by Lebanese Association for Democratic Elections'
+
+};
+
+expatText.textAr = {
+	title : ' الناخبون المسجّلون في بلاد الاغتراب ',
+	desc :'تُظهِر هذه الخريطة عدد الناخبين الذين سجّلوا أسماءهم لدى السفارات والقنصليّات في بلدان الاغتراب للعام 2017، بحسب الدوائر الانتخابية التي ينتمون إليها، مع أسمائهم، البلدان التي يتواجدون فيها، نسبة النساء والرجال فيما بينهم، إضافة إلى طوائفهم.  يرمز اللون الأخضر إلى الدوائر  التي تسجل فيها اللبنانيون في الاغتراب .  ',
+	attribution: 'الجمعية اللبنانية من أجل ديمقراطية الإنتخابات'
 };

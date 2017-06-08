@@ -18,7 +18,7 @@ options.control = function(){
 		that.map.removeLayer(that.content.layers[1]);
 		that.map.removeLayer(that.content.layers[2]);
 		that.map.addLayer(that.content.layers[0]);
-    }); 
+    });
     $('#invalid_2009.control').on('click', function(){
 		$(".selected").removeClass('selected');
 		$(this).addClass('selected');
@@ -42,7 +42,7 @@ options.setTooltip = function(that){
 	gridLayer.on('mousemove',function(o) {
         document.getElementById('tooltip-overlay').innerHTML = (o.data && o.data.DISTRICT || '');
     });
-	
+
 };
 
 whiteBallots = new M.Map(content, options);
@@ -62,9 +62,8 @@ function getLayers() {
 		}
 
 		markers = new L.markerClusterGroup({
-			
+
 			iconCreateFunction: function(cluster) {
-				//console.log(cluster.getAllChildMarkers()[0].data );
 				var total = 0;
 				for (var i=0;i<cluster.getAllChildMarkers().length;i++){
 					total += Number(cluster.getAllChildMarkers()[i].data);
@@ -116,4 +115,3 @@ $('document').ready(function(){
 	getLayers();
 
 });
-

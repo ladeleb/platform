@@ -49,7 +49,6 @@ var population = {
 options.control = function() {
 	var that = this;
 	$('.select').each(function() {
-		console.log(this);
 		$(this).on('click', function() {
 			$('.select.selected').removeClass('selected');
 			year = $(this).attr('id');

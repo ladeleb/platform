@@ -31,8 +31,6 @@ var options = {};
 options.setTooltip = function( that ){
 	foo = function( str ){
 		$("#chart-current").text("You are viewing: " + str);
-		console.log(str);
-		console.log(names[str]);
 		loader(names[str]);
 	};
 	var gridLayer = L.mapbox.gridLayer('kamicut.voter_trends');
@@ -50,15 +48,15 @@ options.setTooltip = function( that ){
 newMap = new M.Map(content, options);
 
 var confessions = {
-	alawite: "Alawite", 
-	armcath: "Armenian Catholic", 
-	sunni: "Sunni", 
-	shia: "Shia", 
-	maronite: "Maronite", 
-	greekorth: "Greek Orthodox", 
+	alawite: "Alawite",
+	armcath: "Armenian Catholic",
+	sunni: "Sunni",
+	shia: "Shia",
+	maronite: "Maronite",
+	greekorth: "Greek Orthodox",
 	druze: "Druze",
-	greekcath: "Greek Catholic", 
-	armorth: "Armenian Orthodox", 
+	greekcath: "Greek Catholic",
+	armorth: "Armenian Orthodox",
 	minorities: "Minorities",
 	evangelical: "Evangelical"
 };
@@ -72,26 +70,26 @@ var names = {
 	"Jbeil"		: prefix + "jbeil.csv",
 	"Baabda"	: prefix + "baabda.csv",
 	"Jezzine"	: prefix + "jezzine.csv",
-	"Baalbek"	: prefix + "baalbek.csv",           
-	"Kesrwan"	: prefix + "kesrwan.csv ",          
+	"Baalbek"	: prefix + "baalbek.csv",
+	"Kesrwan"	: prefix + "kesrwan.csv ",
 	"Tripoli"	: prefix + "tripoli.csv",
-	"Batroun"	: prefix + "batroun.csv",           
-	"Koura"		: prefix + "koura.csv",           
+	"Batroun"	: prefix + "batroun.csv",
+	"Koura"		: prefix + "koura.csv",
 	"Tyr"		: prefix + "tyr.csv",
-	"Bcharry"	: prefix + "bcharry.csv ",          
-	"Beirut"	: prefix + "beirut.csv",           
-	"Matn"		: prefix + "matn.csv",   
+	"Bcharry"	: prefix + "bcharry.csv ",
+	"Beirut"	: prefix + "beirut.csv",
+	"Matn"		: prefix + "matn.csv",
 	"WestBekaa-Rachaya": prefix + "westbekaa.rachaya.csv",
 	"Bent-Jbel"	: prefix + "bent.jbel.csv         ",
-	"Minniye-Danniyeh":	prefix + "minniye.danniyeh.csv",  
+	"Minniye-Danniyeh":	prefix + "minniye.danniyeh.csv",
 	"Marjayoun-Hasbaya": prefix + "marjayoun.hasbaya.csv",
 	"Zahle"		:prefix + "zahle.csv",
-	"Chouf"		: prefix + "chouf.csv",             
-	"Nabatiyeh"	: prefix + "nabatiyeh.csv",         
+	"Chouf"		: prefix + "chouf.csv",
+	"Nabatiyeh"	: prefix + "nabatiyeh.csv",
 	"Zgharta"	: prefix + "zgharta.csv"
 };
 
-var curr_confession = "alawite"; 
+var curr_confession = "alawite";
 //Setup storyboard
 var storyboard;
 
@@ -102,10 +100,8 @@ function loader(name) {
 	var svg = dimple.newSvg("#chart");
 	var svg2 = dimple.newSvg("#chart2");
 	d3.csv(name, function(data) {
-		console.log(data);
 		var myChart = new dimple.chart(svg, data);
 		var myChart2 = new dimple.chart(svg2, data);
-		console.log(myChart2);
 		function bounds() {
 			myChart.setBounds("20%", "10%", "60%", "70%");
 			myChart2.setBounds("20%", "10%", "80%", "50%");
@@ -140,8 +136,6 @@ $('document').ready(function(){
 	}
 	$("select").change(function() {
 		curr_confession = $("select option:selected").attr('value');
-		console.log(curr_confession);
 		storyboard.goToFrame(confessions[curr_confession]);
 	});
 });
-

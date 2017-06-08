@@ -1,4 +1,4 @@
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/marcfarra\/Code\/ladeleb\/platform\/app\/styles\/about\.scss}line{font-family:\000036}}
+/* line 6, about.scss */
 path {
   fill: #000;
   fill-opacity: .3;
@@ -6,13 +6,13 @@ path {
   stroke-width: 3px;
 }
 
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/marcfarra\/Code\/ladeleb\/platform\/app\/styles\/about\.scss}line{font-family:\0000313}}
+/* line 13, about.scss */
 h1 {
   margin: 0 0 0px 0;
   font-weight: 700;
 }
 
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/marcfarra\/Code\/ladeleb\/platform\/app\/styles\/about\.scss}line{font-family:\0000317}}
+/* line 17, about.scss */
 #tloc {
   font-family: Helvetica, sans-serif;
   font-weight: 400;
@@ -21,7 +21,7 @@ h1 {
   padding-bottom: 0.8em;
 }
 
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/marcfarra\/Code\/ladeleb\/platform\/app\/styles\/about\.scss}line{font-family:\0000325}}
+/* line 25, about.scss */
 #tnum {
   font-family: Helvetica, sans-serif;
   font-color: #28283c;
@@ -29,7 +29,7 @@ h1 {
   font-weight: 800;
 }
 
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/marcfarra\/Code\/ladeleb\/platform\/app\/styles\/about\.scss}line{font-family:\0000334}}
+/* line 34, about.scss */
 .text_overlay {
   overflow: scroll;
   margin: 75px 0 50px 50px;
@@ -45,24 +45,24 @@ h1 {
   z-index: 4;
   font-size: 1.3em;
 }
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/marcfarra\/Code\/ladeleb\/platform\/app\/styles\/about\.scss}line{font-family:\0000350}}
+/* line 50, about.scss */
 .text_overlay p {
   line-height: 1.4em;
   font-weight: 100;
   font-size: 0.8em;
   margin: 10px 0 20px 0;
 }
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/marcfarra\/Code\/ladeleb\/platform\/app\/styles\/about\.scss}line{font-family:\0000356}}
+/* line 56, about.scss */
 .text_overlay ul {
   line-height: 1.4em;
   font-weight: 100;
   font-size: 0.8em;
 }
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/marcfarra\/Code\/ladeleb\/platform\/app\/styles\/about\.scss}line{font-family:\0000361}}
+/* line 61, about.scss */
 .text_overlay li {
   list-style-type: square;
 }
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/marcfarra\/Code\/ladeleb\/platform\/app\/styles\/about\.scss}line{font-family:\0000365}}
+/* line 65, about.scss */
 .text_overlay #desc {
   font-weight: 300;
   font-size: 1em;
@@ -70,16 +70,16 @@ h1 {
   color: #787878;
 }
 
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/marcfarra\/Code\/ladeleb\/platform\/app\/styles\/about\.scss}line{font-family:\0000373}}
+/* line 73, about.scss */
 .text_overlay.en {
   text-align: left;
 }
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/marcfarra\/Code\/ladeleb\/platform\/app\/styles\/about\.scss}line{font-family:\0000377}}
+/* line 77, about.scss */
 .text_overlay.en .time_section #time, .text_overlay.en .time_section #time_desc {
   float: left;
 }
 
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/marcfarra\/Code\/ladeleb\/platform\/app\/styles\/about\.scss}line{font-family:\0000384}}
+/* line 84, about.scss */
 #tooltip-overlay {
   padding: 10px;
   z-index: 9999;
@@ -91,7 +91,7 @@ h1 {
   text-align: center;
 }
 
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/marcfarra\/Code\/ladeleb\/platform\/app\/styles\/about\.scss}line{font-family:\0000396}}
+/* line 96, about.scss */
 .control, .control2 {
   width: 100px;
   padding: 5px;
@@ -102,12 +102,12 @@ h1 {
   display: inline-block;
   cursor: pointer;
 }
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/marcfarra\/Code\/ladeleb\/platform\/app\/styles\/about\.scss}line{font-family:\00003105}}
+/* line 105, about.scss */
 .control:hover, .control2:hover {
   color: #e3afaf;
 }
 
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/marcfarra\/Code\/ladeleb\/platform\/app\/styles\/about\.scss}line{font-family:\00003110}}
+/* line 110, about.scss */
 .control2 {
   width: 100px;
   padding: 5px;
@@ -117,24 +117,24 @@ h1 {
   background-color: white;
   display: inline-block;
 }
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/marcfarra\/Code\/ladeleb\/platform\/app\/styles\/about\.scss}line{font-family:\00003118}}
+/* line 118, about.scss */
 .control2:hover {
   color: black;
 }
 
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/marcfarra\/Code\/ladeleb\/platform\/app\/styles\/about\.scss}line{font-family:\00003123}}
+/* line 123, about.scss */
 .selected {
   color: white;
   background-color: #c86464;
 }
 
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/marcfarra\/Code\/ladeleb\/platform\/app\/styles\/about\.scss}line{font-family:\00003128}}
+/* line 128, about.scss */
 .time_section {
   display: inline-block;
   position: relative;
 }
 
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/marcfarra\/Code\/ladeleb\/platform\/app\/styles\/about\.scss}line{font-family:\00003132}}
+/* line 132, about.scss */
 #time, #time_desc {
   display: inline-block;
   padding: 10px 0 10px 0;
@@ -142,7 +142,7 @@ h1 {
   font-weight: 800;
 }
 
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/marcfarra\/Code\/ladeleb\/platform\/app\/styles\/about\.scss}line{font-family:\00003143}}
+/* line 143, about.scss */
 #timepicker {
   display: inline-block;
   margin-top: 15px;
@@ -155,7 +155,7 @@ h1 {
   float: left;
 }
 
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/marcfarra\/Code\/ladeleb\/platform\/app\/styles\/about\.scss}line{font-family:\00003154}}
+/* line 154, about.scss */
 #time {
   font-size: 2em;
   margin: 0 20px 0 35px;

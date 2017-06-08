@@ -42,15 +42,15 @@
                       <h4 class="panel-title">Lebanese Elections Data</h4>
                     </div>
                     <div class="panel-body">
-                      <p>
-                        These maps present the numbers of the registered voter rolls, the results of their votes, their presence in the areas of electoral districts, their sex and their confessions since 2005 until today. 
-                      </p>
+                      <p> These maps present the numbers of the registered voters as per the voters lists, the results of their votes, the power of their vote per electoral district, their sex and their confessions since 2005 until today.
+                        </p>
                       <p>These maps are classified according to four different categories:</p>
                        <ul>
                          <li><a href="confessions.html">Voter trends by confessions</a></li>
                          <li><a href="gender.html">Voter trends by gender</a></li>
                          <li><a href="white_ballots.html">White and invalid ballots</a></li>
                          <li><a href="vote_power.html">Voter representation in the parliament</a></li>
+                          <li><a href="expat.html">Registered Expatriate Lebanese Voters 2017</a></li>
                        </ul>
 
                     </div>
@@ -79,14 +79,15 @@
                 <h4 class="panel-title">تحليل بيانات الانتخابات النيابيّة</h4>
               </div>
               <div class="panel-body">
-                <p>
-تعرض الخرائط وبالأرقام عدد المسجلين في لوائح الشطب، نتائج تصويتهم، مناطق تواجدهم في الدوائر الإنتخابية، جنسهم وطوائفهم منذ العام2005 حتّى اليوم
-</p><p> أنواع الخرائط هي:</p>
+              <p>تعرض الخرائط وبالأرقام عدد المسجلين في لوائح الشطب، نتائج تصويتهم، قوة أصواتهم في كلّ دائرة إنتخابية، جنسهم وطوائفهم منذ العام 2005  حتّى اليوم. </p>
+
+            <p> أنواع الخرائط هي:</p>
                  <ul>
                    <li><a href="confessions.html">الناخبون المسجلون حسب الطائفة</a></li>
                    <li><a href="gender.html">الناخبون المسجلون حسب الجنس</a></li>
                    <li><a href="white_ballots.html">الاوراق البيضاء والملغاة</a></li>
                    <li><a href="vote_power.html">تمثيل الناخبين في البرلمان</a></li>
+                   <li><a href="expat.html">الناخبون المسجّلون في بلاد الاغتراب 2017</a></li>
                  </ul>
 
               </div>
@@ -119,7 +120,6 @@
                 .setView([33.894286, 35.67231], 10);
 
           $("#ar").on("click",function(){
-          console.log('switching lang');
           $(".en").hide();
           $(".ar").show();
           $("#ar").hide();
@@ -127,7 +127,7 @@
 
         });
         $("#en").on("click",function(){
-          console.log('switching lang');
+
           $(".ar").hide();
           $(".en").show();
           $("#en").hide();

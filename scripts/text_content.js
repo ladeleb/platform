@@ -2,6 +2,7 @@ var powerText = {};
 var whiteBallotText = {};
 var confessions = {};
 var genderText = {};
+var expatText = {};
 
 // *************** MAIN INDEX
 
@@ -72,7 +73,7 @@ confessions.textEn = {
 	// title : 'The <fc>Power</fc> of the <fh>White Ballot</fh>',
 	// title: '<span style="font-family: serif !important;font-weight:700;font-size:0.8em"> The power of the </span><br> <span style="font-family:Helvetica Neue;font-weight: 100">W H I T E  .  B A L L O T</span>',
 	title: 'Registered voters by confession',
-	desc : 'The following map shows the variance (between two consecutive parliamentary elections in addition to the 2013, 2014 and 2015 voter’s lists) in the total number of the registered voters of each sect per electoral district and their percentages (in respect to the total number of voters in that district). Green indicates an increase in influence, while red indicates a decrease in influence. Yellow represents no or minimal change in influence.',
+	desc : 'The following map shows the variance between two consecutive parliamentary elections, as well as the no-elections 2013-2017 electoral round, in addition to the 2013, 2014, 2015, 2016 and 2017 voter’s lists  in the total number of the registered voters of each sect per electoral district and their percentages (in respect to the total number of voters in that district). Green indicates an increase in influence, while red indicates a decrease in influence. Yellow represents no or minimal change in influence.',
 	attribution: 'Data by Lebanese Association for Democratic Elections',
 	confession: "Select a confession",
 	year: "Select a year",
@@ -91,7 +92,7 @@ confessions.textEn = {
 
 confessions.textAr = {
 	title : 'الناخبون المسجلون بحسب الطائفة',
-	desc : 'تظهر هذه الخريطة الفارق (في دورتين انتخابيتين نيابيتين متتاليتين 2005 و 2009 اضافة الى المسجلين على لوائح 2013 و 2014 و2015) بين العدد الاجمالي  للناخبين عن كل طائفة في كل دائرة انتخابية، كما تظهر النسب (بالنسبة لمجمل عدد الناخبين عن هذه الدائرة). اللون الأخضر يشير إلى تزايد تأثير ناخبي هذه الطائفة، في حين أنّ اللون الأحمر يشير إلى انخفاض هذا التأثير. اللون الأصفر يشير الى انه لا تغيير أوتغيير ضئيل في التأثير. ',
+	desc : ' تظهر هذه الخريطة الفارق في دورتين انتخابيتين نيابيتين متتاليتين 2005 و  2009 ، ودورة 2013-2017 التي لم تجر فيها الانتخابات، إضافة الى المسجلين على لوائح  2013, 2014، 2015، 2016 و2017  بين العدد الاجمالي  للناخبين عن كل طائفة في كل دائرة انتخابية، كما تظهر النسب (بالنسبة لمجمل عدد الناخبين عن هذه الدائرة). اللون الأخضر يشير إلى تزايد تأثير ناخبي هذه الطائفة، في حين أنّ اللون الأحمر يشير إلى انخفاض هذا التأثير. اللون الأصفر يشير الى انه لا تغيير أوتغيير ضئيل في التأثير. ',
 	attribution: 'الجمعية اللبنانية من أجل ديمقراطية الإنتخابات',
 	confession: ":اختر طائفة",
 	year: ":اختر السنة",
@@ -134,7 +135,7 @@ genderText.textAr = {
 	voter_turnout: " الناخبين حسب المشاركة ",
 	voter_registration: "الناخبين حسب التسجيل",
 	f_maj1: "(0% - 1%)" + "اغلبية للاناث",
-    f_maj2: "(1% - 2%) " + "اغلبية للاناث", 
+    f_maj2: "(1% - 2%) " + "اغلبية للاناث",
    	f_maj3: "(3% - 5%) " + "اغلبية للاناث",
     f_maj4: "(> 5%) " + "اغلبية للاناث",
     m_maj1: "(0% - 1%) " + "اغلبية للذكور",
@@ -157,4 +158,17 @@ powerText.textAr = {
 	attribution: 'الجمعية اللبنانية من أجل ديمقراطية الإنتخابات',
 	select_year: ":اختر السنة",
 
+};
+
+expatText.textEn = {
+	title: 'Registered Expatriate Lebanese Voters',
+	desc : 'The following map shows the total number of the registered voters among Lebanese expatriates in 2017, according to the electoral districts they belong to. The map shows the names of the registred voters, the countries they reside in, alongside their gender, and confession. Green indicates the registred voters among expatriates in a specific district.',
+	attribution: 'Data by Lebanese Association for Democratic Elections'
+
+};
+
+expatText.textAr = {
+	title : ' الناخبون المسجّلون في بلاد الاغتراب ',
+	desc :'تُظهِر هذه الخريطة عدد الناخبين الذين سجّلوا أسماءهم لدى السفارات والقنصليّات في بلدان الاغتراب للعام 2017، بحسب الدوائر الانتخابية التي ينتمون إليها، مع أسمائهم، البلدان التي يتواجدون فيها، نسبة النساء والرجال فيما بينهم، إضافة إلى طوائفهم.  يرمز اللون الأخضر إلى الدوائر  التي تسجل فيها اللبنانيون في الاغتراب .  ',
+	attribution: 'الجمعية اللبنانية من أجل ديمقراطية الإنتخابات'
 };

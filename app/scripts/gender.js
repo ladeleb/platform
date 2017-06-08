@@ -150,11 +150,9 @@ var years = {
 
 function changeLayer(datalayer, year) {
 	diff = 'diff_'+datalayer;
-	console.log(datalayer + ", " + year);
 	if (typeof(geojson) !== "undefined") {
 		gender.map.removeLayer(geojson);
 	}
-	console.log(years[year]);
 	geojson = L.geoJson(years[year], {
 		style: style(diff),
 		onEachFeature: onEachFeature(datalayer)

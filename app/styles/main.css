@@ -129,24 +129,25 @@ html[xmlns] .clearfix {
 /* line 21, _map.scss */
 .text_overlay.ar {
   text-align: right;
+  direction: rtl;
 }
-/* line 25, _map.scss */
+/* line 26, _map.scss */
 .text_overlay.ar .time_section #time, .text_overlay.ar .time_section #time_desc {
   float: right;
 }
-/* line 29, _map.scss */
+/* line 30, _map.scss */
 .text_overlay.ar #time {
   margin: 0 0 0 40px;
 }
 
-/* line 36, _map.scss */
+/* line 37, _map.scss */
 .legend {
   position: fixed;
   bottom: 50px;
   right: 50px;
   max-width: 50px;
 }
-/* line 42, _map.scss */
+/* line 43, _map.scss */
 .legend div {
   display: block;
   font-weight: 100;
@@ -156,7 +157,7 @@ html[xmlns] .clearfix {
   text-align: right;
 }
 
-/* line 51, _map.scss */
+/* line 52, _map.scss */
 .legend.inner {
   position: relative;
   top: 0px;
@@ -167,13 +168,13 @@ html[xmlns] .clearfix {
   padding: 7px 0 7px 0;
 }
 
-/* line 61, _map.scss */
+/* line 62, _map.scss */
 #leg {
   display: block;
   width: 100%;
 }
 
-/* line 65, _map.scss */
+/* line 66, _map.scss */
 #legcol {
   padding: 0px;
   width: 30px;
@@ -185,7 +186,7 @@ html[xmlns] .clearfix {
   border-right: 1px solid white;
 }
 
-/* line 76, _map.scss */
+/* line 77, _map.scss */
 #leglabel {
   display: inline-block;
   float: right;

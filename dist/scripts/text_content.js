@@ -114,7 +114,7 @@ confessions.textAr = {
 /* The text content of the page in English */
 genderText.textEn = {
 	title: 'Voters by Gender',
-	desc : 'The following map shows the total number of male and female per electoral district in 2009 in addition to voter’s lists of 2013, 2014, and 2015. The percentages of the female and male turnout in 2009 are calculated in comparison to the number of males and females registered on the voter’s lists and not in comparison to the male and female total turnout.',
+	desc : 'The following map shows the total number of male and female per electoral district in 2009 in addition to voter’s lists of 2013, 2014, 2015, 2016 and 2017. The percentages of the female and male turnout in 2009 are calculated in comparison to the number of males and females registered on the voter’s lists and not in comparison to the male and female total turnout.',
 	attribution: 'Data by Lebanese Association for Democratic Elections',
 	select: "Select a map:",
 	voter_turnout: "Voter Turnout",
@@ -129,9 +129,9 @@ genderText.textEn = {
 
 genderText.textAr = {
 	title : 'الناخبون المسجلون حسب الجنس',
-	desc :'تظهر هذه الخريطة العدد الاجمالي للناخبين الذكور والاناث (الناخبين المسجّلين والمقترعين) في كل دائرة انتخابية في انتخابات 2009 اضافة الى المسجّلين على لوائح 2013 و2014 و2015. ان نسبة مشاركة الذكور في انتخابات العام 2009 محتسبة مقارنة بعدد الناخبين الذكور المسجلين على القوائم الانتخابية وكذلك نسبة مشاركة الناخبات الاناث وهذه النسب لم تحتسب بالمقارنة مع مجموع المشاركين في العملية الانتخابيّة.',
+	desc :'تظهر هذه الخريطة العدد الاجمالي للناخبين الذكور والاناث (الناخبين المسجّلين والمقترعين) في كل دائرة انتخابية في انتخابات 2009 اضافة الى المسجّلين على لوائح 2013 و2014 و2015 و 2016  و 2017 . ان نسبة مشاركة الذكور في انتخابات العام 2009 محتسبة مقارنة بعدد الناخبين الذكور المسجلين على القوائم الانتخابية وكذلك نسبة مشاركة الناخبات الاناث وهذه النسب لم تحتسب بالمقارنة مع مجموع المشاركين في العملية الانتخابيّة.',
 	attribution: 'الجمعية اللبنانية من أجل ديمقراطية الإنتخابات',
-	select: ":اختر خريطة",
+	select: "اختر خريطة",
 	voter_turnout: " الناخبين حسب المشاركة ",
 	voter_registration: "الناخبين حسب التسجيل",
 	f_maj1: "(0% - 1%)" + "اغلبية للاناث",
